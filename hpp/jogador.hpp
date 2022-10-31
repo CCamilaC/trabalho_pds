@@ -1,5 +1,5 @@
-#ifndef jogador
-#define jogador 
+#ifndef jogador_h
+#define jogador_h
 
 class joador
 {
@@ -11,5 +11,5 @@ class joador
     Usuario(std::string nome, std::string pecado);
     std::string getNome();
     std::string getPecado();
-}
+};
 #endif

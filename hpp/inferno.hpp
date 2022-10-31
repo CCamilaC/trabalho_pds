@@ -1,7 +1,7 @@
-#ifndef inferno
-#define inferno
+#ifndef Inferno_h
+#define Inferno_h
 
-class inferno: public historia
+class Inferno: public Historia
 {
     public:
     void inicializar_historia();
@@ -12,4 +12,5 @@ class inferno: public historia
     int Avareza(); 
     int Inveja(); 
     int Ira();
-}
+};
+#endif 
