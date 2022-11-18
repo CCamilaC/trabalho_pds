@@ -1,3 +1,14 @@
+/**
+ * @file Inferno.cpp
+ * @author your name (you@domain.com)
+ * @brief classe responsável pelos dialógos, escolhas e armazenamento das interações no inferno
+ * @version 0.1
+ * @date 2022-11-18
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include <iostream>
 #include "inferno.hpp"
 #include <vector>
