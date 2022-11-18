@@ -12,5 +12,10 @@ class Inferno: public Historia
     int Avareza(); 
     int Inveja(); 
     int Ira();
+    
+    private:
+    std::vector<int> _choice; //variável que armazena as escolhas do usuário
+    int _contador; //auxiliar para determinar quantas escolhas boas foram
+                  //feitas pelo usuário
 };
 #endif 

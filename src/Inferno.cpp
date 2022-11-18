@@ -3,12 +3,10 @@
 #include <vector>
 #include <string>
 
-void Inferno::inicializar_historia()
-{
+void Inferno::inicializar_historia(){
 
 }
-int Inferno::Preguica()
-{
+int Inferno::Preguica(){
     std::cout<<"Não há espaço para filósofos no mundo de hoje. 
     Tudo que todos pensam é no lucro e na produção de bens. 
     Taxado como preguiçoso, dá pra acreditar? Pensar é um trabalho 
@@ -18,15 +16,21 @@ int Inferno::Preguica()
     |O capitalismo é o verdadeiro mal da sociedade|\n
     -----------------------------------------------"
 }
-int Inferno::Gula()
-{
+int Inferno::Gula(){
 
 }
-int Inferno::Soberba()
-{
+int Inferno::Soberba(){
 
 }
-int Inferno::Luxuria(); 
-int Inferno::Avareza(); 
-int Inferno::Inveja(); 
-int Inferno::Ira();
+int Inferno::Luxuria(){
+
+}
+int Inferno::Avareza(){
+
+}
+int Inferno::Inveja(){
+
+}
+int Inferno::Ira(){
+
+}
