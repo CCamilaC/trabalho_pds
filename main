@@ -1,0 +1,15 @@
+#include <iostream>
+#include "batalha.cpp"
+
+using namespace std;
+
+int main()
+{
+    cout << "sistema de batalha" << endl;
+    batalha luta;
+    luta.batalhar();
+
+
+
+    return 0;
+}
