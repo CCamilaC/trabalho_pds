@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 #include "historia.hpp"
 #include "batalha.hpp"
 
@@ -25,5 +26,6 @@ class Inferno: public Historia
     std::vector<int> _choice; //variável que armazena as escolhas do usuário
     int _contador; //auxiliar para determinar quantas escolhas boas foram
                   //feitas pelo usuário
+    std::string _escolha="ESCOLHA 1 OU 2:\n------------------------\\------------------------";
 };
 #endif 
