@@ -5,4 +5,4 @@ void Historia::inicializar_historia()
 
 }
 
-void Historia::Finalizar_historia(){}
+void Historia::finalizar_historia(){}
