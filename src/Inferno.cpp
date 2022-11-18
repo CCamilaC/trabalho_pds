@@ -15,7 +15,10 @@
 #include <string>
 using namespace std;
 //1 smp será a escolha boa
-
+/**
+ * @brief Construct a new Inferno:: Inferno object
+ * @param _choice vector contendo as escolhas do usuário 
+ */
 Inferno::Inferno(){ //construtor
     _choice.clear();
     _contador=0;
