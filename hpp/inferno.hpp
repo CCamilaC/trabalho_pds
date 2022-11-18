@@ -18,7 +18,7 @@ class Inferno: public Historia
     int Avareza(); 
     int Inveja(); 
     int Ira();
-    void Batalha_final()
+    void Batalha_final();
     Batalha batalha;
 
     private:
