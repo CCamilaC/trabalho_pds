@@ -11,13 +11,13 @@ class Inferno: public Historia
     public:
     Inferno();
     int Escolha();
-    int Preguica();
-    int Gula();
-    int Soberba(); 
-    int Luxuria(); 
-    int Avareza(); 
-    int Inveja(); 
-    int Ira();
+    void Preguica();
+    void Gula();
+    void Soberba(); 
+    void Luxuria(); 
+    void Avareza(); 
+    void Inveja(); 
+    void Ira();
     void Batalha_final();
     Batalha batalha;
 
