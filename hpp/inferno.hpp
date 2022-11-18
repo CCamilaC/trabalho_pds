@@ -8,7 +8,6 @@
  * @copyright Copyright (c) 2022
  * 
  */
- 
 #ifndef Inferno_h
 #define Inferno_h
 

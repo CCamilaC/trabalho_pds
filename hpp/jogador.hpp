@@ -1,3 +1,13 @@
+/**
+ * @file jogador.hpp
+ * @author your name (you@domain.com)
+ * @brief a classe jogador armazena a quantidade de vida do jogador a quantidade de itens
+ * @version 0.1
+ * @date 2022-11-18
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #ifndef jogador_h
 #define jogador_h
 
