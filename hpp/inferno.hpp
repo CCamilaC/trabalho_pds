@@ -10,6 +10,7 @@ class Inferno: public Historia
 {
     public:
     Inferno();
+    int Escolha();
     int Preguica();
     int Gula();
     int Soberba(); 
@@ -17,6 +18,7 @@ class Inferno: public Historia
     int Avareza(); 
     int Inveja(); 
     int Ira();
+    void Batalha_final()
     Batalha batalha;
 
     private:
