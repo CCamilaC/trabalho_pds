@@ -2,20 +2,34 @@
 #include "inferno.hpp"
 #include <vector>
 #include <string>
-
-void Inferno::inicializar_historia(){
-
+using namespace std;
+//1 smp será a escolha boa
+Inferno::Inferno(){ //construtor
+    _choice.clear();
+    _contador=0;
 }
 int Inferno::Preguica(){
-    std::cout<<"Não há espaço para filósofos no mundo de hoje. 
-    Tudo que todos pensam é no lucro e na produção de bens. 
-    Taxado como preguiçoso, dá pra acreditar? Pensar é um trabalho 
-    tão nobre quando agir! Você não acredita que eu deveria estar 
-    aqui não é?"<<std::endl;
-    std::cout<<"-----------------------------------------------\n
-    |O capitalismo é o verdadeiro mal da sociedade|\n
-    -----------------------------------------------"
+    int aux=0; //conterá a escolha feita
+    //printar os dialogos
+    do{ //escolha de uma das opções
+        cin>>aux;
+        switch (aux)
+        {
+        case '1':
+            _contador++;
+            _choice.push_back(aux);
+            break;
+        case '2':
+            _choice.push_back(aux);
+        default:
+            break;
+        }
+    } while(aux!=1 || aux!=2);
+
+    //inico da batalha
+    batalha.batalhar();
 }
+
 int Inferno::Gula(){
 
 }

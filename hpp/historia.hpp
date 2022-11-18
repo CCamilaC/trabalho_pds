@@ -1,17 +1,15 @@
 //Classe
-#ifndef Historia
-#define Historia
+#ifndef Historia_H
+#define Historia_H
 
 #include<iostream>
 #include<string>
 
 class Historia
 {
-    protected: 
-
     public:
     void inicializar_historia();
-    void finalizar_historia();
+    virtual void finalizar_historia();
 };
 
 #endif

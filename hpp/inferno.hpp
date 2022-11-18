@@ -1,10 +1,15 @@
 #ifndef Inferno_h
 #define Inferno_h
 
+#include <iostream>
+#include <vector>
+#include "historia.hpp"
+#include "batalha.hpp"
+
 class Inferno: public Historia
 {
     public:
-    void inicializar_historia();
+    Inferno();
     int Preguica();
     int Gula();
     int Soberba(); 
@@ -12,7 +17,8 @@ class Inferno: public Historia
     int Avareza(); 
     int Inveja(); 
     int Ira();
-    
+    Batalha batalha;
+
     private:
     std::vector<int> _choice; //variável que armazena as escolhas do usuário
     int _contador; //auxiliar para determinar quantas escolhas boas foram
