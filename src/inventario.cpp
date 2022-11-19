@@ -1,32 +1,23 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "inventario.hpp"
 
-using namespace std;
+std::string item::getNome(){
+     return _nome;
+}
 
-class item{
-    private:
-        string _nome;
-        int _tipo;  // 1 = aumentar ataque, 2 = aumentar defesa, 3 = recuperar vida, 4 = veneno
-        int _efeito;
-    
-    public:
-        string getNome(){
-            return _nome;
-        }
+int item::getTipo(){
+    return _tipo;
+}
 
-        int getTipo(){
-            return _tipo;
-        }
+int item::getEfeito(){
+    return _efeito;
+}
 
-        int getEfeito(){
-            return _efeito;
-        }
+item::item(string x, int y, int z){
+    _nome = x;
+    _tipo = y;
+    _efeito = z;
+}
 
-        item(string x, int y, int z){
-            _nome = x;
-            _tipo = y;
-            _efeito = z;
-        }
-
-};
