@@ -33,4 +33,46 @@ void Jogador::print(){
     cout<<"sua vida:"<< get_vida() << "\n";
     cout<< "sua estamina:" << get_estamina() << "\n";
 }
+void Jogador::printv(){
+    cout<<"sua vida:"<< get_vida() << "\n"; 
+}
 
+void Jogador::adiciona_item(item x){
+    inventario.push_back(x);
+
+    if(x.getTipo() == 1){
+        int p = 0;
+        p = get_atq();
+        p += x.getEfeito();
+        set_atq(p);
+    }
+    if(x.getTipo() == 2){
+        int p = 0;
+        p = get_def();
+        p += x.getEfeito();
+        set_def(p);
+    }
+}
+
+void Jogador::usa_item(int x){
+    if(inventario[x].getTipo() == 1){
+        //try catch erro "ja equipado"
+    }
+    if(inventario[x].getTipo() == 2){
+        //try catch erro "ja equipado"
+    }
+    if(inventario[x].getTipo() == 3){
+        set_vida(1000);
+        printv();
+    }
+    if(inventario[x].getTipo() == 4){
+        //vida1 -= inventario[x].getEfeito();
+        //cout<<"vida do inimigo:"<< vida1 <<"\n";
+    }
+}
+
+void Jogador::mostra_item(){
+    for(int i = 0; i < inventario.size(); i ++){
+        cout << inventario[i].getNome() << endl;
+    }
+}
