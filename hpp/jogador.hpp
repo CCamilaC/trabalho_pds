@@ -13,6 +13,9 @@
 
 #include<iostream>
 #include <cstdlib>
+#include <vector>
+
+#include "inventario.hpp"
 //using namespace std;
 /**
  * @brief class Jogador
@@ -24,6 +27,7 @@ private:
     int atq = 10;
     int def = 2;
     int estamina = 4;
+    vector<item> inventario;
 
 public:
 /**
@@ -79,6 +83,14 @@ public:
  * 
  */
     void print();
+
+    void printv();
+
+    void adiciona_item(item x);
+
+    void usa_item(int x);
+
+    void mostra_item();
 };
 
 #endif
