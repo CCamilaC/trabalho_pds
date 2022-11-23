@@ -1,56 +1,50 @@
 #include "batalha.hpp"
 
-Jogador jogador;
+using namespace std;
 
-void Batalha::batalhar(){
+void Batalha::batalhar(Jogador user, Jogador inim){
     int a;
     int b;
     while(1){
         a = rand()%2;
 
+        int escolha = 0;
+
 
         if (a == 1){
 
+            escolha = 0;
 
-
-            int escolha = 0;
+            
             cout << "\n" << "escolha entre:" <<"\n\n"<<"(1)atacar"<<"\n\n"<<"(2)defender "<< " (3)usar item" <<"\n\n";
             cin >> escolha;
 
             if (escolha == 1){
-                int y = jogador.get_atq() - def1;
-                vida1 = vida1 - y;
-                int x = jogador.get_estamina() - 1;
-                jogador.set_estamina(x);
-
-                if (vida1 <= 0 || jogador.get_vida() <= 0){
+                int y = user.get_atq() - inim.get_def();
+                y = inim.get_vida() - y;
+                inim.set_vida(y);
+                int x = user.get_estamina() - 1;
+                user.set_estamina(x);
+                if (inim.get_vida() <= 0 || user.get_vida() <= 0){
                     cout << "a batalha acabou" << endl;
                     break;
                 }
-                cout<<"vida do inimigo:"<< vida1<<"\n";
-                cout<<"estamina do inimigo:"<< estamina1<<"\n" << "====================" << "\n";
-                jogador.print();
-            }       
-            if (escolha == 2){
-                int y = atq1 - jogador.get_def();
-                int x = jogador.get_vida() - y;
-                jogador.set_vida( x);
-                int z = jogador.get_estamina() + 1;
-                jogador.set_estamina(z);
+                cout<<"vida do inimigo:"<< inim.get_vida() <<"\n";
+                cout<<"estamina do inimigo:"<< inim.get_estamina() <<"\n" << "====================" << "\n";
+                user.print();
+            }
 
-                if (vida1 <= 0 || jogador.get_vida() <= 0){
+            if (escolha == 2){
+                int z = user.get_estamina() + 1;
+                user.set_estamina(z);
+                if (inim.get_vida() <= 0 || user.get_vida() <= 0){
                     cout << "a batalha acabou";
                     break;
                 }
-                jogador.print();
+                user.print();
             }
-            if (escolha == 3){
-                int iten = 0;
-                cout << "inventario:" << endl;
-                jogador.mostra_item();
-                cin >> iten;
-                jogador.usa_item(iten);
-            }
+
+            
         }
         cout << "\n";
 
@@ -63,30 +57,42 @@ void Batalha::batalhar(){
 
             if (c == 1){
                 cout<< "o inimigo atacou:" << "\n\n";
-                int y = atq1 - jogador.get_def();
-                int x = jogador.get_vida() - y;
-                jogador.set_vida(x);
-                estamina1--;
+                if(escolha == 2){
+                    int y = inim.get_atq() - user.get_def();
+                    int x = user.get_vida() - y;
+                    user.set_vida(x);
+                } else{
+                    int y = inim.get_atq();
+                    int x = user.get_vida() - y;
+                    user.set_vida(x);
+                }
+    
+                int z = inim.get_estamina() - 1;
+                inim.set_estamina(z);
 
-                if (vida1 <= 0 || jogador.get_vida() <= 0){
+                if (inim.get_vida() <= 0 || user.get_vida() <= 0){
                     cout << "a batalha acabou";
                     break;
                 }
-                jogador.printv();
+                user.printv();
             }
 
             if (c == 0){
                 cout<< "o inimigo defendeu:" << "\n";
-                int y = jogador.get_atq() - def1;
-                vida1 = vida1 - y;
-                estamina1++;
-
-                if (vida1 <= 0 || jogador.get_vida() <= 0){
+                if(escolha == 1){
+                    int y = user.get_atq() - inim.get_def();
+                    y = inim.get_vida() - y;
+                    inim.set_vida(y);
+                } 
+        
+                int z = inim.get_estamina() + 1;
+                inim.set_estamina(z);
+                if (inim.get_vida() <= 0 || user.get_vida() <= 0){
                     cout << "a batalha acabou";
                     break;
                 }
-                cout << " vida do inimigo:" << vida1<< "\n";
-                cout << " estamina do inimigo:" << estamina1<< "\n\n";
+                cout << " vida do inimigo:" << inim.get_vida() << "\n";
+                cout << " estamina do inimigo:" << inim.get_estamina() << "\n\n";
             }
         }
         cout << "\n";
