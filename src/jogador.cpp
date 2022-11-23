@@ -1,6 +1,5 @@
-#include<iostream>
-#include <cstdlib>
 #include "jogador.hpp"
+
 using namespace std;
 
 int Jogador::get_vida(){
@@ -75,4 +74,22 @@ void Jogador::mostra_item(){
     for(int i = 0; i < inventario.size(); i ++){
         cout << inventario[i].getNome() << endl;
     }
+}
+
+std::string item::getNome(){
+     return _nome;
+}
+
+int item::getTipo(){
+    return _tipo;
+}
+
+int item::getEfeito(){
+    return _efeito;
+}
+
+item::item(string x, int y, int z){
+    _nome = x;
+    _tipo = y;
+    _efeito = z;
 }
