@@ -24,13 +24,19 @@
  */
 class Jogador{
 private:
-    int vida  = 1000;
-    int atq = 10;
-    int def = 2;
-    int estamina = 4;
+    int vida;
+    int atq;
+    int def;
+    int estamina;
+    bool veneno;
     vector<item> inventario;
 
 public:
+    Jogador(int x, int y, int z, int w);
+
+    bool get_veneno();
+
+    void set_veneno(bool x);
 /**
  * @brief Get the vida object
  * 
@@ -87,9 +93,11 @@ public:
 
     void printv();
 
+    void printiv();
+
     void adiciona_item(item x);
 
-    void usa_item(int x);
+    int usa_item(int x, Jogador p);
 
     void mostra_item();
 };
