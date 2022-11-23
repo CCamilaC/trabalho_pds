@@ -21,41 +21,15 @@
  */
 
 class Batalha{
-private:
-    /**
-     * @brief valor do ataque do oponente
-     * 
-     */
-    int atq1 = 10;
-    /**
-     * @brief valor da defesa do oponente
-     * 
-     */
-    int def1 = 3;
-    /**
-     * @brief valor da vida do oponente
-     * 
-     */
-    int vida1 = 1000;
-    /**
-     * @brief valor da estamina do oponente
-     * 
-     */
-    int estamina1 = 6;
 
 public:
-    /**
-     * @brief inicializa um jogador para a batalha
-     * 
-     */
-    Jogador jogador;
     /**
      * @brief controla toda a batalha
      * @details determina a taxa de acerto dos golpes e das defesas, além de gerenciar os turnos e os valores da vida, defesa
      * ataque e estamina do oponente e do jogador.
      *  
      */
-    void batalhar();
+    void batalhar(Jogador user, Jogador inim);
 };
 
 #endif

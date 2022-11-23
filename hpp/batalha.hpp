@@ -12,8 +12,8 @@ private:
     int estamina1 = 6;
 //teste aqui 
 public:
-    Jogador jogador;
-    void batalhar();
+    
+    void batalhar(Jogador user, Jogador inim);
 };
 
 #endif
