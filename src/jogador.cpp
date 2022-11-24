@@ -51,11 +51,11 @@ using namespace std;
     }
 
     void Jogador::printv(){
-       cout<< "sua vida:"<< get_vida() << "\n"; 
+       cout<< "sua vida: "<< get_vida() << "\n"; 
     }
     void Jogador::printiv(){
-       cout<< "vida inimigo:"<< get_vida() << "\n"; 
-       cout << "veneno:" << get_veneno() << endl;
+       cout<< "vida inimigo: "<< get_vida() << "\n"; 
+       cout << "veneno: " << get_veneno() << endl;
     }
 
     void Jogador::adiciona_item(item x){
