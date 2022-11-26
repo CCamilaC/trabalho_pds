@@ -1,25 +1,11 @@
-//teste luiza 22/11
-/**
- * @file Inferno.cpp
- * @author your name (you@domain.com)
- * @brief classe responsável pelos dialógos, escolhas e armazenamento das interações no inferno
- * @version 0.1
- * @date 2022-11-18
- * 
- * @copyright Copyright (c) 2022
- * 
- */
+
 
 #include <iostream>
 #include "inferno.hpp"
 #include <vector>
 #include <string>
 using namespace std;
-//1 smp será a escolha boa
-/**
- * @brief Construct a new Inferno:: Inferno object
- * @param _choice vector contendo as escolhas do usuário 
- */
+
 Inferno::Inferno(){ //construtor
     _choice.clear();
     _contador=0;
@@ -29,7 +15,7 @@ int Inferno::Escolha(){
     do{ //escolha de uma das opcoes
         cin>>aux;
         if(aux!=1 || aux!=2){
-            cout<<"Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher um das opções 1 ou 2, vou te dar uma nova chance:";
+            cout<<"Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:";
         }
         switch (aux)
         {
