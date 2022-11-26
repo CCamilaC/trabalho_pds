@@ -78,28 +78,29 @@ class Inferno: public Historia
     void Soberba(); 
     /**
      * @brief faz o cout de toda a parte da história relacionada ao pecado da luxuria
-     * @details printa o enredo e faz o cin para a opção de escolha
+     * @details printa o enredo e faz o cin para a opção de escolha do usuário
      * 
      */
     void Luxuria();
     /**
      * @brief faz o cout de toda a parte da história relacionada ao pecado da Avareza
-     * @details printa o enredo e faz o cin para a opção de escolha
+     * @details printa o enredo e faz o cin para a opção de escolha do usuário
      */
     void Avareza();
     /**
-     * @brief 
-     * 
+     * @brief faz o cout de toda a parte da história relacionada ao pecado da Inveja
+     * @details printa o enredo, faz o cin para o usuário conseguir escolher uma opção e chama
+     * a função batalhar da classe batalha
      */
     void Inveja(); 
     /**
-     * @brief 
-     * 
+     * @brief faz o cout de toda a parte da história relacionada ao pecado da Ira
+     * @details enredo + cin para opção de escolha do usuário
      */
     void Ira();
     /**
-     * @brief 
-     * 
+     * @brief finaliza a história no inferno
+     * @details printa a ùltima parte e chama a função batalhar da classe batalha
      */
     void Batalha_final();
     
