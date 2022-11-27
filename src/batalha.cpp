@@ -49,7 +49,7 @@ void batalhar(Jogador user, Jogador inim){
         VOLTA_AQUI:
         escolha = 0;
 
-
+ESCOLHER:
         cout << "\n" << "escolha entre:" <<"\n\n"<<"(1)atacar"<<"\n\n"<<"(2)defender "<< "\n\n" << "(3)usar item" <<"\n\n";
         cin >> escolha;
 
@@ -57,8 +57,21 @@ void batalhar(Jogador user, Jogador inim){
             int y = user.get_atq() - inim.get_def();
             y = inim.get_vida() - y;
             inim.set_vida(y);
-            int x = user.get_estamina() - 1;
-            user.set_estamina(x);
+
+             try{
+         int x =  user.get_estamina() - 1;
+    user.set_estamina(x);
+
+ if(x < 0){
+            x = 0;
+             user.set_estamina(x);
+      throw "sua estamina esta em zero, voce nao pode atacar. ";
+    }
+
+    }catch(const char *e){
+cout << e;
+goto ESCOLHER;
+    }
             if (inim.get_vida() <= 0 || user.get_vida() <= 0){
                 cout << "a batalha acabou" << endl;
                 break;
@@ -68,9 +81,9 @@ void batalhar(Jogador user, Jogador inim){
             user.print();
         }
         if (escolha == 2){
-            //int y = inim.get_atq() - user.get_def();
-            //int x = user.get_vida() - y;
-            //user.set_vida(x);
+            int y = inim.get_atq() - user.get_def();
+            int x = user.get_vida() - y;
+            user.set_vida(x);
             int z = user.get_estamina() + 1;
             user.set_estamina(z);
             if (inim.get_vida() <= 0 || user.get_vida() <= 0){
@@ -106,7 +119,7 @@ void batalhar(Jogador user, Jogador inim){
 
             cout<< "eh a vez do inimigo" << "\n\n";
             
-
+VOLTAR:
         c = rand() % 2;
 
         if (c == 1){
@@ -121,8 +134,18 @@ void batalhar(Jogador user, Jogador inim){
                 user.set_vida(x);
             }
             
-            int z = inim.get_estamina() - 1;
-            inim.set_estamina(z);
+            try{
+    int z = inim.get_estamina() - 1;
+    inim.set_estamina(z);
+    if(z < 0){
+        throw "o inimigo tentou atacar, mas esta sem estamina.";
+    }
+}catch(const char *e){
+
+cout << e << "\n" << "\n";
+
+goto VOLTAR;
+}
 
             if (inim.get_vida() <= 0 || user.get_vida() <= 0){
                 cout << "a batalha acabou";
