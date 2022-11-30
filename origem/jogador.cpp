@@ -3,10 +3,11 @@
 using namespace std;
 
     Jogador::Jogador(int x, int y, int z, int w){
-        vida = x;
-        atq = y;
-        def = z;
-        estamina = w;
+       set_vida(x);
+       set_estamina(y);
+       set_atq(z);
+       set_def(w);
+
         veneno = false;
     }
 
@@ -25,9 +26,11 @@ using namespace std;
         vida = x;
     }
      int Jogador::get_atq(){
+
         return atq;
     }
     void Jogador::set_atq(int x){
+
         atq = x;
     }
     int Jogador::get_def(){
@@ -44,45 +47,37 @@ using namespace std;
     }
     void Jogador::print(){
         cout<<"vida: "<< get_vida() << "\n";
-        cout<< "estamina: " << get_estamina() << "\n";       
+        cout<< "estamina: " << get_estamina() << "\n";
         cout<<"ataque: "<< get_atq()<< "\n";
         cout<<"defesa: "<< get_def() <<"\n";
         cout << "veneno: " << get_veneno() << endl;
     }
 
     void Jogador::printv(){
-       cout<< "sua vida: "<< get_vida() << "\n"; 
+       cout<< "sua vida: "<< get_vida() << "\n";
     }
     void Jogador::printiv(){
-       cout<< "vida inimigo: "<< get_vida() << "\n"; 
+       cout<< "vida inimigo: "<< get_vida() << "\n";
        cout << "veneno: " << get_veneno() << endl;
     }
 
     void Jogador::adiciona_item(item x){
         inventario.push_back(x);
 
-        if(x.getTipo() == 1){
-            int p = 0;
-            p = get_atq();
-            p += x.getEfeito();
-            set_atq(p);
-          
-        }
-        if(x.getTipo() == 2){
-            int p = 0;
-            p = get_def();
-            p += x.getEfeito();
-            set_def(p);
-            
+
+    }
+
+    int Jogador::usa_item(int x, Jogador *p){
+
+        if(inventario[x].getTipo() == 1){
+           int y = 0;
+           y =inventario[x].getEfeito() + p->get_atq();
+           p->set_atq(y);
+
         }
     }
 
-    int Jogador::usa_item(int x, Jogador p){
-        if(inventario[x].getTipo() == 1){
-            //try catch erro "ja equipado"
-            cout << "ja equipado" << endl;
-        }
-        if(inventario[x].getTipo() == 2){
+/*        if(inventario[x].getTipo() == 2){
             //try catch erro "ja equipado"
             cout << "ja equipado" << endl;
         }
@@ -92,7 +87,7 @@ using namespace std;
             printv();
         }
         if(inventario[x].getTipo() == 4){
-          
+
             int x = p.get_vida() - inventario[x].getEfeito();
             //p.set_vida(x);
             //cout<<"vida do inimigo:"<< p.get_vida() <<"\n";
@@ -100,10 +95,13 @@ using namespace std;
             return 1;
         }
     }
+    */
+
 
     void Jogador::mostra_item(){
         for(int i = 0; i < inventario.size(); i ++){
             cout << "(" << i << ")" << inventario[i].getNome() << endl;
             }
-        
+
     }
+            
