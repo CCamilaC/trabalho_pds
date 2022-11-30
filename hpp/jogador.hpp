@@ -97,7 +97,7 @@ public:
 
     void adiciona_item(item x);
 
-    int usa_item(int x, Jogador p);
+    int usa_item(int x, Jogador *p);
 
     void mostra_item();
 };
