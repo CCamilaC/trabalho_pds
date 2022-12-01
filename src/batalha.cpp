@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void batalhar(Jogador user, Jogador inim){
+void Batalha::batalhar(Jogador user, Jogador inim){
     int a;
     int b;
     int cont1 = 0;
@@ -16,9 +16,9 @@ void batalhar(Jogador user, Jogador inim){
         int c = 0;
 
         ux = user.get_veneno();
-        ix = inim.get_veneno(); 
+        ix = inim.get_veneno();
 
-
+/*
         if(ux == 1){
             if(cont1 < 5){
                 user.set_vida(user.get_vida() - 5);
@@ -39,6 +39,7 @@ void batalhar(Jogador user, Jogador inim){
                 inim.set_veneno(false);
             }
         }
+        */
 
         user.printv();
         inim.printiv();
@@ -96,7 +97,7 @@ goto ESCOLHER;
         }
         if (escolha == 3){
             int iten = 0;
-            
+
             cout << "inventario:" << endl;
             user.mostra_item();
             cout << "(8)voltar" << endl;
@@ -104,13 +105,11 @@ goto ESCOLHER;
             if(iten == 8){
                 goto VOLTA_AQUI;
             }
-            int x = user.usa_item(iten, inim);
-            if(x == 0){
-                goto VOLTA_AQUI;
-            }
-            inim.set_veneno(x);
-            inim.set_vida(inim.get_vida() - 5);    
-            inim.printiv();
+             user.usa_item(iten, &user);
+
+            //inim.set_veneno(x);
+            //inim.set_vida(inim.get_vida() - 5);
+            //inim.printiv();
         }
         //}
         cout << "\n";
@@ -118,9 +117,25 @@ goto ESCOLHER;
         //if (a == 0 || a == 2 || a == 4){
 
             cout<< "eh a vez do inimigo" << "\n\n";
-            
+
 VOLTAR:
+    int aux = 5;
         c = rand() % 2;
+         int cont;
+        if(user.get_veneno() == 1){
+                int x = 0;
+
+                if(cont < 5){
+aux = aux - cont;
+cout <<  "o inimigo esta envenenado por:"<< aux<<" rodadas"<< "\n";
+            x = inim.get_vida() - 1;
+            inim.set_vida(x);
+            ++cont;
+                }else{
+                    cout << "o inimigo nao esta mais envenenado" << "\n";
+                bool y = false;
+                user.set_veneno(y);}
+        }
 
         if (c == 1){
             cout<< "o inimigo atacou:" << "\n\n";
@@ -133,7 +148,7 @@ VOLTAR:
                 int x = user.get_vida() - y;
                 user.set_vida(x);
             }
-            
+
             try{
     int z = inim.get_estamina() - 1;
     inim.set_estamina(z);
@@ -160,8 +175,8 @@ goto VOLTAR;
                     int y = user.get_atq() - inim.get_def();
                     y = inim.get_vida() - y;
                     inim.set_vida(y);
-                } 
-                
+                }
+
                 int z = inim.get_estamina() + 1;
                 inim.set_estamina(z);
                 if (inim.get_vida() <= 0 || user.get_vida() <= 0){
