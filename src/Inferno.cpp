@@ -1,10 +1,9 @@
-
-
 #include <iostream>
 #include "inferno.hpp"
 #include <vector>
 #include <string>
 using namespace std;
+//ESCOLHA 1 SEMPRE SERÁ A CERTA 
 
 Inferno::Inferno(){ //construtor
     _choice.clear();
@@ -15,7 +14,8 @@ int Inferno::Escolha(){
     do{ //escolha de uma das opcoes
         cin>>aux;
         if(aux!=1 || aux!=2){
-            cout<<"Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:";
+            throw invalid_argument("Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:");
+            //cout<<"Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:";
         }
         switch (aux)
         {
@@ -51,7 +51,9 @@ void Inferno::Preguica(){
         break;
     case '2':
         //OBSERVAÇÃO: TERA QUE COLOCAR O NOME DO PERSONAGEM AQUI
-        cout<<"Platão: É assim que se fala! Eu amo quando concordam comigo. É como eu sempre digo “Quem comete uma injustiça é sempre mais infeliz que o injustiçado”, calma, não era essa a frase que eu queria. De todo jeito você caiu nas minhas graças, tome esse megafone de presente, ele tem o poder mágico de fazer as pessoas te escutarem."<<endl;
+        //FEITO 
+        cout<<"Eu deveria saber, alguém que diz "<<endl;
+        cout<<'"'<<_pecado<<'"'<<" para um anjo pensaria assim, devo dizer que não fico surpreso."<<endl;
         break;
     default:
         break;
@@ -87,7 +89,7 @@ void Inferno::Gula(){
 }
 void Inferno::Soberba(){
     //adicionar cout dialogo
-    cout<<"Andando pelas terras devastadas do inferno, você vê um vulto branco se aproximando de você em alta velocidade. Quando o esbelto cavalo branco para a sua frente um homem baixíssimo desde de sua lombar. Você nem precisa olhar seu localizador para saber que é Napoleão, o soberbo."<<endl;
+    cout<<"Andando pelas terras devastadas do inferno, você vê um vulto branco se aproximando de você em alta velocidade. Quando o esbelto cavalo branco para a sua frente um homem baixíssimo desce de sua lombar. Você nem precisa olhar seu localizador para saber que é Napoleão, o soberbo."<<endl;
     cout<<"Napoleão: Mais um dia no inferno, quem diria. Eu só estava tentando fazer o melhor pela França e pelo mundo! Deus não entende nada de paz e harmonia, elas só vêm pela guerra. Um mundo unificado é um mundo melhor! Todos seriam felizes sob o meu comando. Imagine uma Europa unida, não, esqueça a Europa, um mundo unido! Planeta Napoleônico, isso sim é um bom nome. Você daria um bom súdito, talvez eu até te desse um papel mais importante no meu reino, o que acha?"<<endl;
     cout<<_escolha<<endl;
     cout<<"1- Se a unidade vem da dor e da conquista então ela não está unificando nada. "<<endl;

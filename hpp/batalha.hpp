@@ -11,7 +11,7 @@ class Batalha{
 
 public:
 
-    void batalhar(Jogador user, Jogador inim);
+    static void batalhar(Jogador user, Jogador inim);
 };
 
 
