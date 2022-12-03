@@ -1,4 +1,4 @@
-#include "jogador.hpp"
+#include "../include/jogador.hpp"
 
 using namespace std;
 
@@ -99,6 +99,7 @@ using namespace std;
             inventario.erase(inventario.begin() + x);
             return 1;
         }
+        return 0;//essa parte tava dando erro, apenas para testar
     }
 
     void Jogador::mostra_item(){

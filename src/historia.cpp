@@ -1,8 +1,12 @@
-#include "historia.hpp"
-
-void Historia::inicializar_historia()
-{
+#include "../include/historia.hpp"
+#include "../include/jogador.hpp"
+#include "../include/batalha.hpp"
+Historia::Historia(){
+    _usuario=new Jogador(5, 5, 5, 5);
 
 }
+void Historia::inicializar_historia()
+{
+   
 
-void Historia::finalizar_historia(){}
+}

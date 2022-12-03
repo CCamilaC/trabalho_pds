@@ -10,14 +10,14 @@
  * @copyright Copyright (c) 2022
  * 
  */
-#ifndef Inferno_h
-#define Inferno_h
-
+#ifndef inferno_h
+#define inferno_h
+#include "../include/jogador.hpp"
 #include <iostream>
 #include <vector>
 #include <string>
-#include "historia.hpp"
-#include "batalha.hpp"
+#include "../include/historia.hpp"
+#include "../include/batalha.hpp"
 /**
  *  
  * @brief printa na tela toda a história do inferno, implementa batalhas e faz as escolhas do jogo

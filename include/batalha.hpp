@@ -2,7 +2,7 @@
 #define batalha_H
 #include <iostream>
 #include <string>
-#include "jogador.hpp" 
+#include "../include/jogador.hpp" 
 
 class Batalha{
 private:
@@ -14,6 +14,7 @@ private:
 public:
     
     void batalhar(Jogador user, Jogador inim);
+    
 };
 
 #endif
