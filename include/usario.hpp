@@ -4,14 +4,9 @@
 #include <cstdlib>
 #include <vector>
 #include <string>
-#include "inventario.hpp"
+//#include "inventario.hpp"
 
 using namespace std;
-/**
- * @brief class Usuario
- *
- */
-
 
 class Usuario{
 protected:
@@ -29,58 +24,22 @@ public:
 
     void set_veneno(bool x);
 
-/**
- * @brief Get the vida object
- *
- * @return int
- */
     int get_vida();
-/**
- * @brief Set the vida object
- *
- * @param x
- */
+
     void set_vida(int x);
-/**
- * @brief Get the atq object
- *
- * @return int
- */
+
     int get_atq();
-/**
- * @brief Set the atq object
- *
- * @param x
- */
+
     void set_atq(int x);
-/**
- * @brief Get the def object
- *
- * @return int
- */
+
     int get_def();
-/**
- * @brief Set the def object
- *
- * @param x
- */
+
     void set_def(int x);
-/**
- * @brief Get the estamina object
- *
- * @return int
- */
+
     int get_estamina();
-/**
- * @brief Set the estamina object
- *
- * @param x
- */
+
     void set_estamina(int x);
-/**
- * @brief
- *
- */
+
     void print();
 
     void printv();
@@ -93,8 +52,3 @@ public:
 
     void mostra_item();
 };
-
-
-
-
-#endif // Usuario_HPP_INCLUDED

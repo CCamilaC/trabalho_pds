@@ -61,7 +61,7 @@ using namespace std;
        //cout << "veneno: " << get_veneno() << endl;
     }
 
-    virtual void Usuario::adiciona_item(item x){
+    /*virtual void Usuario::adiciona_item(item x){
         inventario.push_back(x);
 
 
@@ -96,13 +96,13 @@ using namespace std;
        if(inventario[x].getTipo() == 4){
            bool t = true;
             p->set_veneno(t);
-  inventario.erase(inventario.begin() + x);
+  inventario.erase(inventario.begin() + x);*/
            /* int x = p->get_vida() - inventario[x].getEfeito();
             p->set_vida(x);
             cout<<"vida do inimigo:"<< p->get_vida() <<"\n";
             inventario.erase(inventario.begin() + x);
             return 1;*/
-        }
+       /* }
 
 
     }
@@ -112,4 +112,4 @@ using namespace std;
             cout << "(" << i << ")" << inventario[i].getNome() << endl;
             }
 
-    }
+    }*/
