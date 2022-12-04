@@ -29,7 +29,7 @@ int main()
     Batalha luta;
     luta.batalhar(user, inim);
 
-
+    //batalha.batalhar(*_usuario, filosofos);
     return 0;
 }
 
