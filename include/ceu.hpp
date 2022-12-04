@@ -18,19 +18,48 @@
 #include <vector>
 /**
  *  
- * @brief printa na tela toda a história do inferno, implementa batalhas e faz as escolhas do jogo
- * @details essa classe possui um vetor para armazenar todas as escolhas ao longo da implementação das funções da classe
- * e um contador para  registrar as escolhas e mudar a continuidade da história. Além de 9 funções
+ * @brief printa na tela a história final do jogo, o destino final do jogador 
+ * @details essa classe possui uma string para armazenar o nome do jogador e um inteiro para armazenar a escolha
+ * que o jogador desejará fazer para salvar uma das pessoas que ele batalhou, além do construtor e 4 funções.
 */
 class Ceu{
   private:
+    /**
+     * @brief uma variável para armazenar o nome do jogador
+     * 
+     */
     string _nome;
+    /**
+     * @brief uma variável para armazenar a pessoa escolhida pelo jogador para ser salva
+     * 
+     */
     int _pessoa_salva;
 
   public:
+    /**
+     * @brief Construtor
+     * 
+     */
     Ceu(int pessoa_salva, string nome);
+    /**
+     * @brief função para definir o fim da história caso o jogador consiga ir para o Ceu bom
+     * @details caso o jogador chegue no Ceu bom fazendo boas escolhas durante o Inferno
+     * ele poderá escolher um dos inimigos que ele batalhou no inferno para ser salvo do Inferno
+     * e ir para o Ceu junto com ele.
+     * 
+     */
     void Ceu_bom();
+    /**
+     * @brief função para definir o fim da história caso o jogador vá para o Ceu ruim
+     * @details caso o jogador faça escolhas ruins durante o percurso do jogo ele irá para o
+     * Céu ruim onde o Anjo narrador decidirá o destino final do jogador que é permanecer no inferno.
+     */
     void Ceu_ruim();
+    /**
+     * @brief função para conclusões finais do Anjo narrador
+     * @details essa função imprime uma mensagem de despedida do Anjo narrador para o jogador
+     * para assim finalizar o jogo completamente.
+     */
     void Finalizar_historia();
 
 

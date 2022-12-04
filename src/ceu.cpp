@@ -88,7 +88,7 @@ void Ceu::Ceu_ruim(){
     cout << "tentando me sacanear? Não sei nem por que fiquei empolgado em participar desse" <<endl;
     cout << "projeto, você deve achar isso tudo tão engraçado, pois saiba que eu posso perder" << endl;
     cout << "meu emprego por conta disso! Eu não acredito que discuti com o Miguel para te deixarem"<<endl;
-    cout << "participar do projeto.Como pode um humano ser tão fundamentalmente malvado? Você vai pro"<<endl;
+    cout << "participar do projeto. Como pode um humano ser tão fundamentalmente malvado? Você vai pro"<<endl;
     cout << "inferno, e não para esse inferno legal cheio de provações e distrações, você vai para o"<<endl;
     cout << "inferno de verdade. Até nunca mais “herói”." << endl;
 
@@ -99,6 +99,15 @@ void Ceu::Finalizar_historia(){
     cout<<"Anjo: As escolhas foram feitas, espero que esteja feliz com elas!"<<endl; 
     cout<<"      Obrigado por ser parte desse experimento e até uma próxima vida" <<endl;
     cout<<"----------------------------------------------------------------------------------"<<endl;
+    cout<<" ##   ##  #######  ####     ####              ##  ##            ##   ##  #######    ##     ##   ##  #######  ##   ##" << endl;
+    cout<<" ##   ##   ##   #   ##       ##               ##  ##            ##   ##   ##   #   ####    ##   ##   ##   #  ###  ##" <<endl;
+    cout<<" ##   ##   ## #     ##       ##                ####             ##   ##   ## #    ##  ##    ## ##    ## #    #### ##" <<endl;
+    cout<<" #######   ####     ##       ##                 ##              #######   ####    ##  ##    ## ##    ####    ## ####" <<endl;
+    cout<<" ##   ##   ## #     ##   #   ##   #            ####             ##   ##   ## #    ######     ###     ## #    ##  ###" <<endl;
+    cout<<" ##   ##   ##   #   ##  ##   ##  ##           ##  ##            ##   ##   ##   #  ##  ##     ###     ##   #  ##   ##" <<endl;
+    cout<<" ##   ##  #######  #######  #######           ##  ##            ##   ##  #######  ##  ##      #     #######  ##   ##" <<endl;
+
+
 }
 
 
