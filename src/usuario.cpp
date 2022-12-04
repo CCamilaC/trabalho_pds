@@ -10,7 +10,6 @@ using namespace std;
 
        // veneno = false;
     }
-
     /*virtual bool Usuario::get_veneno(){
         return veneno;
     }
