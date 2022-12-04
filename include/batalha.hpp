@@ -1,20 +1,19 @@
-#ifndef batalha_H
-#define batalha_H
+#ifndef BATALHA_HPP_INCLUDED
+#define BATALHA_HPP_INCLUDED
 #include <iostream>
 #include <string>
-#include "../include/jogador.hpp" 
+
+#include "jogador.hpp"
+
+
 
 class Batalha{
-private:
-    int atq1 = 10;
-    int def1 = 3;
-    int vida1 = 1000;
-    int estamina1 = 6;
-//teste aqui 
+
 public:
-    
+
     void batalhar(Jogador user, Jogador inim);
     
 };
 
-#endif
+
+#endif // BATALHA_HPP_INCLUDED
