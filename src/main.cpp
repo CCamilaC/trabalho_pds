@@ -1,5 +1,7 @@
 #include <iostream>
-#include "./batalha.hpp/"
+#include "../include/batalha.hpp"
+#include "../include/inferno.hpp"
+#include "../include/invenario.hpp"
 #include <windows.h>
 
 using namespace std;

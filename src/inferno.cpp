@@ -11,16 +11,15 @@ using namespace std;
 Inferno::Inferno(string n, string p){ //construtor
     _choice.clear();
     _contador=0;
-    _nome;
-    _pecadoJog;
+    _nome=n;
+    _pecadoJog=p;
 }
 int Inferno::Escolha(){
-    int aux=0; //contera a escolha feita
+    int aux='0'; //contera a escolha feita
     do{ //escolha de uma das opcoes
         cin>>aux;
         if(aux!=1 && aux!=2){
-            cout<<("\nAnjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:")<<endl<<endl;
-            //cout<<"Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:";
+            cout<<"\nAnjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:"<<endl<<endl;
         }
         switch (aux)
         {
@@ -46,9 +45,9 @@ void Inferno::Inicializar_historia(){
     cout<<"Bem-vindo pobre alma mortal! Eu sou o anjo designado para cuidar de você por aqui. O sistema diz que você morreu hoje, e, devido a superlotação no purgatório, conseguimos uma vaga aqui no inferno. Só preciso que você confirme seu nome e o pecado que te trouxe aqui."<<endl<<endl;
     string no, pe;
     cout<<"DIGITE SEU NOME: "<<endl;
-    cin>> no;
+    getline(cin,no);
     cout<<"\nDIGITE SEU PECADO: "<<endl;
-    cin>> pe;
+    getline(cin,pe);
     cout<<"\nÉ, esse pecado é pior do que bater na mãe. Brincadeira, não se preocupe, sua estadia no inferno pode não ser permanente. Nosso novo programa chamado 'Hell X Heaven' acabou de entrar na fase de teste e você é nossa primeira cobaia. É bem simples, tudo que você deve fazer é percorrer os horripilantes sete níveis do inferno! Aqui está um localizador mostrando todas as provações que você deve enfrentar para terminar o desafio. Faça questão de parar em todos os lugares que ele apontar. Como você deve imaginar, não gostamos de trapaceiros. Vá meu caro pecador e prove sua dignidade!”"<<endl<<endl;
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
     Inferno(no, pe);
