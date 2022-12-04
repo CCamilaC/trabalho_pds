@@ -28,6 +28,7 @@ public:
     bool get_veneno();
 
     void set_veneno(bool x);
+
 /**
  * @brief Get the vida object
  *
