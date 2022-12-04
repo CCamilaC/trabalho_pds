@@ -1,44 +1,61 @@
 #include <iostream>
 #include "../include/inferno.hpp"
+//#include "../include/jogador.hpp"
 #include <vector>
 #include <string>
 
 using namespace std;
+
 //ESCOLHA 1 SEMPRE SERÁ A CERTA 
 
-Inferno::Inferno(){ //construtor
+Inferno::Inferno(string n, string p){ //construtor
     _choice.clear();
     _contador=0;
+    _nome;
+    _pecadoJog;
 }
 int Inferno::Escolha(){
     int aux=0; //contera a escolha feita
     do{ //escolha de uma das opcoes
         cin>>aux;
-        if(aux!=1 || aux!=2){
-            throw invalid_argument("Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:");
+        if(aux!=1 && aux!=2){
+            cout<<("Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:")<<endl<<endl;
             //cout<<"Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:";
         }
         switch (aux)
         {
-        case '1':
+        case 1:
             _contador++;
             _choice.push_back(aux);
             return aux;
             break;
-        case '2':
+        case 2:
             _choice.push_back(aux);
             return aux;
         default:
             return 0;
             break;
         } 
-    } while(aux!=1 || aux!=2);
+    } while(aux!=1 && aux!=2);
+}
+int Inferno::getContador(){
+    return _contador;
+}
 
+void Inferno::Inicializar_historia(){
+    //SE DER TEMPO REALOCAR AS VARIAVEIS NOME E PECADO PRA JOGADOR
+    cout<<"Bem-vindo pobre alma mortal! Eu sou o anjo designado para cuidar de você por aqui. O sistema diz que você morreu hoje, e, devido a superlotação no purgatório, conseguimos uma vaga aqui no inferno. Só preciso que você confirme seu nome e o pecado que te trouxe aqui."<<endl;
+    string no, pe;
+    cout<<"DIGITE SEU NOME: "<<endl;
+    cin>> no;
+    cout<<"DIGITE SEU PECADO: "<<endl;
+    cin>> pe;
+    cout<<"É, esse pecado é pior do que bater na mãe. Brincadeira, não se preocupe, sua estadia no inferno pode não ser permanente. Nosso novo programa chamado 'Hell X Heaven' acabou de entrar na fase de teste e você é nossa primeira cobaia. É bem simples, tudo que você deve fazer é percorrer os horripilantes sete níveis do inferno! Aqui está um localizador mostrando todas as provações que você deve enfrentar para terminar o desafio. Faça questão de parar em todos os lugares que ele apontar. Como você deve imaginar, não gostamos de trapaceiros. Vá meu caro pecador e prove sua dignidade!”"<<endl;
+    
+    Inferno(no, pe);
 }
 
 void Inferno::Preguica(){
-   //adicionar cout dialogo
-    Jogador filosofos=*new Jogador(5, 5, 5, 5);
     int decisao;
     cout<<"Antes mesmo de alcançar o seu objetivo você escuta vozes alteradas. Várias pessoas se reúnem em um círculo discutindo algo, mas o assunto parece variar dependendo de qual voz você presta atenção. No centro dessa baderna está um homem com uma longa barba branca discursando. Você se aproxima."<<endl;
     cout<<"Platão: Não há espaço para filósofos no mundo de hoje. Tudo que todos pensam é no lucro e na produção de bens. Taxado como preguiçoso, dá pra acreditar? Pensar é um trabalho tão nobre quanto agir! Isso é tudo propaganda capitalista idiota, culpa desses empreendedores, gente desse tipo é permitida aqui?. Você aí! Eu nunca te vi por essas bandas antes… sim sim, uma mente fresca. Nos diga o que você pensa, entre na nossa discussão!"<<endl; 
@@ -51,24 +68,25 @@ void Inferno::Preguica(){
     switch (decisao)
     {
     case '1':
-        cout<<"Platão: É assim que se fala! Eu amo quando concordam comigo. É como eu sempre digo “Quem comete uma injustiça é sempre mais infeliz que o injustiçado”, calma, não era essa a frase que eu queria. De todo jeito você caiu nas minhas graças, tome esse megafone de presente, ele tem o poder mágico de fazer as pessoas te escutarem."<<endl;
+        cout<<"Platão: É assim que se fala! Eu amo quando concordam comigo. É como eu sempre digo “Quem comete uma injustiça é sempre mais infeliz que o injustiçado”, calma, não era essa a frase que eu queria."<<endl;
+        cout<<"*** NOVO ITEM ADQUIRIDO! ***"<<endl;
+        cout<<"--- VOCÊ GANHA UM MEGAFONE DE PLATÃO. ELE TEM O PODER MÁGICO DE FAZER AS PESSOAS TE ESCUTAREM ---"<<endl;
         break;
     case '2':
         //OBSERVAÇÃO: TERA QUE COLOCAR O NOME DO PERSONAGEM AQUI
         //FEITO 
         cout<<"Eu deveria saber, alguém que diz "<<endl;
-        cout<<'"'<<_pecado<<'"'<<" para um anjo pensaria assim, devo dizer que não fico surpreso."<<endl;
+        cout<<'"'<<_pecadoJog<<'"'<<" para um anjo pensaria assim, devo dizer que não fico surpreso."<<endl;
         break;
     default:
         break;
     }
+    cout<<"-------------------------//----------------------------"<<endl<<endl;
     cout<<"Sua resposta traz consigo uma grande reverberação dos demais filósofos. De repente você sente algo atingindo sua orelha com força, um deles atirou um rolo de pergaminho em sua direção e você não pode deixar isso passar sem consequências"<<endl;
     //inico da batalha
-    batalha.batalhar(*_usuario, filosofos);
 }
 
 void Inferno::Gula(){
-    //adicionar cout dialogo
     cout<<"Antes mesmo de seu localizador apitar você vê ao longe uma grande mesa de banquete. Animado pela perspectiva de um lanchinho, você anda em direção a mulher sentada na cabeceira. Sua tela te avisa que é Maria Antonieta, a infame rainha francesa."<<endl;
     cout<<"Maria Antonieta: Eu disse uma frase boba uma vez e agora sou obrigada a jantar lama todo dia que nem uma plebeia. O que há de tão mau em incentivar o consumo de brioches? Eu entendo que acumular comida pode ser visto como ruim por alguns, mas vocês só pensam nisso quando alguém rico faz isso. Se um esfomeado qualquer decidir roubar um brioche para não morrer de fome ele deverá ser punido no inferno?"<<endl;
     cout<<_escolha<<endl;
@@ -82,6 +100,8 @@ void Inferno::Gula(){
     case '1':
         //cout dialogo bom
         cout<<"Maria Antonieta: Não venha com esse papo de socialista para cima de mim. Daqui a pouco nossa janta vai ser cachorros."<<endl;
+        cout<<"*** NOVO ITEM ADQUIRIDO! ***"<<endl;
+        cout<<"--- VOCÊ GANHA UM BRIOCHE DURO E VELHO. DA PARA REBATER UMA BOLA COM ESSA COISA ---"<<endl;
         break;
     case '2':
         //cout dialogo ruim
@@ -90,6 +110,7 @@ void Inferno::Gula(){
     default:
         break;
     }
+    cout<<"-------------------------//----------------------------"<<endl;
 }
 void Inferno::Soberba(){
     //adicionar cout dialogo
@@ -110,10 +131,13 @@ void Inferno::Soberba(){
     case '2':
         //cout dialogo ruim
         cout<<"Napoleão: É assim que eu gosto! Podíamos começar conquistando essa parte do inferno, eu te dou 5%, das riquezas que conquistarmos, não, talvez 2%. Enfim, vamos lá!"<<endl;
+        cout<<"*** NOVO ITEM ADQUIRIDO! ***"<<endl;
+        cout<<"---VOCÊ GANHA UMA ESPADA PARA TE ACOMPANHAR COM NAPOLEÃO"<<endl;
         break;
     default:
         break;
     }
+    cout<<"-------------------------//----------------------------"<<endl;
     //inico da batalha
     //batalha.batalhar();
 }
@@ -131,6 +155,8 @@ void Inferno::Luxuria(){
     case '1':
         //cout dialogo bom
         cout<<"Marilyn Monroe: muito obrigada! Ter uma pessoa que entenda a injustiça que sofri é muito importante para mim"<<endl;
+        cout<<"*** NOVO ITEM ADQUIRIDO! ***"<<endl;
+        cout<<"--- VOCÊ GANHA UM COLETE DE DIAMENTES. AGORA OU VOCÊ ESTÁ SUPER PROTEGIDO OU ESTÁ RICO ---"<<endl;
         break;
     case '2':
         //cout dialogo ruim
@@ -139,7 +165,7 @@ void Inferno::Luxuria(){
     default:
         break;
     }
-    
+    cout<<"-------------------------//----------------------------"<<endl;
 }
 void Inferno::Avareza(){
     cout<<"A falta de qualquer objeto na vasta planície escura traz ansiedade. Você se apoia no localizador para encontrar a sua próxima provação. Ao longe se encontra um homem estranho, com uma certa cara de rato. O aparelho diz que é Elon Musk, o famoso bilionário."<<endl;
@@ -162,10 +188,13 @@ void Inferno::Avareza(){
         break;
     case '2':
         cout<<"Elon Musk: Não tem problema em aprender a usar o sistema para ganhar. Não foi você que instaurou essa forma de vida injusta, por que você deveria desistir de tudo que conquistou?"<<endl;
-        break;
+        cout<<"*** NOVO ITEM ADQUIRIDO! ***"<<endl;
+        cout<<"--- VOCÊ GANHA UM TESAR PARA SE DEFENDER, CUIDADO VOCẼ PODE LEVAR UM CHOQUE"<<endl;
+        break; 
     default:
         break;
     }
+    cout<<"-------------------------//----------------------------"<<endl;
 }
 void Inferno::Inveja(){
     cout<<"Ao longe há uma luz fraca, o localizador apita naquela direção. Passa pela sua cabeça a hipótese de ser a saída do seu inferno pessoal, mas estranhamente quanto mais perto da luz mais quente o ambiente fica. Após seus olhos se acostumarem com a claridade você vê um homem perto de uma fogueira."<<endl;
@@ -188,13 +217,16 @@ void Inferno::Inveja(){
         break;
     case '2':
         cout<<"Thomas Edison: Esse sabe do que fala! O que mais importa é a glória, quer dizer, a humanidade. Agora me diga, as pessoas ainda falam de mim lá em cima? Claro que falam o grande Thomas Edison, como podem me esquecer..."<<endl;
+        cout<<"*** ITEM PERDIDO! ***"<<endl;
+        cout<<"--- QUEM MANDOU APOIAR UM INVEJOSO. ---";
         break;
     default:
         break;
     }
+    cout<<"-------------------------//----------------------------"<<endl;
     //inico da batalha
     cout<<"Quanto mais você se afasta do “inventor” mais arrepiada sua pele fica. De algum modo você sente a atmosfera ao seu redor mudar, como se alguém estivesse te observando. A presença da sua mochila passa pela sua cabeça e você decide abraçá-la em um gesto protetor, como se soubesse que algo estaria atrás dela. Você tenta se acalmar dizendo que é apenas um truque do nível da inveja, mas poucos passos depois algo puxa suas costas com força"<<endl;
-    //batalha.batalhar();
+   
 }
 void Inferno::Ira(){
     cout<<"Você está no chão, juntando o resto das suas energias após uma batalha tão difícil quando você ouve, ao fundo, um choro. A princípio você continua deitada(o) à espera de que seja somente mais uma alma vagando, mas você percebe que os choros estão se multiplicando mais e mais e quando percebe só consegue ouvir um barulho ensurdecedor de um grito, até que você estreita os olhos e vê o que julga ser o Zumbi dos Palmares gritando..."<<endl;
@@ -212,6 +244,8 @@ void Inferno::Ira(){
     case '1':
         //dialogo bom
         cout<<"Zumbi dos Palmares: Não gosto do que fiz, mas isso só foi reflexo do que fizeram comigo."<<endl;
+        cout<<"*** NOVO ITEM ADQUIRIDO! ***"<<endl;
+        cout<<"--- VOCÊ GANHA UM CHICOTE. USE SABIAMENTE. ---"<<endl;
         break;
     case '2':
         cout<<"Zumbi dos Palmares: Certo nas leis de deus eu não sei, mas definitivamente tinha um lado errado e eu não estava nele."<<endl;
@@ -219,6 +253,7 @@ void Inferno::Ira(){
     default:
         break;
     }
+    cout<<"-------------------------//----------------------------"<<endl;
 }
 
 void Inferno::Batalha_final(){
@@ -232,4 +267,5 @@ void Inferno::Batalha_final(){
     }
     cout<<"Aqui vem o vencedor dos vencedores, o rei dos reis, o anjo que comanda, o grande diabo! (ele percebe que está visível) Eu disse para só abaixar a cortina depois da minha fala! Bando de incompetentes. Agora minha incrível entrada dramática foi arruinada, todo aquele ensaio na frente do espelho foi inútil. Enfim, o que importa é que eu vou mostrar como eu trato pessoas como você e acabar com essa coisa do céu de querer controlar até o inferno"<<endl;
     //batalha.batalhar();
+    cout<<"-------------------------//----------------------------"<<endl;
 }
