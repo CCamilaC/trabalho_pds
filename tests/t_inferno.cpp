@@ -4,11 +4,19 @@
 
 TEST_CASE("Escolha"){
     SUBCASE("Escolha válida"){
-        CHECK_THROW(Escolha(1)==1);
-        CHECK_THROW(Escolha(2)==2);
+        Inferno inf("nome","pecado");
+        
+        CHECK_NOTHROW(inf.Escolha());
+
+        //CHECK_THROW_AS(1, inf.Escolha());
+        CHECK(inf.Escolha(2) == 2);
     }
     SUBCASE("Escolha inválida"){
-        CHECK_THROW(Escolha(5));
-        CHECK_THROW(Escolha('s'));
+        Inferno inf("nome","pecado");
+        CHECK_THROW(5,inf.Escolha());
+        CHECK_THROW(inf.Escolha('s'));
     }
 }
+
+
+

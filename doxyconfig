@@ -9,7 +9,7 @@
 #       TAG += value [value, ...]
 # Values that contain spaces should be placed between quotes (" ")
 
-PROJECT_NAME           = "Intruso"
+PROJECT_NAME           = "trabalho_pds"
 PROJECT_NUMBER         = "Version 1.0"
 RECURSIVE              = YES
 INPUT                  = "."
