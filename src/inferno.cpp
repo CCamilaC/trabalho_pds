@@ -47,11 +47,13 @@ void Inferno::Inicializar_historia(){
     string no, pe;
     cout<<"DIGITE SEU NOME: "<<endl;
     getline(cin,no);
+    _nome=no;
     cout<<"\nDIGITE SEU PECADO: "<<endl;
     getline(cin,pe);
+    _pecadoJog=pe;
     cout<<"\nÉ, esse pecado é pior do que bater na mãe. Brincadeira, não se preocupe, sua estadia no inferno pode não ser permanente. Nosso novo programa chamado 'Hell X Heaven' acabou de entrar na fase de teste e você é nossa primeira cobaia. É bem simples, tudo que você deve fazer é percorrer os horripilantes sete níveis do inferno! Aqui está um localizador mostrando todas as provações que você deve enfrentar para terminar o desafio. Faça questão de parar em todos os lugares que ele apontar. Como você deve imaginar, não gostamos de trapaceiros. Vá meu caro pecador e prove sua dignidade!”"<<endl<<endl;
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
-    Inferno(no, pe);
+    getch();
 }
 
 void Inferno::Preguica(){
@@ -82,6 +84,7 @@ void Inferno::Preguica(){
     }
     cout<<"Sua resposta traz consigo uma grande reverberação dos demais filósofos. De repente você sente algo atingindo sua orelha com força, um deles atirou um rolo de pergaminho em sua direção e você não pode deixar isso passar sem consequências"<<endl;
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
+    getch();
     //inico da batalha
 }
 
@@ -110,6 +113,7 @@ void Inferno::Gula(){
         break;
     }
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
+    getch();
 }
 void Inferno::Soberba(){
     //adicionar cout dialogo
@@ -137,6 +141,7 @@ void Inferno::Soberba(){
         break;
     }
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
+    getch();
     //inico da batalha
     //batalha.batalhar();
 }
@@ -165,6 +170,7 @@ void Inferno::Luxuria(){
         break;
     }
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
+    getch();
 }
 void Inferno::Avareza(){
     cout<<"A falta de qualquer objeto na vasta planície escura traz ansiedade. Você se apoia no localizador para encontrar a sua próxima provação. Ao longe se encontra um homem estranho, com uma certa cara de rato. O aparelho diz que é Elon Musk, o famoso bilionário."<<endl;
@@ -193,6 +199,7 @@ void Inferno::Avareza(){
         break;
     }
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
+    getch();
 }
 void Inferno::Inveja(){
     cout<<"Ao longe há uma luz fraca, o localizador apita naquela direção. Passa pela sua cabeça a hipótese de ser a saída do seu inferno pessoal, mas estranhamente quanto mais perto da luz mais quente o ambiente fica. Após seus olhos se acostumarem com a claridade você vê um homem perto de uma fogueira."<<endl<<endl;
@@ -222,6 +229,7 @@ void Inferno::Inveja(){
         break;
     }
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
+    getch();
     //inico da batalha
     cout<<"\nQuanto mais você se afasta do “inventor” mais arrepiada sua pele fica. De algum modo você sente a atmosfera ao seu redor mudar, como se alguém estivesse te observando. A presença da sua mochila passa pela sua cabeça e você decide abraçá-la em um gesto protetor, como se soubesse que algo estaria atrás dela. Você tenta se acalmar dizendo que é apenas um truque do nível da inveja, mas poucos passos depois algo puxa suas costas com força"<<endl<<endl;
    
@@ -252,6 +260,7 @@ void Inferno::Ira(){
         break;
     }
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
+    getch();
 }
 
 void Inferno::Batalha_final(){
@@ -266,4 +275,5 @@ void Inferno::Batalha_final(){
     cout<<"Aqui vem o vencedor dos vencedores, o rei dos reis, o anjo que comanda, o grande diabo! (ele percebe que está visível) Eu disse para só abaixar a cortina depois da minha fala! Bando de incompetentes. Agora minha incrível entrada dramática foi arruinada, todo aquele ensaio na frente do espelho foi inútil. Enfim, o que importa é que eu vou mostrar como eu trato pessoas como você e acabar com essa coisa do céu de querer controlar até o inferno"<<endl<<endl;
     //batalha.batalhar();
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
+    getch();
 }
