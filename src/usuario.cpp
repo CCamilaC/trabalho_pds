@@ -8,16 +8,16 @@ using namespace std;
        set_atq(z);
        set_def(w);
 
-        veneno = false;
+       // veneno = false;
     }
 
-    virtual bool Usuario::get_veneno(){
+    /*virtual bool Usuario::get_veneno(){
         return veneno;
     }
 
     virtual void Usuario::set_veneno(bool x){
         veneno = x;
-    }
+    }*/
 
     virtual int Usuario::get_vida(){
         return vida;
@@ -50,7 +50,7 @@ using namespace std;
         cout<< "estamina: " << get_estamina() << "\n";
         cout<<"ataque: "<< get_atq()<< "\n";
         cout<<"defesa: "<< get_def() <<"\n";
-        cout << "veneno: " << get_veneno() << endl;
+        //cout << "veneno: " << get_veneno() << endl;
     }
 
     virtual void Usuario::printv(){
@@ -58,7 +58,7 @@ using namespace std;
     }
     virtual void Usuario::printiv(){
        cout<< "vida inimigo: "<< get_vida() << "\n";
-       cout << "veneno: " << get_veneno() << endl;
+       //cout << "veneno: " << get_veneno() << endl;
     }
 
     virtual void Usuario::adiciona_item(item x){
