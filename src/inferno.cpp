@@ -1,9 +1,10 @@
 #include <iostream>
-#include "../include/inferno.hpp"
-//#include "../include/jogador.hpp"
+#include <windows.h>
 #include <vector>
 #include <string>
+#include <conio.h>
 
+#include "../include/inferno.hpp"
 using namespace std;
 
 //ESCOLHA 1 SEMPRE SERÁ A CERTA 
