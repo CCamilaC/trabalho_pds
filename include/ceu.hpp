@@ -21,10 +21,9 @@ class Ceu{
   private:
     string _nome;
     int _pessoa_salva;
-    vector<int>_armazena;
+
   public:
     Ceu(int pessoa_salva, string nome);
-    void Destino(int escolha);
     void Ceu_bom();
     void Ceu_ruim();
     void Finalizar_historia();
