@@ -77,10 +77,6 @@ void Ceu::Ceu_bom(){
            
 
     }
-    cout<<"-----------------------------------------//-----------------------------------------"<<endl;
-    cout<<"Anjo: As escolhas foram feitas, espero que esteja feliz com elas!"<<endl; 
-    cout<<"      Obrigado por ser parte desse experimento e até uma próxima vida" <<endl;
-    cout<<"----------------------------------------------------------------------------------"<<endl;
 }
 
 void Ceu::Ceu_ruim(){
@@ -97,5 +93,13 @@ void Ceu::Ceu_ruim(){
     cout << "inferno de verdade. Até nunca mais “herói”." << endl;
 
 }
+
+void Ceu::Finalizar_historia(){
+    cout<<"-----------------------------------------//-----------------------------------------"<<endl;
+    cout<<"Anjo: As escolhas foram feitas, espero que esteja feliz com elas!"<<endl; 
+    cout<<"      Obrigado por ser parte desse experimento e até uma próxima vida" <<endl;
+    cout<<"----------------------------------------------------------------------------------"<<endl;
+}
+
 
 
