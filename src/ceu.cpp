@@ -96,7 +96,6 @@ void Ceu::Ceu_ruim(){
     cout << "inferno, e não para esse inferno legal cheio de provações e distrações, você vai para o"<<endl;
     cout << "inferno de verdade. Até nunca mais “herói”." << endl;
 
-
 }
 
 
