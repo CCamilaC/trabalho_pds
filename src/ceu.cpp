@@ -28,7 +28,13 @@ void Ceu::Ceu_bom(){
         cout << "o céu, mas além disso, você tem direito de selecionar uma das pessoas que você"<< endl;
         cout << "trombou para ir com você!"<< endl; 
         cout <<"------------------------------------------------------------------------------------------"<<endl;
-        
+        cout << "[A] = Platão"<< endl;
+        cout << "[B] = Maria Antonieta"<< endl;
+        cout << "[C] = Napoleão"<< endl;
+        cout << "[D] = Marilyn Monroe"<< endl;
+        cout << "[E] = Elon Musk"<< endl;
+        cout << "[F] = Thomas Edison"<< endl;
+        cout << "[G] = Zumbi dos Palmares"<< endl;
         
         cin>>_pessoa_salva;
 
