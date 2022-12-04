@@ -1,7 +1,8 @@
 #include <iostream>
-#include "inferno.hpp"
+#include "../include/inferno.hpp"
 #include <vector>
 #include <string>
+
 using namespace std;
 //ESCOLHA 1 SEMPRE SERÁ A CERTA 
 
@@ -28,13 +29,16 @@ int Inferno::Escolha(){
             _choice.push_back(aux);
             return aux;
         default:
+            return 0;
             break;
         } 
     } while(aux!=1 || aux!=2);
+
 }
 
 void Inferno::Preguica(){
    //adicionar cout dialogo
+    Jogador filosofos=*new Jogador(5, 5, 5, 5);
     int decisao;
     cout<<"Antes mesmo de alcançar o seu objetivo você escuta vozes alteradas. Várias pessoas se reúnem em um círculo discutindo algo, mas o assunto parece variar dependendo de qual voz você presta atenção. No centro dessa baderna está um homem com uma longa barba branca discursando. Você se aproxima."<<endl;
     cout<<"Platão: Não há espaço para filósofos no mundo de hoje. Tudo que todos pensam é no lucro e na produção de bens. Taxado como preguiçoso, dá pra acreditar? Pensar é um trabalho tão nobre quanto agir! Isso é tudo propaganda capitalista idiota, culpa desses empreendedores, gente desse tipo é permitida aqui?. Você aí! Eu nunca te vi por essas bandas antes… sim sim, uma mente fresca. Nos diga o que você pensa, entre na nossa discussão!"<<endl; 
@@ -60,7 +64,7 @@ void Inferno::Preguica(){
     }
     cout<<"Sua resposta traz consigo uma grande reverberação dos demais filósofos. De repente você sente algo atingindo sua orelha com força, um deles atirou um rolo de pergaminho em sua direção e você não pode deixar isso passar sem consequências"<<endl;
     //inico da batalha
-    batalha.batalhar();
+    batalha.batalhar(*_usuario, filosofos);
 }
 
 void Inferno::Gula(){
@@ -111,7 +115,7 @@ void Inferno::Soberba(){
         break;
     }
     //inico da batalha
-    batalha.batalhar();
+    //batalha.batalhar();
 }
 void Inferno::Luxuria(){
     //adicionar cout dialogo
@@ -190,7 +194,7 @@ void Inferno::Inveja(){
     }
     //inico da batalha
     cout<<"Quanto mais você se afasta do “inventor” mais arrepiada sua pele fica. De algum modo você sente a atmosfera ao seu redor mudar, como se alguém estivesse te observando. A presença da sua mochila passa pela sua cabeça e você decide abraçá-la em um gesto protetor, como se soubesse que algo estaria atrás dela. Você tenta se acalmar dizendo que é apenas um truque do nível da inveja, mas poucos passos depois algo puxa suas costas com força"<<endl;
-    batalha.batalhar();
+    //batalha.batalhar();
 }
 void Inferno::Ira(){
     cout<<"Você está no chão, juntando o resto das suas energias após uma batalha tão difícil quando você ouve, ao fundo, um choro. A princípio você continua deitada(o) à espera de que seja somente mais uma alma vagando, mas você percebe que os choros estão se multiplicando mais e mais e quando percebe só consegue ouvir um barulho ensurdecedor de um grito, até que você estreita os olhos e vê o que julga ser o Zumbi dos Palmares gritando..."<<endl;
@@ -227,5 +231,5 @@ void Inferno::Batalha_final(){
         cout<<"Enfim, é hora de terminar a sua jornada, só resta um último desafio à sua frente: você deve enfrentar o senhor dos pecados, o encardido, o sete-pele, o sinteco gelado, o DEMÔNIO! Não se preocupe muito, é só sair no soco com ele, vou garantir que não sejam usados muitos golpes sujos, e eu digo isso pra você, seu encrenqueiro"<<endl;
     }
     cout<<"Aqui vem o vencedor dos vencedores, o rei dos reis, o anjo que comanda, o grande diabo! (ele percebe que está visível) Eu disse para só abaixar a cortina depois da minha fala! Bando de incompetentes. Agora minha incrível entrada dramática foi arruinada, todo aquele ensaio na frente do espelho foi inútil. Enfim, o que importa é que eu vou mostrar como eu trato pessoas como você e acabar com essa coisa do céu de querer controlar até o inferno"<<endl;
-    batalha.batalhar();
+    //batalha.batalhar();
 }
