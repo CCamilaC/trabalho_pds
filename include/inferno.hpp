@@ -53,7 +53,7 @@ class Inferno
      * @brief printar as opções de escolha
      * 
      */
-    std::string _escolha="ESCOLHA 1 OU 2:\n------------------------\\------------------------";
+    std::string _escolha="ESCOLHA 1 OU 2:\n";
 
     public:
     /** 
