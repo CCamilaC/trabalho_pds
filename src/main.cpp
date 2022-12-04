@@ -1,11 +1,13 @@
 #include <iostream>
-#include "batalha.hpp"
+#include "./batalha.hpp/"
+#include <windows.h>
 
 using namespace std;
 
 int main()
 {
-   item i1("espada de fogo", 1, 3);
+    SetConsoleOutputCP(CP_UTF8);
+    item i1("espada de fogo", 1, 3);
     item i2("escudo das almas", 2, 2);
     //item i3("elixir da vida", 3, 0);
     item i4("lagrimas da meia noite", 4, 5);
