@@ -4,9 +4,14 @@
 #include <iostream>
 
 
-class Ceu:
-{
-    
+class Ceu{
+  private:
+    int _pessoa_salva;
+  public:
+    int getDestino(int escolha);
+    void Ceu_bom();
+    void Ceu_ruim();
+    void Finalizar_historia();
 
 
 };
