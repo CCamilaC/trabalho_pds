@@ -1,6 +1,5 @@
 #ifndef BATALHA_HPP_INCLUDED
 #define BATALHA_HPP_INCLUDED
-#include <iostream>
 #include <string>
 
 #include "jogador.hpp"
@@ -10,13 +9,14 @@
 class Batalha{
 
 public:
-    void atacar(Jogador *user, Jogador *inim);
-    void defender(Jogador *user, Jogador *inim);
-    void inventario(Jogador *user);
-    void envenenado(Jogador *user, Jogador *inim );
+    bool atacar(Jogador *user, Jogador *inim, bool atq_def);
+    bool defender(Jogador *user, Jogador *inim);
+    bool inventario(Jogador *user, Jogador *inim);
 
-    void batalhar(Jogador *user, Jogador *inim);
+
+    int batalhar(Jogador *user, Jogador *inim);
+
 };
 
 
-#endif // BATALHA_HPP_INCLUDED
+#endif  //BATALHA_HPP_INCLUDED

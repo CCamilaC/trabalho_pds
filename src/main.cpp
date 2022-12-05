@@ -2,14 +2,21 @@
 #include "../include/batalha.hpp"
 #include "../include/inferno.hpp"
 #include "../include/inventario.hpp"
-#include <windows.h>
+//#include <windows.h>
 
 using namespace std;
 
 int main()
 {
-    SetConsoleOutputCP(CP_UTF8);
-    /////////////////////// isso foi para testagem? não irei mexer////////////////////////////////
+    //SetConsoleOutputCP(CP_UTF8);
+    Inferno inf("",""); 
+    inf.Preguica();
+    inf.Gula();
+    inf.Soberba();
+    inf.Luxuria();
+    inf.Avareza();
+    inf.Inveja();
+    inf.Ira();
     item i1("espada de fogo", 1, 3);
     item i2("escudo das almas", 2, 2);
     //item i3("elixir da vida", 3, 0);

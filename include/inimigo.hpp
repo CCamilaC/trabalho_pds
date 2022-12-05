@@ -44,6 +44,5 @@ class Inimigo: protected Usuario{
  * @brief imprime a quantidade de vida do inimigo e se está envenenado ou não
  * 
  */
-
     void Inimigo::printiv() override;
 };

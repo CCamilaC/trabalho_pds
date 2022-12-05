@@ -1,11 +1,9 @@
+#include "../include/inferno.hpp"
 #include <iostream>
-#include <windows.h>
+//#include <windows.h>
 #include <vector>
 #include <string>
-#include <conio.h>
-#include <stdlib.h>
 
-#include "../include/inferno.hpp"
 using namespace std;
 
 //ESCOLHA 1 SEMPRE SERÁ A CERTA 
@@ -26,7 +24,7 @@ string Inferno::getPecado(){
 char Inferno::Escolha(char opcaoEscolhida){
     //contera a escolha feita
     _opcaoEscolhida='0';
-    try{
+    
         do{ //escolha de uma das opcoes
             cin>>_opcaoEscolhida;
             if(_opcaoEscolhida!='1' && _opcaoEscolhida!='2'){
@@ -41,21 +39,22 @@ char Inferno::Escolha(char opcaoEscolhida){
                 return _opcaoEscolhida;
                 break;
             case '2':
-                _choice.push_back((int)_oSpcaoEscolhida);
+                _choice.push_back((int)_opcaoEscolhida);
                 return _opcaoEscolhida;
             default:
                 break;
             }
         } while(_opcaoEscolhida!='1' && _opcaoEscolhida!='2');
-    }
-    catch(){ 
+    
+    /*catch(){ 
         /*amg isso não seria na main? o catch no caso?
     eu n sei direito. sei q o try é aqui e o throw é no arquivo de teste
     vc acha q o catch é na main? sim, acho que o catch e  try ficam juntos na main
     quando chama a função, o neitam falou que era assim, masv tb não tenho certeza nao kkkkkk
     vou pesquisar mais um pouco ent camila: eu tbb vou!!
-    */
     }
+    */
+    
     return '0';
 }
 int Inferno::getContador(){
@@ -72,11 +71,12 @@ void Inferno::Inicializar_historia(){
     cout<<"\nDIGITE SEU PECADO: "<<endl;
     getline(cin,pe);
     cout<<"\nAnjo: É, esse pecado é pior do que bater na mãe. Brincadeira, não se preocupe, sua estadia no inferno pode não ser permanente. Nosso novo programa chamado 'Hell X Heaven' acabou de entrar na fase de teste e você é nossa primeira cobaia. É bem simples, tudo que você deve fazer é percorrer os horripilantes sete níveis do inferno! Aqui está um localizador mostrando todas as provações que você deve enfrentar para terminar o desafio. Faça questão de parar em todos os lugares que ele apontar. Como você deve imaginar, não gostamos de trapaceiros. Vá meu caro pecador e prove sua dignidade!”"<<endl<<endl;
-    getch();
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
     _nome=no;
     _pecadoJog=pe;
-    getch();
+    //getch();
+    cin.get();
+    cin.get();
     system("CLS");
 }
 
@@ -108,8 +108,9 @@ void Inferno::Preguica(){
     }
     cout<<"Sua resposta traz consigo uma grande reverberação dos demais filósofos. De repente você sente algo atingindo sua orelha com força, um deles atirou um rolo de pergaminho em sua direção e você não pode deixar isso passar sem consequências"<<endl;
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
-    getch();
-    system("CLS");
+    //getch();
+    cin.get();
+    cin.get();
     //clrscr();
     //inico da batalha
 }
@@ -139,13 +140,15 @@ void Inferno::Gula(){
         break;
     }
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
-    getch();
+    //getch();
+    cin.get();
+    cin.get();
     system("CLS");
 }
 void Inferno::Soberba(){
     //adicionar cout dialogo
     cout<<"Andando pelas terras devastadas do inferno, você vê um vulto branco se aproximando de você em alta velocidade. Quando o esbelto cavalo branco para a sua frente um homem baixíssimo desce de sua lombar. Você nem precisa olhar seu localizador para saber que é Napoleão, o soberbo."<<endl;
-    cout<<"Napoleão: Mais um dia no inferno, quem diria. Eu só estava tentando fazer o melhor pela França e pelo mundo! Deus não entende nada de paz e harmonia, elas só vêm pela guerra. Um mundo unificado é um mundo melhor! Todos seriam felizes sob o meu comando. Imagine uma Europa unida, não, esqueça a Europa, um mundo unido! Planeta Napoleônico, isso sim é um bom nome. Você daria um bom súdito, talvez eu até te desse um papel mais importante no meu reino, o que acha?"<<endl;
+    cout<<"Napoleão: Mais um dia no inferno, quem diria. Eu só estava tentando fazer o melhor pela França e pelo mundo! Deus não entende nada de paz e harmonia, elas só vêm pela guerra. Um mundo unificado é um mundo melhor! Todos seriam felizes sob o meu comando. Imagine uma Europa unida, não, esqueça a Europa, um mundo unido! Planeta Napoleônico, isso sim é um bom nome. Você daria um bom súdito, talvez eu até te desse um papel mais importante no meu reino, o que acha?"<<endl<<endl;
     cout<<_escolha<<endl<<endl;
     cout<<"1- Se a unidade vem da dor e da conquista então ela não está unificando nada. "<<endl;
     cout<<"2- Sabe de uma coisa? A humanidade seria melhor com todos do mesmo lado. Eu aceitaria sua proposta."<<endl<<endl;
@@ -168,7 +171,9 @@ void Inferno::Soberba(){
         break;
     }
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
-    getch();
+    //getch();
+    cin.get();
+    cin.get();
     system("CLS");
     //inico da batalha
     //batalha.batalhar();
@@ -198,7 +203,9 @@ void Inferno::Luxuria(){
         break;
     }
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
-    getch();
+    //getch();
+    cin.get();
+    cin.get();
     system("CLS");
 }
 void Inferno::Avareza(){
@@ -228,7 +235,9 @@ void Inferno::Avareza(){
         break;
     }
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
-    getch();
+    //getch();
+    cin.get();
+    cin.get();
     system("CLS");
 }
 void Inferno::Inveja(){
@@ -259,7 +268,9 @@ void Inferno::Inveja(){
         break;
     }
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
-    getch();
+    //getch();
+    cin.get();
+    cin.get();
     system("CLS");
     //inico da batalha
     cout<<"\nQuanto mais você se afasta do “inventor” mais arrepiada sua pele fica. De algum modo você sente a atmosfera ao seu redor mudar, como se alguém estivesse te observando. A presença da sua mochila passa pela sua cabeça e você decide abraçá-la em um gesto protetor, como se soubesse que algo estaria atrás dela. Você tenta se acalmar dizendo que é apenas um truque do nível da inveja, mas poucos passos depois algo puxa suas costas com força"<<endl<<endl;
@@ -291,7 +302,9 @@ void Inferno::Ira(){
         break;
     }
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
-    getch();
+    //getch();
+    cin.get();
+    cin.get();
     system("CLS");
 }
 
@@ -307,19 +320,8 @@ void Inferno::Batalha_final(){
     cout<<"Aqui vem o vencedor dos vencedores, o rei dos reis, o anjo que comanda, o grande diabo! (ele percebe que está visível) Eu disse para só abaixar a cortina depois da minha fala! Bando de incompetentes. Agora minha incrível entrada dramática foi arruinada, todo aquele ensaio na frente do espelho foi inútil. Enfim, o que importa é que eu vou mostrar como eu trato pessoas como você e acabar com essa coisa do céu de querer controlar até o inferno"<<endl<<endl;
     //batalha.batalhar();
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
-    getch();
+    //getch();
+    cin.get();
+    cin.get();
     system("CLS");
-}
-
-int main(){
-    SetConsoleOutputCP(CP_UTF8);
-    Inferno inf;
-    inf.Inicializar_historia();
-    inf.Preguica();
-    inf.Gula();
-    inf.Soberba();
-    inf.Luxuria();
-    inf.Inveja();
-    inf.Ira();
-    return 0;
 }
