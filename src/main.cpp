@@ -2,6 +2,7 @@
 #include "../include/batalha.hpp"
 #include "../include/inferno.hpp"
 #include "../include/inventario.hpp"
+#include "../include/jogador.hpp"//tentando consertar os erros
 //#include <windows.h>
 
 using namespace std;
@@ -41,7 +42,8 @@ int main()
     Batalha luta;
     luta.batalhar(user, inim);
 
-    //batalha.batalhar(*_usuario, filosofos);
+    ////////////////////////////////////////////////////////////////////////////////////
+    
     return 0;
 }
 
