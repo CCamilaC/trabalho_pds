@@ -27,6 +27,11 @@ class Inferno
 {
     private:
     /**
+     * @brief uma variável para o usuário colocar qual opção ele escolheu
+     * 
+     */
+    char _opcaoEscolhida;
+    /**
      * @brief uma variável para armazenar o pecado do jogador
      * 
      */

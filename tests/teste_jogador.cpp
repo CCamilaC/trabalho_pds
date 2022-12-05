@@ -1,10 +1,10 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
-#include "jogador.hpp"
+#include "../include/jogador.hpp"
 
-using shapes::Jogador;
+//using shapes::Jogador;
 
-Jogador gamer1 ()
+Jogador gamer1 ();
 Jogador gamer2 ();
 Jogador gamer3 ();
 
