@@ -12,11 +12,9 @@
  */
 #ifndef inferno_h
 #define inferno_h
-#include "../include/jogador.hpp"
 #include <iostream>
 #include <vector>
 #include <string>
-#include "../include/batalha.hpp"
 /**
  *  
  * @brief printa na tela toda a história do inferno, implementa batalhas e faz as escolhas do jogo

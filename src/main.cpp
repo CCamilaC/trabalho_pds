@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
-    Inferno inf();
+    Inferno inf(); 
     inf.Preguica();
     inf.Gula();
     inf.Soberba();
