@@ -10,37 +10,37 @@ using namespace std;
 
 
     }
-    virtual int Usuario::get_max_estamina(){
+    int Usuario::get_max_estamina(){
         return _max_estamina;
     }
 
-    virtual int Usuario::get_vida(){
+    int Usuario::get_vida(){
         return _vida;
     }
-    virtual void Usuario::set_vida(int vida){
+    void Usuario::set_vida(int vida){
         _vida = vida;
     }
-    virtual int Usuario::get_atq(){
+    int Usuario::get_atq(){
 
         return _atq;
     }
-    virtual void Usuario::set_atq(int atq){
+    void Usuario::set_atq(int atq){
 
         _atq = atq;
     }
-    virtual int Usuario::get_def(){
+    int Usuario::get_def(){
         return _def;
     }
-    virtual void Usuario::set_def(int def){
+    void Usuario::set_def(int def){
         _def = def;
     }
-    virtual int Usuario::get_estamina(){
+    int Usuario::get_estamina(){
         return _estamina;
     }
-    virtual void Usuario::set_estamina(int estamina){
+    void Usuario::set_estamina(int estamina){
         _estamina = estamina;
     }
-    virtual void Usuario::print(){
+    void Usuario::print(){
         cout<<"vida: "<< get_vida() << "\n";
         cout<< "estamina: " << get_estamina() << "\n";
         cout<<"ataque: "<< get_atq()<< "\n";
@@ -48,7 +48,7 @@ using namespace std;
 
     }
 
-    virtual void Usuario::printv(){
+    void Usuario::printv(){
        cout << "Vida ";
     }
 

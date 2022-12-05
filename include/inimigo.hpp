@@ -36,6 +36,12 @@ class Inimigo: protected Usuario{
  */
     bool Inimigo::get_veneno();
 /**
+ * @brief define a condiçao de envenenado
+ * 
+ * @param ven
+*/
+    void Inimigo::set_veneno(bool ven);
+/**
  * @brief imprime vida, estamina, ataque, defesa e se o inimigo está envenenado ou não
  * 
  */

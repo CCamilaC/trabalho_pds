@@ -1,24 +1,27 @@
-#ifndef USUARIO_HPP_INCLUDED
-#define USUARIO_HPP_INCLUDED
+#ifndef JOGADOR_HPP_INCLUDED
+#define JOGADOR_HPP_INCLUDED
 #include<iostream>
 #include <cstdlib>
 #include <vector>
-#include <string>
-#include "inventario.hpp
+#include "inventario.hpp"
 #include "usuario.hpp"
+#include "inimigo.hpp"
 
 using namespace std;
 
 class Jogador:protected Usuario{
 private:
-    vector<item> inventario;
+    vector<item> _inventario;
 
 public:
-    Jogador(int vida, int estamina, int ataque, int defesa): Jogador(vida, estamina, ataque, defesa);
+    Jogador(int vida, int estamina, int ataque, int defesa): Usuario(vida, estamina, ataque, defesa){};
 
     void Jogador::adiciona_item(item x);
 
-    int Jogador::usa_item(int x, Jogador *p);
+    void Jogador::usa_item(int x, Jogador *p, Inimigo *i), ;
 
     void Jogador::mostra_item();
+
+    void Jogador::remove_item();
 };
+#endif

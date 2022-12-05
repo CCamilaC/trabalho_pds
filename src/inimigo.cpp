@@ -13,6 +13,9 @@ public:
     bool Inimigo::get_veneno(){
         return _envenenado;
     }
+    void Inimigo::set_veneno(bool ven){
+        _envenenado = ven;
+    }
     void Inimigo::set_veneno(bool envenenado){
         _envenenado = envenenado;
     }
