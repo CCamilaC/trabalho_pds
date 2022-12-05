@@ -88,7 +88,7 @@ class Inferno
      * @return int 
      */
     
-    int Escolha();
+    char Escolha(char opcao);
     /**
      * @brief faz o cout de toda a parte da história relacionada ao pecado da preguiça
      * @details essa função ira printar a parte da história, fazer a opção de escolha que o personagem

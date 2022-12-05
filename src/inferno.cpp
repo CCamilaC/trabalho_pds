@@ -13,9 +13,10 @@ using namespace std;
 Inferno::Inferno(){ //construtor
     _choice.clear();
     _contador=0;
+    _opcaoEscolhida='0';
 }
-int Inferno::Escolha(){
-    char opcaoEscolha='0'; //contera a escolha feita
+char Inferno::Escolha(char opcaoEscolhida){
+    //contera a escolha feita
     do{ //escolha de uma das opcoes
         cin>>_opcaoEscolhida;
         if(_opcaoEscolhida!='1' && _opcaoEscolhida!='2'){
@@ -69,7 +70,7 @@ void Inferno::Preguica(){
     cout<<"1- O capitalismo é o mal da sociedade, um trabalho como o seu deveria ser o mais prestigiado de todos."<<endl;
     cout<<"2- Todos devem fazer sua parte, pare de ser preguiçoso. Ninguém vive de ideais ou enche a barriga com discursos."<<endl;
 
-    decisao=Escolha();
+    decisao=Escolha(0);
 
     switch (decisao)
     {
@@ -101,7 +102,7 @@ void Inferno::Gula(){
     cout<<"1- Todos devem ter suas necessidades básicas atendidas, mesmo que às vezes isso aconteça por meios duvidosos."<<endl;
     cout<<"2- O pecado está na ação, não importa a intenção por trás dela. É a única forma realmente justa de lidar com a imoralidade."<<endl;
     int decisao;
-    decisao=Escolha();
+    decisao=Escolha(0);
 
     switch (decisao)
     {
@@ -130,7 +131,7 @@ void Inferno::Soberba(){
     cout<<"1- Se a unidade vem da dor e da conquista então ela não está unificando nada. "<<endl;
     cout<<"2- Sabe de uma coisa? A humanidade seria melhor com todos do mesmo lado. Eu aceitaria sua proposta."<<endl<<endl;
     int decisao;
-    decisao=Escolha();
+    decisao=Escolha(0);
 
     switch (decisao)
     {
@@ -161,7 +162,7 @@ void Inferno::Luxuria(){
     cout<<"1- concordo!"<<endl;
     cout<<"2- acho que não concordo, pois se você quisesse que isso não acontecesse com você, você deveria agir de forma respeitável. Uma vez que já estava na posição de sexualizada, você deixou claro que qualquer um tinha direito de fazer o que bem entender. O que não aconteceria com um homem"<<endl;
     int decisao;
-    decisao=Escolha();
+    decisao=Escolha(0);
     switch (decisao)
     {
     case '1':
@@ -191,7 +192,7 @@ void Inferno::Avareza(){
     cout<<"1- Nada é um jogo quando envolve a vida dos outros, nem um centavo de um bilionário é ganho de forma ética. A redistribuição de ganhos é a única forma realmente ética de lidar com a riqueza."<<endl;
     cout<<"2- Não tem problema em aprender a usar o sistema para ganhar. Não foi você que instaurou essa forma de vida injusta, por que você deveria desistir de tudo que conquistou?"<<endl;
     int decisao;
-    decisao=Escolha();
+    decisao=Escolha(0);
 
     switch (decisao)
     {
@@ -222,7 +223,7 @@ void Inferno::Inveja(){
     cout<<"2- O crescimento científico deve ser priorizado, não importa os meios."<<endl<<endl;
 
     int decisao;
-    decisao=Escolha();
+    decisao=Escolha(0);
 
     switch (decisao)
     {
@@ -254,7 +255,7 @@ void Inferno::Ira(){
     cout<<"2- Discordo! Se as mãos de dois combatentes estão sujas de sangue, então nunca haverá um lado certo."<<endl;
 
     int decisao;
-    decisao=Escolha();
+    decisao=Escolha(0);
 
     switch (decisao)
     {
