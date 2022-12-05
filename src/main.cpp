@@ -2,22 +2,61 @@
 #include "../include/batalha.hpp"
 #include "../include/inferno.hpp"
 #include "../include/inventario.hpp"
-#include "../include/jogador.hpp"//tentando consertar os erros
-//#include <windows.h>
+#include "../include/usuario.hpp"
+#include "../include/inimigo.hpp"
+#include "../include/jogador.hpp"
+#include <string>
+
 
 using namespace std;
 
 int main()
 {
-    //SetConsoleOutputCP(CP_UTF8);
+    
     Inferno inf("",""); 
-    inf.Preguica();
+    try{
+        inf.Inicializar_historia();
+    }
+    catch(invalid_argument& e){
+        cout<<e.what()<<endl;
+    }
+    try{
+        inf.Preguica();
+    }
+    catch(invalid_argument& e){
+        cout<<e.what()<<endl;
+    }
+    try{
     inf.Gula();
-    inf.Soberba();
+    } catch(invalid_argument& e){
+        cout << e.what() << endl;
+    }
+    try{
+    inf.Soberba()
+    } catch(invalid_argument& e){
+        cout << e.what() << endl;
+    }
+    try{
     inf.Luxuria();
+    } catch(invalid_argument& e){
+        cout << e.what() << endl;
+    }
+    try{
     inf.Avareza();
+    } catch(invalid_argument& e){
+        cout << e.what() << endl;
+    }
+    try{
     inf.Inveja();
+    } catch(invalid_argument& e){
+        cout << e.what() << endl;
+    }
+    try{
     inf.Ira();
+    } catch(invalid_argument& e){
+        cout << e.what() << endl;
+    }
+    
     item i1("espada de fogo", 1, 3);
     item i2("escudo das almas", 2, 2);
     //item i3("elixir da vida", 3, 0);
