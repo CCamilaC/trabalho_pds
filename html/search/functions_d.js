@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['scale_999',['scale',['../structdoctest_1_1Approx.html#a62185fd4c09a63dab61bd893574d8473',1,'doctest::Approx']]],
+  ['set_5fatq_1000',['set_atq',['../classUsuario.html#a4756795e47d6a9bdb43e09c3d6f144ed',1,'Usuario']]],
+  ['set_5fdef_1001',['set_def',['../classUsuario.html#a18d2e6cbf113012cd47bd4d513d04495',1,'Usuario']]],
+  ['set_5festamina_1002',['set_estamina',['../classUsuario.html#aba6444eb870644038f787b38d3633262',1,'Usuario']]],
+  ['set_5fveneno_1003',['set_veneno',['../classInimigo.html#a5ece8c3053e83eedb14e6206856e8300',1,'Inimigo']]],
+  ['set_5fvida_1004',['set_vida',['../classUsuario.html#af340856ebb21f27d723273e9d92338d3',1,'Usuario']]],
+  ['setasdefaultforassertsoutoftestcases_1005',['setAsDefaultForAssertsOutOfTestCases',['../classdoctest_1_1Context.html#ae85cecc7689f009e23cba383484773b2',1,'doctest::Context']]],
+  ['setasserthandler_1006',['setAssertHandler',['../classdoctest_1_1Context.html#a669dd0a596a611eeb0decdb78b661a90',1,'doctest::Context']]],
+  ['setcout_1007',['setCout',['../classdoctest_1_1Context.html#a503e7ebcc794a3cc67fa2e77873cafaa',1,'doctest::Context']]],
+  ['setoption_1008',['setOption',['../classdoctest_1_1Context.html#a7f7735caa75c60cdf8c8d86a75ce1d81',1,'doctest::Context::setOption(const char *option, bool value)'],['../classdoctest_1_1Context.html#a95e7a0230c5897f0eae36718f51d2f05',1,'doctest::Context::setOption(const char *option, int value)'],['../classdoctest_1_1Context.html#a4352ffc196c4ba56045270e45baa2754',1,'doctest::Context::setOption(const char *option, const char *value)']]],
+  ['setresult_1009',['setResult',['../structdoctest_1_1detail_1_1ResultBuilder.html#a86c0ca727fead43263de4a7e9a59ad23',1,'doctest::detail::ResultBuilder']]],
+  ['settestsuite_1010',['setTestSuite',['../namespacedoctest_1_1detail.html#ae79cb8df06d35468dd0ba9f04c85802c',1,'doctest::detail']]],
+  ['shouldexit_1011',['shouldExit',['../classdoctest_1_1Context.html#a219b10301380b81c84c0824a6876d9aa',1,'doctest::Context']]],
+  ['size_1012',['size',['../classdoctest_1_1String.html#acc9888303b7330a8dc78d3d79eadcf7c',1,'doctest::String']]],
+  ['skippathfromfilename_1013',['skipPathFromFilename',['../namespacedoctest.html#a7dcf6f5129e87219b8058577b5eb710f',1,'doctest']]],
+  ['soberba_1014',['Soberba',['../classInferno.html#a15b6a5e990c114822cde6fc42cfd9d24',1,'Inferno']]],
+  ['string_1015',['String',['../classdoctest_1_1String.html#ac458ccc54bb0f2d66fe8ca14146ec5f0',1,'doctest::String::String() noexcept'],['../classdoctest_1_1String.html#abb4449cbc613cd973ae774c704fca5dd',1,'doctest::String::String(const char *in)'],['../classdoctest_1_1String.html#a0ce0a3e6a00b63b0a219a988fc42cec3',1,'doctest::String::String(const char *in, size_type in_size)'],['../classdoctest_1_1String.html#ac6e38dd40b68e19ef6898a13f60d2a07',1,'doctest::String::String(std::istream &amp;in, size_type in_size)'],['../classdoctest_1_1String.html#a27ca7976da20bdebbf225fa496c38ad1',1,'doctest::String::String(const String &amp;other)'],['../classdoctest_1_1String.html#a2a0aa72649d92cb8da5b89b98bcff752',1,'doctest::String::String(String &amp;&amp;other) noexcept']]],
+  ['stringcontains_1016',['StringContains',['../classdoctest_1_1AssertData_1_1StringContains.html#a6a88dee0e03ef22a1e425696c3070e16',1,'doctest::AssertData::StringContains::StringContains(const String &amp;str)'],['../classdoctest_1_1AssertData_1_1StringContains.html#ae8b0e70648c2863d986b3ca053a78078',1,'doctest::AssertData::StringContains::StringContains(Contains cntn)']]],
+  ['stringify_1017',['stringify',['../structdoctest_1_1IContextScope.html#affbf0f9bf8107a4a8a805d237288141d',1,'doctest::IContextScope::stringify()'],['../classdoctest_1_1detail_1_1ContextScope.html#a4636ac32ae41ae108c7ada4a164ffaeb',1,'doctest::detail::ContextScope::stringify()']]],
+  ['stringifybinaryexpr_1018',['stringifyBinaryExpr',['../namespacedoctest_1_1detail.html#a6879a79aea397a22e296e4afd0a90e3b',1,'doctest::detail']]],
+  ['subcase_1019',['Subcase',['../structdoctest_1_1detail_1_1Subcase.html#a8f7d4a5ddfb8ae48663e5cfc786e6f12',1,'doctest::detail::Subcase::Subcase(const String &amp;name, const char *file, int line)'],['../structdoctest_1_1detail_1_1Subcase.html#a9e0ce38b3c110677a9188ba130a946f5',1,'doctest::detail::Subcase::Subcase(const Subcase &amp;)=delete'],['../structdoctest_1_1detail_1_1Subcase.html#aa467f606cedb24696a5013da4737bc90',1,'doctest::detail::Subcase::Subcase(Subcase &amp;&amp;)=delete']]],
+  ['subcase_5fend_1020',['subcase_end',['../structdoctest_1_1IReporter.html#a05196dd1a5f7e40e8c734cd2a37d4e1e',1,'doctest::IReporter']]],
+  ['subcase_5fstart_1021',['subcase_start',['../structdoctest_1_1IReporter.html#a03ef82d6fb9afe8b0e3bbe24f28dd268',1,'doctest::IReporter']]],
+  ['substr_1022',['substr',['../classdoctest_1_1String.html#a6fd53b95d33900d8a38a3a33c43c928e',1,'doctest::String::substr(size_type pos, size_type cnt=npos) &amp;&amp;'],['../classdoctest_1_1String.html#ace5bc90d48d52944412addef185de9a6',1,'doctest::String::substr(size_type pos, size_type cnt=npos) const &amp;']]]
+];
