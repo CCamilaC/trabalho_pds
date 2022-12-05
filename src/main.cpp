@@ -1,7 +1,7 @@
 #include <iostream>
 #include "../include/batalha.hpp"
 #include "../include/inferno.hpp"
-#include "../include/invenario.hpp"
+#include "../include/inventario.hpp"
 #include <windows.h>
 
 using namespace std;
@@ -9,6 +9,7 @@ using namespace std;
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
+    /////////////////////// isso foi para testagem? não irei mexer////////////////////////////////
     item i1("espada de fogo", 1, 3);
     item i2("escudo das almas", 2, 2);
     //item i3("elixir da vida", 3, 0);
@@ -33,7 +34,8 @@ int main()
     Batalha luta;
     luta.batalhar(user, inim);
 
-    //batalha.batalhar(*_usuario, filosofos);
+    ////////////////////////////////////////////////////////////////////////////////////
+    
     return 0;
 }
 
