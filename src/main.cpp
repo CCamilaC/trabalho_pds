@@ -2,6 +2,7 @@
 #include "../include/batalha.hpp"
 #include "../include/inferno.hpp"
 #include "../include/inventario.hpp"
+#include "../include/jogador.hpp"//tentando consertar os erros
 //#include <windows.h>
 
 using namespace std;
