@@ -12,7 +12,7 @@
  */
 #ifndef ceu_bom_H
 #define ceu_bom_H
-#include "jogador.hpp"
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -40,7 +40,7 @@ class Ceu{
      * @brief Construtor
      * 
      */
-    Ceu(char pessoa_salva, string nome);
+    Ceu(string nome);
     /**
      * @brief função para definir o fim da história caso o jogador consiga ir para o Ceu bom
      * @details caso o jogador chegue no Ceu bom fazendo boas escolhas durante o Inferno
