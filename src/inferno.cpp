@@ -17,6 +17,7 @@ Inferno::Inferno(){ //construtor
 }
 char Inferno::Escolha(char opcaoEscolhida){
     //contera a escolha feita
+    _opcaoEscolhida='0';
     do{ //escolha de uma das opcoes
         cin>>_opcaoEscolhida;
         if(_opcaoEscolhida!='1' && _opcaoEscolhida!='2'){
@@ -28,16 +29,17 @@ char Inferno::Escolha(char opcaoEscolhida){
         {
         case '1':
             _contador++;
-            _choice.push_back(_opcaoEscolhida);
+            _choice.push_back((int)_opcaoEscolhida);
             return _opcaoEscolhida;
             break;
         case '2':
-            _choice.push_back(_opcaoEscolhida);
+            _choice.push_back((int)_opcaoEscolhida);
             return _opcaoEscolhida;
         default:
             break;
         }
     } while(_opcaoEscolhida!='1' && _opcaoEscolhida!='2');
+    return '0';
 }
 int Inferno::getContador(){
     return _contador;
