@@ -27,6 +27,11 @@ class Inferno
 {
     private:
     /**
+     * @brief uma variável para o usuário colocar qual opção ele escolheu
+     * 
+     */
+    char _opcaoEscolhida;
+    /**
      * @brief uma variável para armazenar o pecado do jogador
      * 
      */
@@ -83,7 +88,7 @@ class Inferno
      * @return int 
      */
     
-    int Escolha();
+    char Escolha(char opcao);
     /**
      * @brief faz o cout de toda a parte da história relacionada ao pecado da preguiça
      * @details essa função ira printar a parte da história, fazer a opção de escolha que o personagem
