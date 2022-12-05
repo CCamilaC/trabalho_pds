@@ -1,15 +1,15 @@
 #include <iostream>
 #include "../include/batalha.hpp"
 #include "../include/inferno.hpp"
-#include "../include/invenario.hpp"
-#include <windows.h>
+#include "../include/inventario.hpp"
+//#include <windows.h>
 
 using namespace std;
 
 int main()
 {
-    SetConsoleOutputCP(CP_UTF8);
-    Inferno inf(); 
+    //SetConsoleOutputCP(CP_UTF8);
+    Inferno inf("",""); 
     inf.Preguica();
     inf.Gula();
     inf.Soberba();

@@ -148,7 +148,7 @@ void Inferno::Gula(){
 void Inferno::Soberba(){
     //adicionar cout dialogo
     cout<<"Andando pelas terras devastadas do inferno, você vê um vulto branco se aproximando de você em alta velocidade. Quando o esbelto cavalo branco para a sua frente um homem baixíssimo desce de sua lombar. Você nem precisa olhar seu localizador para saber que é Napoleão, o soberbo."<<endl;
-    cout<<"Napoleão: Mais um dia no inferno, quem diria. Eu só estava tentando fazer o melhor pela França e pelo mundo! Deus não entende nada de paz e harmonia, elas só vêm pela guerra. Um mundo unificado é um mundo melhor! Todos seriam felizes sob o meu comando. Imagine uma Europa unida, não, esqueça a Europa, um mundo unido! Planeta Napoleônico, isso sim é um bom nome. Você daria um bom súdito, talvez eu até te desse um papel mais importante no meu reino, o que acha?"<<endl;
+    cout<<"Napoleão: Mais um dia no inferno, quem diria. Eu só estava tentando fazer o melhor pela França e pelo mundo! Deus não entende nada de paz e harmonia, elas só vêm pela guerra. Um mundo unificado é um mundo melhor! Todos seriam felizes sob o meu comando. Imagine uma Europa unida, não, esqueça a Europa, um mundo unido! Planeta Napoleônico, isso sim é um bom nome. Você daria um bom súdito, talvez eu até te desse um papel mais importante no meu reino, o que acha?"<<endl<<endl;
     cout<<_escolha<<endl<<endl;
     cout<<"1- Se a unidade vem da dor e da conquista então ela não está unificando nada. "<<endl;
     cout<<"2- Sabe de uma coisa? A humanidade seria melhor com todos do mesmo lado. Eu aceitaria sua proposta."<<endl<<endl;
