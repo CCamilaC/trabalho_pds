@@ -1,12 +1,18 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 #include "inferno.hpp"
-TEST_CASE(""){
-    
+Inferno *inf=new Inferno("Neitan","ser chato");
+
+TEST_CASE("inferno getNome"){
+    CHECK(inf->getNome()=="Neitan");
+    CHECK(inf->getNome()=="Camila");
+}
+TEST_CASE("inferno getPecado"){
+    CHECK(inf->getPecado()=="ser chato");
+    CHECK(inf->getPecado()=="ser doido");
 }
 
 TEST_CASE("Escolha"){
-    Inferno inf();
     SUBCASE("Escolha válida"){
         //Inferno inf();
         CHECK_EQ('1', inf.Escolha('1'));

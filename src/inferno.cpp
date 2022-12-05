@@ -10,10 +10,18 @@ using namespace std;
 
 //ESCOLHA 1 SEMPRE SERÁ A CERTA 
 
-Inferno::Inferno(){ //construtor
+Inferno::Inferno(string n, string p){ //construtor
     _choice.clear();
     _contador=0;
     _opcaoEscolhida='0';
+    _nome=n;
+    _pecadoJog=p;
+}
+string Inferno::getNome(){
+    return _nome;
+}
+string Inferno::getPecado(){
+    return _pecadoJog;
 }
 char Inferno::Escolha(char opcaoEscolhida){
     //contera a escolha feita

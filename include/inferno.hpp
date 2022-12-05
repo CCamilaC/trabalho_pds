@@ -65,7 +65,18 @@ class Inferno
      * @brief construtor
     */
     Inferno(string n, string p);
-    
+    /**
+     * @brief função para retornar o nome
+     * 
+     * @return string
+     */
+    string getNome();
+    /**
+     * @brief função para retornar o pecado
+     * 
+     * @return string
+     */
+    string getPecado();
     /**
      * @brief Get o Contador 
      * 
