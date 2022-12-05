@@ -1,37 +1,33 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 #include "inferno.hpp"
-Inferno *inf=new Inferno("Neitan","ser chato");
+//Inferno *inf=new Inferno("Neitan","ser chato");
+Inferno inf("Neitan","ser chato");
 
 TEST_CASE("getNome"){
     SUBCASE("Caso válido"){
-        CHECK(inf->getNome()=="Neitan");
+        CHECK(inf.getNome()=="Neitan");
     }
-    SUBCASE("Caso válido"){
-    CHECK(inf->getNome()=="Camila");
+    SUBCASE("Caso inválido"){
+        CHECK(inf.getNome()=="Camila");
     }
 }
 TEST_CASE("inferno getPecado"){
     SUBCASE("Caso válido"){
-    CHECK(inf->getPecado()=="ser chato");
+        CHECK(inf.getPecado()=="ser chato");
     }
-    SUBCASE("Caso válido"){
-    CHECK(inf->getPecado()=="ser doido");
+    SUBCASE("Caso inválido"){
+        CHECK(inf.getPecado()=="ser doido");
     }
 }
 
 TEST_CASE("Escolha"){
     SUBCASE("Escolha válida"){
-        
         CHECK_THROWS(inf.Escolha('1'));
-
-        //CHECK_THROW_AS(1, inf.Escolha());
-        
     }
     SUBCASE("Escolha inválida"){
-        //Inferno inf();
-        CHECK_EQ(inf.Escolha('5'));
-        CHECK_EQ(inf.Escolha('s'));
+        CHECK_THROWS(inf.Escolha('5'));
+        CHECK_THROWS(inf.Escolha('s'));
     }
 }
 
