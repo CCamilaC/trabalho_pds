@@ -42,8 +42,9 @@ void Ceu::Ceu_bom(){
    _pessoa_salva = '0';
    do{
       cin>>_pessoa_salva;
-      if(_pessoa_salva!= 1 && _pessoa_salva!=2 && _pessoa_salva!=3 && _pessoa_salva!=4 && _pessoa_salva!=5 && _pessoa_salva!=6 && _pessoa_salva!=7){
-         cout <<  "Essa opção não está dentro das propostas"<<endl;
+      if(_pessoa_salva!= '1' && _pessoa_salva!='2' && _pessoa_salva!='3' && _pessoa_salva!='4' && _pessoa_salva!='5' && _pessoa_salva!='6' && _pessoa_salva!='7'){
+         cout <<  "Você só pode salvar uma dessas pessoas, mesmo que você queira salvar o Papa!!"<<endl;
+         cout <<  "Digite um número válido!!"<<endl;
       }
       switch(_pessoa_salva){
          case '1':
@@ -71,19 +72,22 @@ void Ceu::Ceu_bom(){
             cout << "Elon Musk:"<< endl;
             cout << "E tem pessoas que dizem que da terra não se leva nada," << endl;
             cout << "pois muito obrigado jovem, os poderosos sempre são poderosos"<< endl;
+            break;
          case '6':
             cout<< "Thomas Edison:"<<endl;
             cout<< "Ohohoho, irei iluminar o céu inteiro com a MINHA invensão!!"<<endl;
+            break;
          case '7':
             cout<<"Zumbi dos Palmares:"<<endl;
             cout<<"Obrigado companheiro, se tem alguma coisa que euaprendi com a minha experiência"<<endl;
             cout<<"é que quem sente o sofrimento alheio, nunca estará sozinho."<<endl;
+            break;
          default:
             break;
       }
-   }while(_pessoa_salva!= 1 && _pessoa_salva!=2 && _pessoa_salva!=3 && _pessoa_salva!=4 && _pessoa_salva!=5 && _pessoa_salva!=6 && _pessoa_salva!=7);
-            
+   }while(_pessoa_salva!= '1' && _pessoa_salva!='2' && _pessoa_salva!='3' && _pessoa_salva!='4' && _pessoa_salva!='5' && _pessoa_salva!='6' && _pessoa_salva!='7');
 }
+
 void Ceu::Ceu_ruim(){
     cout<<"-----------------------------------------//-----------------------------------------"<<endl;
     cout << _nome + ", você venceu a luta. Desculpe, não estou em clima de" << endl;
