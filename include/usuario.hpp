@@ -120,14 +120,9 @@ public:
  */
     virtual void print();
 /**
- * @brief imprime a quantidade de vida, e estamina do jogador
+ * @brief imprime Vida
  * 
  */
     virtual void printv();
-/**
- * @brief imprime a quantidade de vida e estamina do inimigo
- * 
- */
-    virtual void printiv();
 
 };

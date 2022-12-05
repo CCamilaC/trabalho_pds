@@ -49,12 +49,8 @@ using namespace std;
     }
 
     virtual void Usuario::printv(){
-       cout<< "Sua vida: "<< get_vida() << "\n";
-       cout << "Sua estamin: " << get_estamina() << endl;
+       cout << "Vida ";
     }
-    virtual void Usuario::printiv(){
-       cout<< "Vida inimigo: "<< get_vida() << "\n";
-       cout << "Estamina do inimigo: " << get_estamina() << endl;
-    }
+
 
    

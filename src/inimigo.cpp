@@ -5,7 +5,7 @@ using namespace std;
 
 class Inimigo:protected Usuario{
 private:
-    bool _envenenado;
+    bool _envenenado = false;
 
 public:
     Inimigo::Inimigo(int vida, int estamina, int ataque, int defesa, bool veneno): Usuario(vida, estamina, ataque, defesa),_envenenado(veneno){}
@@ -17,9 +17,27 @@ public:
         _envenenado = envenenado;
     }
     void Inimigo::print() override{
-        cout << "veneno: " << get_veneno() << endl;
+        cout << "do Inimigo: " << get_vida() << endl;
+        cout << "Estamina do Inimigo: " << get_estamina() << endl;
     }
-    void Inimigo::printiv() override{
-        cout << "veneno: " << get_veneno() << endl;
+    void Inimigo::envenenado(int cont){
+        int aux2;
+        if(get_veneno() == false){
+            aux2 = 0;
+        }
+        else if(get_veneno() == true){
+            if(cont < 5){
+                cout << "O inimigo está envenenado por: " << (5 - cont) << " rodadas" << endl;
+                aux2 = get_vida() - 5;
+                set_vida(aux2);
+
+            }
+            else if(cont == 5){
+                cout << "O inimigo não está mais envenendado" << endl;
+                set_veneno(false);
+            }
+        }
+
     }
+
 };
