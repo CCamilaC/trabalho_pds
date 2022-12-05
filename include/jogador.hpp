@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include "inventario.hpp
+#include "usuario.hpp"
 
 using namespace std;
 
