@@ -28,106 +28,106 @@ protected:
  * @brief quantidade de vida do jogador ou do inimigo
  * 
  */
-    int vida;
+    int _vida;
 /**
  * @brief quantidade de dano que o ataque do jogador ou do inimigo causam
  * 
  */
-    int atq;
+    int _atq;
 /**
- * @brief ***************************************************************************************
+ * @brief quantidade de dano absorvido pelo jogador ou inimigo, sem reduzir a vida
  * 
  */
-    int def;
+    int _def;
 /**
  * @brief quantidade de energia do jogador ou do inimigo, ou seja, quantas vezes um deles consegue atacar
  * 
  */
-    int estamina;
-   // bool veneno = false;
-   // vector<item> inventario;
+    int _estamina;
+/**
+ * @brief quantidade de energia máxima do jogador ou do inimigo
+ */
+    int _max_estamina;
 
 public:
 /**
  * @brief Construtor
  * 
- * @param x vida
- * @param y ataque
- * @param z defesa
- * @param w estamina
+ * @param vida vida
+ * @param atq ataque
+ * @param def defesa
+ * @param estamina estamina
  */
-    Usuario(int x, int y, int z, int w);
+    Usuario(int vida, int atq, int def, int estamina);
 
-    //bool get_veneno();
-
-    //void set_veneno(bool x);
+/**
+ * @brief retorna a quantidade de estamina maxima do jogador ou do inimigo
+ * 
+ * @return int 
+ */
+    virtual int get_max_estamina();
 /**
  * @brief retorna a quantidade de vida do jogador ou do inimigo
  * 
  * @return int 
  */
-    int get_vida();
+    virtual int get_vida();
 /**
  * @brief altera a quantidade de vida
  * 
- * @param x número inteiro 
+ * @param vida número inteiro 
  */
-    void set_vida(int x);
+    virtual void set_vida(int vida);
 /**
  * @brief retorna a quantidade de dano que o ataque causa
  * 
  * @return int 
  */
-    int get_atq();
+    virtual int get_atq();
 /**
  * @brief altera o valor do dano causado pelo ataque
  * 
- * @param x 
+ * @param atq 
  */
-    void set_atq(int x);
+    virtual void set_atq(int atq);
 /**
- * @brief retorna ******************************************
+ * @brief retorna a quantidade de dano ignorado pelo jogador ou inimigo
  * 
  * @return int 
  */
-    int get_def();
+    virtual int get_def();
 /**
- * @brief altera ******************************************
+ * @brief altera a quantidade de dano ignorado pelo jogador ou inimigo
  * 
- * @param x 
+ * @param def 
  */
-    void set_def(int x);
+    virtual void set_def(int def);
 /**
  * @brief retorna a quantidade de energia do jogador ou do inimigo
  * 
  * @return int 
  */
-    int get_estamina();
+    virtual int get_estamina();
 /**
  * @brief altera a quantidade de energia do jogador ou do inimigo
  * 
- * @param x 
+ * @param estamina 
  */
-    void set_estamina(int x);
+    virtual void set_estamina(int estamina);
 /**
- * @brief imprime a quantidade de vida, de dano do ataque, de defesa ou de energia
+ * @brief imprime a quantidade de vida, de dano do ataque, de defesa e de energia
  * 
  */
-    void print();
+    virtual void print();
 /**
- * @brief imprime a quantidade de vida do jogador
+ * @brief imprime a quantidade de vida, e estamina do jogador
  * 
  */
-    void printv();
+    virtual void printv();
 /**
- * @brief imprime a quantidade de vida do inimigo
+ * @brief imprime a quantidade de vida e estamina do inimigo
  * 
  */
-    void printiv();
-s
-    /*void adiciona_item(item x);
+    virtual void printiv();
 
-    int usa_item(int x, Usuario *p);
-
-    void mostra_item();*/
 };
