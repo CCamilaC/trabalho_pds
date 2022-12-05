@@ -9,12 +9,12 @@
             return _tipo;
         }
 
-        int item:: getEfeito(){
-            return _efeito;
+        int item:: get_intensidadeEfeito(){
+            return _intensidadeEfeito;
         }
 
         item::item(string x, int y, int z){
             _nome = x;
             _tipo = y;
-            _efeito = z;
+            _intensidadeEfeito = z;
         }
