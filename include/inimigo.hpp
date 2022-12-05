@@ -57,5 +57,23 @@ class Inimigo: protected Usuario{
  * @param cont
  */
     void Inimigo::envenenado(int cont);
+
+    int Inimigo::get_vida();
+
+    void Inimigo::set_vida(int vida);
+
+    int Inimigo::get_atq();
+
+    void Inimigo::set_atq(int atq);
+
+    int Inimigo::get_def();
+
+    void Inimigo::set_def(int def);
+
+    int Inimigo::get_estamina();
+
+    void Inimigo::set_estamina(int estamina);
+
+    int Inimigo::get_max_estamina();
 };
 #endif

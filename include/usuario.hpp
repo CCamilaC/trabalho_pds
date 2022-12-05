@@ -125,5 +125,7 @@ public:
  */
     virtual void printv();
 
+    virtual void set_max_estamina(int maxe);
+
 };
 #endif

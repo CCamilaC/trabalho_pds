@@ -2,11 +2,13 @@
 
 using namespace std;
 
+
     Usuario::Usuario(int vida, int atq, int def, int estamina){
        set_vida(vida);
        set_estamina(estamina);
        set_atq(atq);
        set_def(def);
+       set_max_estamina(6);
 
 
     }
@@ -50,6 +52,10 @@ using namespace std;
 
     void Usuario::printv(){
        cout << "Vida ";
+    }
+
+    void Usuario::set_max_estamina(int maxe){
+        _max_estamina = maxe;
     }
 
 

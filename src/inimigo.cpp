@@ -19,7 +19,7 @@ public:
     void Inimigo::set_veneno(bool envenenado){
         _envenenado = envenenado;
     }
-    void Inimigo::print() override{
+    void Inimigo::printv() override{
         cout << "do Inimigo: " << get_vida() << endl;
         cout << "Estamina do Inimigo: " << get_estamina() << endl;
     }

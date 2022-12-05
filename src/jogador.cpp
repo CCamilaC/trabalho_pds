@@ -90,3 +90,8 @@ using namespace std;
         random = (rand() % _inventario.size());
         _inventario.erase(_inventario.begin() + random);
     }
+
+    void Jogador::printv() override{
+        cout << "do Jogador: " << get_vida() << endl;
+        cout << "Estamina do Jogador: " << get_estamina() << endl;
+    }
