@@ -3,19 +3,27 @@
 #include "inferno.hpp"
 Inferno *inf=new Inferno("Neitan","ser chato");
 
-TEST_CASE("inferno getNome"){
-    CHECK(inf->getNome()=="Neitan");
+TEST_CASE("getNome"){
+    SUBCASE("Caso válido"){
+        CHECK(inf->getNome()=="Neitan");
+    }
+    SUBCASE("Caso válido"){
     CHECK(inf->getNome()=="Camila");
+    }
 }
 TEST_CASE("inferno getPecado"){
+    SUBCASE("Caso válido"){
     CHECK(inf->getPecado()=="ser chato");
+    }
+    SUBCASE("Caso válido"){
     CHECK(inf->getPecado()=="ser doido");
+    }
 }
 
 TEST_CASE("Escolha"){
     SUBCASE("Escolha válida"){
-        //Inferno inf();
-        CHECK_EQ('1', inf.Escolha('1'));
+        
+        CHECK_THROWS(inf.Escolha('1'));
 
         //CHECK_THROW_AS(1, inf.Escolha());
         
