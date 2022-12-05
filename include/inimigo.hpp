@@ -44,5 +44,12 @@ class Inimigo: protected Usuario{
  * @brief imprime a quantidade de vida do inimigo e se está envenenado ou não
  * 
  */
-    void Inimigo::printiv() override;
+    void Inimigo::printv() override;
+/**
+ * @brief executa o efeito de envenenado no inimigo e mostra a duração do efeito
+ * 
+ * @param cont
+ */
+    void Inimigo::envenenado(int cont);
 };
+#endif

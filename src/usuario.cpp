@@ -2,113 +2,55 @@
 
 using namespace std;
 
-    Usuario::Usuario(int x, int y, int z, int w){
-       set_vida(x);
-       set_estamina(y);
-       set_atq(z);
-       set_def(w);
+    Usuario::Usuario(int vida, int atq, int def, int estamina){
+       set_vida(vida);
+       set_estamina(estamina);
+       set_atq(atq);
+       set_def(def);
 
-       // veneno = false;
-    }
-    /*virtual bool Usuario::get_veneno(){
-        return veneno;
-    }
 
-    virtual void Usuario::set_veneno(bool x){
-        veneno = x;
-    }*/
+    }
+    virtual int Usuario::get_max_estamina(){
+        return _max_estamina;
+    }
 
     virtual int Usuario::get_vida(){
-        return vida;
+        return _vida;
     }
-    virtual void Usuario::set_vida(int x){
-        vida = x;
+    virtual void Usuario::set_vida(int vida){
+        _vida = vida;
     }
     virtual int Usuario::get_atq(){
 
-        return atq;
+        return _atq;
     }
-    virtual void Usuario::set_atq(int x){
+    virtual void Usuario::set_atq(int atq){
 
-        atq = x;
+        _atq = atq;
     }
     virtual int Usuario::get_def(){
-        return def;
+        return _def;
     }
-    virtual void Usuario::set_def(int x){
-        def = x;
+    virtual void Usuario::set_def(int def){
+        _def = def;
     }
     virtual int Usuario::get_estamina(){
-        return estamina;
+        return _estamina;
     }
-    virtual void Usuario::set_estamina(int x){
-        estamina = x;
+    virtual void Usuario::set_estamina(int estamina){
+        _estamina = estamina;
     }
     virtual void Usuario::print(){
         cout<<"vida: "<< get_vida() << "\n";
         cout<< "estamina: " << get_estamina() << "\n";
         cout<<"ataque: "<< get_atq()<< "\n";
         cout<<"defesa: "<< get_def() <<"\n";
-        //cout << "veneno: " << get_veneno() << endl;
+
     }
 
     virtual void Usuario::printv(){
-       cout<< "sua vida: "<< get_vida() << "\n";
-    }
-    virtual void Usuario::printiv(){
-       cout<< "vida inimigo: "<< get_vida() << "\n";
-       //cout << "veneno: " << get_veneno() << endl;
+       cout << "Vida ";
     }
 
-    /*virtual void Usuario::adiciona_item(item x){
-        inventario.push_back(x);
 
-
-    }
-
-    virtual int Usuario::usa_item(int x, Usuario *p){
-
-
-        if(inventario[x].getTipo() == 1){
-           int y = 0;
-           y =inventario[x].getEfeito() + p->get_atq();
-           p->set_atq(y);
-           inventario.erase(inventario.begin() + x);
-
-        }
-
-
-      if(inventario[x].getTipo() == 2){
-            int y = 0;
-           y =inventario[x].getEfeito() + p->get_def();
-           p->set_def(y);
-             inventario.erase(inventario.begin() + x);
-        }
-        if(inventario[x].getTipo() == 3){
-           int y = 0;
-           y =inventario[x].getEfeito() + p->get_vida();
-           p->set_vida(y);
-             inventario.erase(inventario.begin() + x);
-
-        }
-
-       if(inventario[x].getTipo() == 4){
-           bool t = true;
-            p->set_veneno(t);
-  inventario.erase(inventario.begin() + x);*/
-           /* int x = p->get_vida() - inventario[x].getEfeito();
-            p->set_vida(x);
-            cout<<"vida do inimigo:"<< p->get_vida() <<"\n";
-            inventario.erase(inventario.begin() + x);
-            return 1;*/
-       /* }
-
-
-    }
-
-    virtual void Usuario::mostra_item(){
-        for(int i = 0; i < inventario.size(); i ++){
-            cout << "(" << i << ")" << inventario[i].getNome() << endl;
-            }
-
-    }*/
+   
