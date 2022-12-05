@@ -33,14 +33,14 @@ class Ceu{
      * @brief uma variável para armazenar a pessoa escolhida pelo jogador para ser salva
      * 
      */
-    int _pessoa_salva;
+    char _pessoa_salva;
 
   public:
     /**
      * @brief Construtor
      * 
      */
-    Ceu(int pessoa_salva, string nome);
+    Ceu(char pessoa_salva, string nome);
     /**
      * @brief função para definir o fim da história caso o jogador consiga ir para o Ceu bom
      * @details caso o jogador chegue no Ceu bom fazendo boas escolhas durante o Inferno
