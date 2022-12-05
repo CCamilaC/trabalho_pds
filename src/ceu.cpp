@@ -3,15 +3,15 @@
 using namespace std;
 
 
-Ceu::Ceu(char pessoa_salva, string nome){
-    _pessoa_salva = pessoa_salva;
-    _nome=nome;
+Ceu::Ceu(string nome){
+   _pessoa_salva = '0';
+   _nome=nome;
 }
 
 void esperarEnter(){
-  	char tmp;
-    cout << "Aperte enter para continuar" << endl;
-    cin.get(tmp);
+   char tmp;
+      cout << "Aperte enter para continuar" << endl;
+      cin.get(tmp);
 }
 
 void Ceu::Ceu_bom(){
@@ -89,32 +89,32 @@ void Ceu::Ceu_bom(){
 }
 
 void Ceu::Ceu_ruim(){
-    cout<<"-----------------------------------------//-----------------------------------------"<<endl;
-    cout << _nome + ", você venceu a luta. Desculpe, não estou em clima de" << endl;
-    cout << "comemoração. Terminamos agora de computar a sua pontuação e eu nem sabia" << endl;
-    cout << "que tinha como o número ser tão pequeno. O que passou na sua cabeça para você" << endl;
-    cout << "fazer escolhas tão ruins? Você sinceramente achou que era uma boa ideia ou só estava"<<endl;
-    cout << "tentando me sacanear? Não sei nem por que fiquei empolgado em participar desse" <<endl;
-    cout << "projeto, você deve achar isso tudo tão engraçado, pois saiba que eu posso perder" << endl;
-    cout << "meu emprego por conta disso! Eu não acredito que discuti com o Miguel para te deixarem"<<endl;
-    cout << "participar do projeto. Como pode um humano ser tão fundamentalmente malvado? Você vai pro"<<endl;
-    cout << "inferno, e não para esse inferno legal cheio de provações e distrações, você vai para o"<<endl;
-    cout << "inferno de verdade. Até nunca mais “herói”." << endl;
+   cout<<"-----------------------------------------//-----------------------------------------"<<endl;
+   cout << _nome + ", você venceu a luta. Desculpe, não estou em clima de" << endl;
+   cout << "comemoração. Terminamos agora de computar a sua pontuação e eu nem sabia" << endl;
+   cout << "que tinha como o número ser tão pequeno. O que passou na sua cabeça para você" << endl;
+   cout << "fazer escolhas tão ruins? Você sinceramente achou que era uma boa ideia ou só estava"<<endl;
+   cout << "tentando me sacanear? Não sei nem por que fiquei empolgado em participar desse" <<endl;
+   cout << "projeto, você deve achar isso tudo tão engraçado, pois saiba que eu posso perder" << endl;
+   cout << "meu emprego por conta disso! Eu não acredito que discuti com o Miguel para te deixarem"<<endl;
+   cout << "participar do projeto. Como pode um humano ser tão fundamentalmente malvado? Você vai pro"<<endl;
+   cout << "inferno, e não para esse inferno legal cheio de provações e distrações, você vai para o"<<endl;
+   cout << "inferno de verdade. Até nunca mais “herói”." << endl;
 
 }
 
 void Ceu::Finalizar_historia(){
-    cout<<"-----------------------------------------//-----------------------------------------"<<endl;
-    cout<<"Anjo: As escolhas foram feitas, espero que esteja feliz com elas!"<<endl; 
-    cout<<"      Obrigado por ser parte desse experimento e até uma próxima vida" <<endl;
-    cout<<"----------------------------------------------------------------------------------"<<endl;
-    cout<<" ##   ##  #######  ####     ####              ##  ##            ##   ##  #######    ##     ##   ##  #######  ##   ##" << endl;
-    cout<<" ##   ##   ##   #   ##       ##               ##  ##            ##   ##   ##   #   ####    ##   ##   ##   #  ###  ##" <<endl;
-    cout<<" ##   ##   ## #     ##       ##                ####             ##   ##   ## #    ##  ##    ## ##    ## #    #### ##" <<endl;
-    cout<<" #######   ####     ##       ##                 ##              #######   ####    ##  ##    ## ##    ####    ## ####" <<endl;
-    cout<<" ##   ##   ## #     ##   #   ##   #            ####             ##   ##   ## #    ######     ###     ## #    ##  ###" <<endl;
-    cout<<" ##   ##   ##   #   ##  ##   ##  ##           ##  ##            ##   ##   ##   #  ##  ##     ###     ##   #  ##   ##" <<endl;
-    cout<<" ##   ##  #######  #######  #######           ##  ##            ##   ##  #######  ##  ##      #     #######  ##   ##" <<endl;
+   cout<<"-----------------------------------------//-----------------------------------------"<<endl;
+   cout<<"Anjo: As escolhas foram feitas, espero que esteja feliz com elas!"<<endl; 
+   cout<<"      Obrigado por ser parte desse experimento e até uma próxima vida" <<endl;
+   cout<<"----------------------------------------------------------------------------------"<<endl;
+   cout<<" ##   ##  #######  ####     ####              ##  ##            ##   ##  #######    ##     ##   ##  #######  ##   ##" << endl;
+   cout<<" ##   ##   ##   #   ##       ##               ##  ##            ##   ##   ##   #   ####    ##   ##   ##   #  ###  ##" <<endl;
+   cout<<" ##   ##   ## #     ##       ##                ####             ##   ##   ## #    ##  ##    ## ##    ## #    #### ##" <<endl;
+   cout<<" #######   ####     ##       ##                 ##              #######   ####    ##  ##    ## ##    ####    ## ####" <<endl;
+   cout<<" ##   ##   ## #     ##   #   ##   #            ####             ##   ##   ## #    ######     ###     ## #    ##  ###" <<endl;
+   cout<<" ##   ##   ##   #   ##  ##   ##  ##           ##  ##            ##   ##   ##   #  ##  ##     ###     ##   #  ##   ##" <<endl;
+   cout<<" ##   ##  #######  #######  #######           ##  ##            ##   ##  #######  ##  ##      #     #######  ##   ##" <<endl;
 
 
 }
