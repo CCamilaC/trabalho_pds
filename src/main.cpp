@@ -56,9 +56,8 @@ int main()
     }
     //Soberba
     try{
-    inf.Soberba();
-    } 
-    catch(invalid_argument& e){
+    inf.Soberba()
+    } catch(invalid_argument& e){
         cout << e.what() << endl;
     }
     if(aux=='2'){

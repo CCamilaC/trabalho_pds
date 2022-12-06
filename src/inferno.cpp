@@ -25,26 +25,26 @@ char Inferno::Escolha(char opcaoEscolhida){
     //contera a escolha feita
     _opcaoEscolhida='0';
     
-        do{ //escolha de uma das opcoes
-            cin>>_opcaoEscolhida;
-            if(_opcaoEscolhida!='1' && _opcaoEscolhida!='2'){
-                throw invalid_argument("Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:");
-                //cout<<"Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:"<<endl<<endl;
-            }
-            switch (_opcaoEscolhida)
-            {
-            case '1':
-                _contador++;
-                _choice.push_back((int)_opcaoEscolhida);
-                return _opcaoEscolhida;
-                break;
-            case '2':
-                _choice.push_back((int)_opcaoEscolhida);
-                return _opcaoEscolhida;
-            default:
-                break;
-            }
-        } while(_opcaoEscolhida!='1' && _opcaoEscolhida!='2');
+    do{ //escolha de uma das opcoes
+        cin>>_opcaoEscolhida;
+        if(_opcaoEscolhida!='1' && _opcaoEscolhida!='2'){
+            throw invalid_argument("Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:");
+            //cout<<"Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:"<<endl<<endl;
+        }
+        switch (_opcaoEscolhida)
+        {
+        case '1':
+            _contador++;
+            _choice.push_back((int)_opcaoEscolhida);
+            return _opcaoEscolhida;
+            break;
+        case '2':
+            _choice.push_back((int)_opcaoEscolhida);
+            return _opcaoEscolhida;
+        default:
+            break;
+        }
+    } while(_opcaoEscolhida!='1' && _opcaoEscolhida!='2');
     
     /*catch(){ 
         /*amg isso não seria na main? o catch no caso?

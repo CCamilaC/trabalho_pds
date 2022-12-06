@@ -2,7 +2,7 @@
     "files.associations": {
         "iostream": "cpp",
         "ostream": "cpp",
-        "string": "cpp",
-        "vector": "cpp"
-    }
+        "string": "cpp"
+    },
+    "makefile.makefilePath": ""
 }

@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+using namespace std;
 /**
  *  
  * @brief printa na tela a história final do jogo, o destino final do jogador 
