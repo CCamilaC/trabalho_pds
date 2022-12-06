@@ -4,5 +4,6 @@
         "ostream": "cpp",
         "string": "cpp",
         "vector": "cpp"
-    }
+    },
+    "makefile.makePath": "/usr/bin/make"
 }
