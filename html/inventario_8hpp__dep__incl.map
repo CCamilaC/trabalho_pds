@@ -1,0 +1,12 @@
+<map id="include/inventario.hpp" name="include/inventario.hpp">
+<area shape="rect" id="node1" title="Classe que crio os itens que o jogador recebe." alt="" coords="520,5,687,32"/>
+<area shape="rect" id="node2" href="$jogador_8hpp.html" title="A classe jogador herdar atributos da classe Usuário e armazena itens do jogador." alt="" coords="295,80,445,107"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="5,229,111,256"/>
+<area shape="rect" id="node6" href="$teste_8cpp.html" title=" " alt="" coords="515,229,620,256"/>
+<area shape="rect" id="node7" href="$jogador_8cpp.html" title=" " alt="" coords="469,155,591,181"/>
+<area shape="rect" id="node9" href="$inventario_8cpp.html" title=" " alt="" coords="666,80,805,107"/>
+<area shape="rect" id="node10" href="$teste__inventario_8cpp.html" title=" " alt="" coords="707,155,897,181"/>
+<area shape="rect" id="node3" href="$batalha_8hpp.html" title="classe responsável por todas as batalhas do jogo" alt="" coords="295,155,445,181"/>
+<area shape="rect" id="node8" href="$teste__jogador_8cpp.html" title=" " alt="" coords="96,155,271,181"/>
+<area shape="rect" id="node4" href="$batalha_8cpp.html" title=" " alt="" coords="309,229,431,256"/>
+</map>
