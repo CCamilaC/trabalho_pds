@@ -5,73 +5,125 @@
 #include "../include/usuario.hpp"
 #include "../include/inimigo.hpp"
 #include "../include/jogador.hpp"
+#include"../include/ceu.hpp"
 #include <string>
-
 
 using namespace std;
 
 int main()
 {
-    
+    Jogador user(250, 25,10 , 5);
+    item i1("Megafone de platão", 1, 5);//preguiça
+    item i2("Brioche duro", 1, 7);//gula
+    item i3("espada", 5, 5);//soberba
+    item i4("colete de diamantes", 2, 8);//luxúria
+    item i5("taser", 5, 5);//avareza
+    item i6("lâmpada", 5, 5);//inveja
+    item i7("chicote", 3, 10);//ira
+    Jogador inim(300, 10, 0, 0);
+    Batalha luta;
+    char aux;
     Inferno inf("",""); 
+    //Inicializar_historia
     try{
         inf.Inicializar_historia();
     }
     catch(invalid_argument& e){
         cout<<e.what()<<endl;
     }
+    //Preguiça
     try{
-        inf.Preguica();
+        aux=inf.Preguica();
+        
     }
     catch(invalid_argument& e){
         cout<<e.what()<<endl;
     }
+    if(aux=='1'){
+        user.adiciona_item(i1);
+    }
+    while(luta.batalhar(&user, &inim) == 1){}
+    //verificar se a vida não é zero
+    //Gula
     try{
-    inf.Gula();
-    } catch(invalid_argument& e){
+        inf.Gula();
+    } 
+    catch(invalid_argument& e){
         cout << e.what() << endl;
     }
+    if(aux=='1'){
+        user.adiciona_item(i2);
+    }
+    //Soberba
     try{
-    inf.Soberba()
-    } catch(invalid_argument& e){
+    inf.Soberba();
+    } 
+    catch(invalid_argument& e){
         cout << e.what() << endl;
     }
+    if(aux=='2'){
+        user.adiciona_item(i3);
+    }
+    while(luta.batalhar(&user, &inim) == 1){}
+    //Luxuaria
     try{
-    inf.Luxuria();
-    } catch(invalid_argument& e){
+        aux = inf.Luxuria();
+    } 
+    catch(invalid_argument& e){
         cout << e.what() << endl;
     }
+    if(aux == '1'){
+        user.adiciona_item(i4);
+    }
+    // Avareza
     try{
-    inf.Avareza();
-    } catch(invalid_argument& e){
+        aux = inf.Avareza();
+    } 
+    catch(invalid_argument& e){
         cout << e.what() << endl;
     }
+    if(aux == '2'){
+        user.adiciona_item(i5);
+    }
+    //Inveja
     try{
-    inf.Inveja();
-    } catch(invalid_argument& e){
+        aux = inf.Inveja();
+    } 
+    catch(invalid_argument& e){
         cout << e.what() << endl;
     }
+    if(aux == '1'){
+        user.adiciona_item(i6);
+    }
+    while(luta.batalhar(&user, &inim) == 1){}
+    // Ira    
     try{
-    inf.Ira();
-    } catch(invalid_argument& e){
+        inf.Ira();
+    }
+    catch(invalid_argument& e){
         cout << e.what() << endl;
     }
-    
-    item i1("espada de fogo", 1, 3);
-    item i2("escudo das almas", 2, 2);
-    //item i3("elixir da vida", 3, 0);
-    item i4("lagrimas da meia noite", 4, 5);
-    //item i5("coxa de frango", 3, 0);
-   //item i6("escudo do campeao infernal", 2, 3);
-   //item i7("lamina do exilado", 1, 3);
-
-    Jogador user(250, 25,10 , 5);
-    user.adiciona_item(i1);
-    user.adiciona_item(i2);
-    user.adiciona_item(i4);
-    //user.adiciona_item(i4);
-    Jogador inim(300, 10, 0, 0);
-     cout << "Jogador:" << endl;
+    if(aux=='1'){
+        user.adiciona_item(i7);
+    }
+    //batalha_final
+    inf.Batalha_final();
+    while(luta.batalhar(&user, &inim) == 1){}
+    string nome;
+    nome=inf.getNome();
+    //PARTE DO CÉU
+    Ceu ceu(nome);
+    int pontuacaoFinal;
+    pontuacaoFinal=inf.getContador();
+    if(pontuacaoFinal>=4){
+        ceu.Ceu_bom();
+    }
+    else{
+        ceu.Ceu_ruim();
+    }
+    ceu.Finalizar_historia();
+    /* OLHAR O QUE É ISSO COM OS MENINOS
+    cout << "Jogador:" << endl;
     user.print();
     cout << endl << "Inimigo:" << endl;
     inim.print();
@@ -80,7 +132,7 @@ int main()
     cout << "sistema de batalha" << endl;
     Batalha luta;
     luta.batalhar(user, inim);
-
+    */
     ////////////////////////////////////////////////////////////////////////////////////
     
     return 0;

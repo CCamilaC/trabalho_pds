@@ -94,7 +94,7 @@ class Inferno
      * @details a função vai fazer o cin da opção escolhida, tratar exceções e armazenar no _choice
      * cada escolha feita, assim como adicionar 1 a variável "_contador" a cada vez que chamar a função 
      * e o usuário digitar uma alternativa válida 
-     * @return int 
+     * @return char
      */
     
     char Escolha(char opcao);
@@ -102,49 +102,53 @@ class Inferno
      * @brief faz o cout de toda a parte da história relacionada ao pecado da preguiça
      * @details essa função ira printar a parte da história, fazer a opção de escolha que o personagem
      * der(sempre acontece por meio da função Escolha) e chamar a função batalhar, da classe batalha.
+     * @return char
      */
      
-    void Preguica();
+    char Preguica();
     /**
      * @brief faz o cout de toda a parte da história relacionada ao pecado da gula
      * @details fará a parte de gula e no final terá o cin para a opção de escolha
+     * @return char
      */
 
-    void Gula();
+    char Gula();
     /**
      * @brief faz o cout de toda a parte da história relacionada ao pecado da gula
      * @details printa o enredo, faz a opção de escolha usando a função da própria 
      * classe "Escolha" e implimenta a função batalhar da classe batalha
-     * 
+     * @return char
      */
 
-    void Soberba(); 
+    char Soberba(); 
     /**
      * @brief faz o cout de toda a parte da história relacionada ao pecado da luxuria
      * @details printa o enredo e faz o cin para a opção de escolha do usuário
-     * 
+     * @return char
      */
 
-    void Luxuria();
+    char Luxuria();
     /**
      * @brief faz o cout de toda a parte da história relacionada ao pecado da Avareza
      * @details printa o enredo e faz o cin para a opção de escolha do usuário
+     * @return char
      */
-
-    void Avareza();
+    char Avareza();
     /**
      * @brief faz o cout de toda a parte da história relacionada ao pecado da Inveja
      * @details printa o enredo, faz o cin para o usuário conseguir escolher uma opção e chama
      * a função batalhar da classe batalha
+     * @return char
      */
 
-    void Inveja(); 
+    char Inveja(); 
     /**
      * @brief faz o cout de toda a parte da história relacionada ao pecado da Ira
      * @details enredo + cin para opção de escolha do usuário
+     * @return char
      */
 
-    void Ira();
+    char Ira();
     /**
      * @brief finaliza a história no inferno
      * @details printa a ùltima parte e chama a função batalhar da classe batalha
