@@ -118,7 +118,7 @@ public:
  * @brief imprime a quantidade de vida, de dano do ataque, de defesa e de energia
  * 
  */
-    virtual void print() = 0;
+    void print();
 /**
  * @brief imprime Vida
  * 

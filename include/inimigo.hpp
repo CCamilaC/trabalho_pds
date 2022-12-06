@@ -12,7 +12,12 @@
  */
 #ifndef INIMIGO_HPP_INCLUDED
 #define INIMIGO_HPP_INCLUDED
+#include<iostream>
+#include <cstdlib>
+#include <vector>
+#include "inventario.hpp"
 #include "usuario.hpp"
+
 
 using namespace std;
 
@@ -37,11 +42,7 @@ class Inimigo: protected Usuario{
  * @param ven
 */
     void set_veneno(bool ven);
-/**
- * @brief imprime vida, estamina, ataque, defesa e se o inimigo está envenenado ou não
- * 
- */
-    void print();
+
 /**
  * @brief imprime a quantidade de vida do inimigo e se está envenenado ou não
  * 
@@ -108,16 +109,8 @@ class Inimigo: protected Usuario{
  * @param estamina 
  */
     void set_estamina(int estamina);
-/**
- * @brief imprime a quantidade de vida, de dano do ataque, de defesa e de energia
- * 
- */
-    void print();
-/**
- * @brief imprime Vida
- * 
- */
-    void printv();
+
+
 /**
  * @brief define a estamina maxima permitida durante o jogo
  * 

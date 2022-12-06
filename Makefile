@@ -7,7 +7,7 @@ CFLAGS := -Wall -I third_party -I include
 
 all: main
 
-inferno:
+inferno: 
 	$(CC) $(CFLAGS) $(SRCDIR)/main.cpp
 	$(BUILDDIR)/inferno.o -o $(BUILDDIR)/main.out
 
@@ -20,20 +20,20 @@ ceu:
 usuario: jogador inimigo
 	$(CC) $(CFLAGS) -o build/usuario.o -c src/usuario.cpp
 
-inimigo: usuario
+inimigo: 
 	$(CC) $(CFLAGS) -o build/inimigo.o -c src/inimigo.cpp
 
 inventario:
 	$(CC) $(CFLAGS) -o build/inventario.o -c src/inventario.cpp
 
-jogador: usuario
+jogador: inventario
 	$(CC) $(CFLAGS) -o build/jogador.o -c src/jogador.cpp
 
 testeinf: inferno.o
 	$(CC) $(CFLAGS) $(TESTDIR)/teste_inferno.cpp
 	$(BUILDDIR)/inferno.o -o $(BUILDDIR)/teste_inferno.out
 
-testeinm: inimigo.os
+testeinm: inimigo.o
 	$(CC) $(CFLAGS) $(TESTDIR)/teste_inimigo.cpp
 	$(BUILDDIR)/inimigo.o -o $(BUILDDIR)/teste_inimigo.out
 
@@ -41,7 +41,7 @@ testejog: jogador.o
 	$(CC) $(CFLAGS) $(TESTDIR)/teste_jogador.cpp
 	$(BUILDDIR)/jogador.o -o $(BUILDDIR)/teste_jogador.out
 
-main: inferno batalha ceu usuario inventario
+main: usuario inferno batalha ceu inventario
 	$(CC) $(CFLAGS) build/*.o src/main.cpp -o $(TARGET)
 
 clean:

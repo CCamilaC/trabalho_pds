@@ -118,11 +118,7 @@ public:
  * @param estamina 
  */
     void set_estamina(int estamina);
-/**
- * @brief imprime a quantidade de vida, de dano do ataque, de defesa e de energia
- * 
- */
-    void print();
+
 /**
  * @brief imprime Vida
  * 

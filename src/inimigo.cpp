@@ -11,10 +11,11 @@ using namespace std;
     void Inimigo::set_veneno(bool envenenado){
         _envenenado = envenenado;
     }
-    void Inimigo::printv(){
+    void Inimigo::printv() {
         cout << "do Inimigo: " << get_vida() << endl;
         cout << "Estamina do Inimigo: " << get_estamina() << endl;
     }
+    
     void Inimigo::envenenado(int cont){
         int aux2;
         if(get_veneno() == false){

@@ -1,11 +1,11 @@
 #include <iostream>
-#include "../include/batalha.hpp"
-#include "../include/inferno.hpp"
-#include "../include/inventario.hpp"
-#include "../include/usuario.hpp"
-#include "../include/inimigo.hpp"
-#include "../include/jogador.hpp"
-#include"../include/ceu.hpp"
+#include "batalha.hpp"
+#include "inferno.hpp"
+#include "inventario.hpp"
+#include "usuario.hpp"
+#include "inimigo.hpp"
+#include "jogador.hpp"
+#include "ceu.hpp"
 #include <string>
 
 using namespace std;
@@ -23,17 +23,17 @@ int main()
     Inimigo inim(300, 10, 10, 0, 0);
     Batalha luta;
     char aux;
-    Inferno inf("",""); 
+    Inferno *inf= new Inferno ("",""); 
     //Inicializar_historia
     try{
-        inf.Inicializar_historia();
+        inf->Inicializar_historia();
     }
     catch(invalid_argument& e){
         cout<<e.what()<<endl;
     }
     //Preguiça
     try{
-        aux=inf.Preguica();
+        aux=inf->Preguica();
         
     }
     catch(invalid_argument& e){
@@ -46,7 +46,7 @@ int main()
     //verificar se a vida não é zero
     //Gula
     try{
-        inf.Gula();
+        inf->Gula();
     } 
     catch(invalid_argument& e){
         cout << e.what() << endl;
@@ -56,7 +56,7 @@ int main()
     }
     //Soberba
     try{
-    inf.Soberba();
+    inf->Soberba();
     } 
     catch(invalid_argument& e){
         cout << e.what() << endl;
@@ -67,7 +67,7 @@ int main()
     while(luta.batalhar(&user, &inim) == 1){}
     //Luxuria
     try{
-        aux = inf.Luxuria();
+        aux = inf->Luxuria();
     } 
     catch(invalid_argument& e){
         cout << e.what() << endl;
@@ -77,7 +77,7 @@ int main()
     }
     // Avareza
     try{
-        aux = inf.Avareza();
+        aux = inf->Avareza();
     } 
     catch(invalid_argument& e){
         cout << e.what() << endl;
@@ -87,7 +87,7 @@ int main()
     }
     //Inveja
     try{
-        aux = inf.Inveja();
+        aux = inf->Inveja();
     } 
     catch(invalid_argument& e){
         cout << e.what() << endl;
@@ -98,7 +98,7 @@ int main()
     while(luta.batalhar(&user, &inim) == 1){}
     // Ira    
     try{
-        inf.Ira();
+        inf->Ira();
     }
     catch(invalid_argument& e){
         cout << e.what() << endl;
@@ -107,14 +107,14 @@ int main()
         user.adiciona_item(i7);
     }
     //batalha_final
-    inf.Batalha_final();
+    inf->Batalha_final();
     while(luta.batalhar(&user, &inim) == 1){}
     string nome;
-    nome=inf.getNome();
+    nome=inf->getNome();
     //PARTE DO CÉU
     Ceu ceu(nome);
     int pontuacaoFinal;
-    pontuacaoFinal=inf.getContador();
+    pontuacaoFinal=inf->getContador();
     if(pontuacaoFinal>=4){
         ceu.Ceu_bom();
     }

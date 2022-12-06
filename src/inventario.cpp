@@ -13,8 +13,8 @@
             return _intensidadeEfeito;
         }
 
-        item::item(string x, int y, int z){
-            _nome = x;
-            _tipo = y;
-            _intensidadeEfeito = z;
+        item::item(string nome, int tipo, int intens){
+            _nome = nome;
+            _tipo = tipo;
+            _intensidadeEfeito = intens;
         }

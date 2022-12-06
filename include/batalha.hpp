@@ -15,8 +15,10 @@
 #define BATALHA_HPP_INCLUDED
 #include <string>
 
+#include "usuario.hpp"
 #include "inimigo.hpp"
 #include "jogador.hpp"
+
 
 
 
