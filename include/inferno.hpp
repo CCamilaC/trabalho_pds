@@ -15,6 +15,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+using namespace std;
 /**
  *  
  * @brief printa na tela toda a história do inferno, implementa batalhas e faz as escolhas do jogo

@@ -3,5 +3,6 @@
         "iostream": "cpp",
         "ostream": "cpp",
         "string": "cpp"
-    }
+    },
+    "makefile.makefilePath": ""
 }
