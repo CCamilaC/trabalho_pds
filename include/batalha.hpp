@@ -2,6 +2,7 @@
 #define BATALHA_HPP_INCLUDED
 #include <string>
 
+#include "inimigo.hpp"
 #include "jogador.hpp"
 
 
@@ -9,12 +10,14 @@
 class Batalha{
 
 public:
-    bool atacar(Jogador *user, Jogador *inim, bool atq_def);
-    bool defender(Jogador *user, Jogador *inim);
-    bool inventario(Jogador *user, Jogador *inim);
+    bool atacarJ(Jogador *user, Inimigo *inim, bool atq_def);
+    bool defenderJ(Jogador *user, Inimigo *inim);
+    bool atacarI(Inimigo *inim, Jogador *user, bool atq_def);
+    bool defenderI(Inimigo *inim, Jogador *user);
+    bool inventario(Jogador *user, Inimigo *inim);
 
 
-    int batalhar(Jogador *user, Jogador *inim);
+    int batalhar(Jogador *user, Inimigo *inim);
 
 };
 

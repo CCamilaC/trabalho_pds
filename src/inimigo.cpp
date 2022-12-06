@@ -1,22 +1,17 @@
-#pragma once
 #include "inimigo.hpp"
 
 using namespace std;
 
-class Inimigo:protected Usuario{
-private:
-    bool _envenenado = false;
-
-public:
     Inimigo::Inimigo(int vida, int estamina, int ataque, int defesa, bool veneno): Usuario(vida, estamina, ataque, defesa),_envenenado(veneno){}
 
     bool Inimigo::get_veneno(){
         return _envenenado;
     }
+    
     void Inimigo::set_veneno(bool envenenado){
         _envenenado = envenenado;
     }
-    void Inimigo::print() override{
+    void Inimigo::printv(){
         cout << "do Inimigo: " << get_vida() << endl;
         cout << "Estamina do Inimigo: " << get_estamina() << endl;
     }
@@ -39,5 +34,3 @@ public:
         }
 
     }
-
-};

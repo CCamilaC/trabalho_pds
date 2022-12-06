@@ -35,20 +35,5 @@ TEST_CASE("Escolha"){
     }
 }
 
-
-TEST_CASE("Gula"){
-    SUBCASE("Escolha um"){   
-        inf.Gula();
-
-        CHECK_MESSAGE(decisao==1,"Antes mesmo de seu localizador apitar você vê ao longe uma grande mesa de banquete. Animado pela perspectiva de um lanchinho, você anda em direção a mulher sentada na cabeceira. Sua tela te avisa que é Maria Antonieta, a infame rainha francesa.");
-
-        //CHECK_THROW_AS(1, inf.Escolha());
-        CHECK(inf.Gula(2) == 2);
-    }
-    SUBCASE("Escolha dois"){
-        CHECK(inf->Gula());
-        CHECK(inf->Gula());
-    }
-}
-
+//demais classes são informativas e não necessitam ser testadas 
 

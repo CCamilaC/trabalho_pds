@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> ea2819ecb8b09cb359d1ebca9e7bd6b1e4df65a9
 CC	:=	g++
 SRCDIR	:=	src
 BUILDDIR	:=	build

@@ -18,38 +18,58 @@ using namespace std;
 
 class Inimigo: protected Usuario{
     private:
-/**
- * @brief diz se o inimigo está envenenado(true) ou não(false)
- * 
- */
         bool _envenenado;
 /**
  * @brief construtor
  * 
  */
-    public: Inimigo::Inimigo(int vida, int estamina, int ataque, int defesa, bool veneno);
+    public: Inimigo(int vida, int estamina, int ataque, int defesa, bool veneno):Usuario(vida, estamina, ataque, defesa), _envenenado(veneno){};
 /**
  * @brief retorna a condição do inimigo: se está envenenado ou não
  * 
  * @return true 
  * @return false 
  */
-    bool Inimigo::get_veneno();
+    bool get_veneno();
+/**
+ * @brief define a condiçao de envenenado
+ * 
+ * @param ven
+*/
+    void set_veneno(bool ven);
 /**
  * @brief imprime vida, estamina, ataque, defesa e se o inimigo está envenenado ou não
  * 
  */
-    void Inimigo::print() override;
+    void print() override;
 /**
  * @brief imprime a quantidade de vida do inimigo e se está envenenado ou não
  * 
  */
-    void Inimigo::printv() override;
+    void printv() override;
 /**
  * @brief executa o efeito de envenenado no inimigo e mostra a duração do efeito
  * 
  * @param cont
  */
-    void Inimigo::envenenado(int cont);
+    void envenenado(int cont);
+
+    int get_vida();
+
+    void set_vida(int vida);
+
+    int get_atq();
+
+    void set_atq(int atq);
+
+    int get_def();
+
+    void set_def(int def);
+
+    int get_estamina();
+
+    void set_estamina(int estamina);
+
+    int get_max_estamina();
 };
 #endif
