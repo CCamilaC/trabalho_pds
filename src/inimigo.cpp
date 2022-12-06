@@ -35,3 +35,38 @@ using namespace std;
         }
 
     }
+
+int Inimigo::get_max_estamina(){
+        return _max_estamina;
+} 
+
+int Inimigo::get_vida(){
+    return _vida;
+}
+void Inimigo::set_vida(int vida){
+    _vida = vida;
+}
+int Inimigo::get_atq(){
+
+    return _atq;
+}
+void Inimigo::set_atq(int atq){
+
+    _atq = atq;
+}
+int Inimigo::get_def(){
+    return _def;
+}
+void Inimigo::set_def(int def){
+    _def = def;
+}
+int Inimigo::get_estamina(){
+    return _estamina;
+}
+void Inimigo::set_estamina(int estamina){
+    _estamina = estamina;
+}
+void Inimigo::set_max_estamina(int maxe){
+    _max_estamina = maxe;
+}
+

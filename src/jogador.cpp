@@ -6,7 +6,7 @@
 
 using namespace std;
 
-    Jogador::Jogador(int vida, int estamina, int ataque, int defesa): Usuario(vida, estamina, ataque, defesa){};
+    Jogador::Jogador(bool vivo, int vida, int estamina, int ataque, int defesa): Usuario(vida, estamina, ataque, defesa),_vivo(vivo){};
 
     void Jogador::adiciona_item(item x){
         _inventario.push_back(x);

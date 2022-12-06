@@ -27,8 +27,8 @@ private:
  * @brief Vetor do tipo item que adiciona um item ao inventario
  * 
  */
-    vector<item> _inventario;
-
+   vector<item> _inventario;
+   bool _vivo;
 public:
 /**
  * @brief Construtor
@@ -38,7 +38,7 @@ public:
  * @param ataque 
  * @param defesa 
  */
-    Jogador(int vida, int estamina, int ataque, int defesa);
+    Jogador(bool vivo, int vida, int estamina, int ataque, int defesa);
 /**
  * @brief Adiciona um item ao inventario 
  * 

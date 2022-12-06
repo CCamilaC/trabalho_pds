@@ -16,17 +16,17 @@ batalha:
 ceu:
 	$(CC) $(CFLAGS) -o build/ceu.o -c src/ceu.cpp
 
+inimigo:
+	$(CC) $(CFLAGS) -o build/inimigo.o -c src/inimigo.cpp
+
+jogador:
+	$(CC) $(CFLAGS) -o build/jogador.o -c src/jogador.cpp
+
 usuario: inventario inimigo jogador
 	$(CC) $(CFLAGS) -o build/usuario.o -c src/usuario.cpp
 
-inimigo: 
-	$(CC) $(CFLAGS) -o build/inimigo.o -c src/inimigo.cpp
-
 inventario:
 	$(CC) $(CFLAGS) -o build/inventario.o -c src/inventario.cpp
-
-jogador: 
-	$(CC) $(CFLAGS) -o build/jogador.o -c src/jogador.cpp
 
 testeinf: inferno.o
 	$(CC) $(CFLAGS) $(TESTDIR)/teste_inferno.cpp

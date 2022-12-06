@@ -3,7 +3,7 @@
 using namespace std;
 
 
-Usuario::Usuario(int vida, int atq, int def, int estamina){
+Usuario::Usuario(int vida, int estamina, int atq, int def){
     set_vida(vida);
     set_estamina(estamina);
     set_atq(atq);
