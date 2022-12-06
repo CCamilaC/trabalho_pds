@@ -31,7 +31,7 @@ COMO jogador(a), quando ocorrer uma batalha durante a narrativa, EU QUERO atacar
 
 COMO jogador(a), EU QUERO chegar no céu PARA ter a possibilidade de salvar uma personagem
 
-COMO jogador(a), EU QUERO 
+caso eu consiga chegar no céu bom, COMO jogador(a), EU QUERO digitar um número correspondente ao personagem que eu queira PARA salvá-lo do inferno
 
 ESPECIFICAÇÕES:
 → Linux: para rodar digite no terminal: make e depois ./main 
