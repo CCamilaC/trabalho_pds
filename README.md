@@ -25,19 +25,21 @@ USER STORIES:
 
 COMO jogador(a), EU QUERO fazer boas escolhas no inferno PARA alcançar o céu
 
-COMO jogador(a), EU QUERO digitar o número 1 ou 2 quando houver uma escolha a ser feita PARA dar prosseguimento a história 
+COMO jogador(a), EU QUERO digitar um número quando houver uma escolha a ser feita PARA dar prosseguimento a história 
 
 COMO jogador(a), quando ocorrer uma batalha durante a narrativa, EU QUERO atacar meu oponente e retirar suas vidas PARA vencer a luta e dar prosseguimento a história
 
-COMO jogador(a), se eu chegar o céu e ter a possibilidade de salvar um personagem, EU QUERO digitar de 1 à 7 PARA selecionar o personagem escolhido
+COMO jogador(a), EU QUERO chegar no céu PARA ter a possibilidade de salvar uma personagem
+
+COMO jogador(a), EU QUERO 
 
 ESPECIFICAÇÕES:
 → Linux: para rodar digite no terminal: make e depois ./main 
 → Windows: para rodar digite no terminal: mingw32-make e depois ./main
 
 DIFERENCIAL CRIATIVO:
-→ textos escritos pelos próprios membros
-→ 
+→ Textos escritos pelos próprios membros
+→ Incrementação do jogo por meio de ASCII art
 
 LINK DO DIAGRAMA DE CLASSES: https://lucid.app/lucidchart/invitations/accept/inv_15be49de-8f15-4b7f-84de-198a19293d5e
 
