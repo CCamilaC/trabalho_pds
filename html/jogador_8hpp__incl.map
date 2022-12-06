@@ -1,0 +1,10 @@
+<map id="include/jogador.hpp" name="include/jogador.hpp">
+<area shape="rect" id="node1" title="A classe jogador herdar atributos da classe Usuário e armazena itens do jogador." alt="" coords="129,5,279,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,229,85,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="193,229,258,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="282,229,345,256"/>
+<area shape="rect" id="node5" href="$inventario_8hpp.html" title="Classe que crio os itens que o jogador recebe." alt="" coords="167,155,283,181"/>
+<area shape="rect" id="node7" href="$usuario_8hpp.html" title=" " alt="" coords="44,155,143,181"/>
+<area shape="rect" id="node8" href="$inimigo_8hpp.html" title="classe que herda os atributos da classe Usuario e armazena informações do inimigo" alt="" coords="112,80,211,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="109,229,168,256"/>
+</map>
