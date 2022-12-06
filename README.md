@@ -21,15 +21,6 @@ OBJETIVOS
 → Criar um jogo de escolhas em que elas realmente impactem a gameplay.
 → Ter uma história envolvente e interessante/criar reflexão à respeito da subjetividade dos pecados.
 
-PERSONAGENS:
-→ Platão
-→ Maria Antonieta
-→ Napoleão
-→ Marylin Monroe
-→ Elon Musk
-→ Thomas Edison
-→ Zumbi dos Palmares
-
 USER STORIES:
 
 COMO jogador(a), EU QUERO fazer boas escolhas no inferno PARA alcançar o céu
@@ -48,4 +39,8 @@ DIFERENCIAL CRIATIVO:
 → textos escritos pelos próprios membros
 → 
 
+LINK DO DIAGRAMA DE CLASSES: https://lucid.app/lucidchart/invitations/accept/inv_15be49de-8f15-4b7f-84de-198a19293d5e
+
+EXTRA: 
+link do docs usado durante o desenvolvimento do jogo: https://docs.google.com/document/d/1Lk0AEHWh82QkxKOwMCVIJBk7utQWAjxyyy3hp7cRctg/edit
 
