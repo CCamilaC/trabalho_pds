@@ -73,24 +73,26 @@ using namespace std;
             _inventario.erase(_inventario.begin() + x);
             cout << "O item falhou e voçê recebeu " << efeito << " de dano" << endl;
         }
+}
 
+void Jogador::mostra_item(){
+    for(size_t i = 0; i < _inventario.size(); i ++){
+        cout << "(" << i << ")" << _inventario[i].getNome() << endl;
+        }
 
-    }
+}
 
-    void Jogador::mostra_item(){
-        for(size_t i = 0; i < _inventario.size(); i ++){
-            cout << "(" << i << ")" << _inventario[i].getNome() << endl;
-            }
+void Jogador::remove_item(){
+    int random;
+    random = (rand() % _inventario.size());
+    _inventario.erase(_inventario.begin() + random);
+}
 
-    }
+void Jogador::printv() {
+    cout << "do Jogador: " << get_vida() << endl;
+    cout << "Estamina do Jogador: " << get_estamina() << endl;
+}
 
-    void Jogador::remove_item(){
-        int random;
-        random = (rand() % _inventario.size());
-        _inventario.erase(_inventario.begin() + random);
-    }
-
-    void Jogador::printv() {
-        cout << "do Jogador: " << get_vida() << endl;
-        cout << "Estamina do Jogador: " << get_estamina() << endl;
-    }
+Jogador::~Jogador(){
+    _vivo=0;
+}

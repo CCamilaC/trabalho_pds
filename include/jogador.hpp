@@ -129,5 +129,6 @@ public:
  * 
  */
     void set_max_estamina(int maxe);
+    ~Jogador();
 };
 #endif

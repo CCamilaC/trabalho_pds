@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/batalha.hpp"
+#include "batalha.hpp"
 #include "../include/inferno.hpp"
 #include "../include/inventario.hpp"
 #include "../include/usuario.hpp"
