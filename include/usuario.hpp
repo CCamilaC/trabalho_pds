@@ -124,7 +124,10 @@ public:
  * 
  */
     virtual void printv();
-
+/**
+ * @brief define a estamina maxima permitida durante o jogo
+ * 
+ */
     virtual void set_max_estamina(int maxe);
 
 };
