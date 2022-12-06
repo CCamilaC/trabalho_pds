@@ -1,4 +1,6 @@
 #include "batalha.hpp"
+#include "jogador.hpp"
+#include "inimigo.hpp"
 
 using namespace std;
 int cont = 0;
@@ -119,120 +121,100 @@ int Batalha::batalhar(Jogador *user, Inimigo *inim){
 
 
 
-        bool Batalha::atacarJ(Jogador *user, Inimigo *inim, bool atq_def){
-            try{
-            int x =  user->Jogador::get_estamina() - 1;
+bool Batalha::atacarJ(Jogador *user, Inimigo *inim, bool atq_def){
+    try{
+     int x =  user->get_estamina() - 1;
+        user->set_estamina(x);
+
+        if(x < 0){
+            x = 0;
             user->set_estamina(x);
-
-            if(x < 0){
-                x = 0;
-                user->set_estamina(x);
             throw "sua estamina esta em zero, voce nao pode atacar. ";
-            }
-            int y = user->get_atq();
-            if(atq_def){
-                y = y - inim->get_def();
-            }
-            y = inim->get_vida() - y;
-            inim->set_vida(y);
-
-            
-
-            }catch(const char *e){
-                cout << e << endl;
-                batalhar(user, inim);
-
-            }
-            if (inim->get_vida() <= 0 || user->get_vida() <= 0){
-
-                return true;
-
-            }
-            
-            return false;
         }
-        bool Batalha::atacarI(Inimigo *inim, Jogador *user, bool atq_def){
-            try{
-            int x =  inim->get_estamina() - 1;
+        int y = user->get_atq();
+        if(atq_def){
+            y = y - inim->get_def();
+        }
+        y = inim->get_vida() - y;
+        inim->set_vida(y);
+    }catch(const char *e){
+        cout << e << endl;
+        batalhar(user, inim);
+    }
+    if (inim->get_vida() <= 0 || user->get_vida() <= 0){
+        return true;
+    }
+    return false;
+}
+
+bool Batalha::atacarI(Inimigo *inim, Jogador *user, bool atq_def){
+    try{
+        int x =  inim->get_estamina() - 1;
+        inim->set_estamina(x);
+
+        if(x < 0){
+            x = 0;
             inim->set_estamina(x);
-
-            if(x < 0){
-                x = 0;
-                inim->set_estamina(x);
             throw "sua estamina esta em zero, voce nao pode atacar. ";
-            }
-            int y = inim->get_atq();
-            if(atq_def){
-                y = y - user->get_def();
-            }
-            y = user->get_vida() - y;
-            user->set_vida(y);
-
-            
-
-            }catch(const char *e){
-                cout << e << endl;
-                batalhar(user, inim);
-
-            }
-            if (inim->get_vida() <= 0 || user->get_vida() <= 0){
-
-                return true;
-
-            }
-            
-            return false;
         }
-
-        bool Batalha::defenderJ(Jogador *user, Inimigo *inim){
-
-            int z = user->get_estamina() + 1;
-            if(z > user->get_max_estamina()){
-                z = z - 1;
-            }
-            user->set_estamina(z);
-            if (inim->get_vida() <= 0 || user->get_vida() <= 0){
-
-                return true;
-
-            }
-
-            return false;
-
-
+        int y = inim->get_atq();
+        if(atq_def){
+            y = y - user->get_def();
         }
-        bool Batalha::defenderI(Inimigo *user, Jogador *inim){
+        y = user->get_vida() - y;
+        user->set_vida(y);
+    }catch(const char *e){
+        cout << e << endl;
+        batalhar(user, inim);
+    }
+    if (inim->get_vida() <= 0 || user->get_vida() <= 0){
+        return true;
+    }
+    return false;
+}
 
-            int z = inim->get_estamina() + 1;
-            if(z > inim->get_max_estamina()){
-                z = z - 1;
-            }
-            inim->set_estamina(z);
-            if (inim->get_vida() <= 0 || user->get_vida() <= 0){
+bool Batalha::defenderJ(Jogador *user, Inimigo *inim){
 
-                return true;
+    int z = user->get_estamina() + 1;
+    if(z > user->get_max_estamina()){
+        z = z - 1;
+    }
+    user->set_estamina(z);
+    if (inim->get_vida() <= 0 || user->get_vida() <= 0){
 
-            }
+        return true;
 
-            return false;
+    }
 
-
-        }
-
-        bool Batalha::inventario(Jogador *user, Inimigo *inim){
-            
-            int iten = 0;
-
-            cout << "inventario: " << endl;
-            user->mostra_item();
-            cout << "[8] = voltar" << endl;
-            cin >> iten;
-            if(iten == 8){
-                return 0;
-            }
-             user->usa_item(iten, user, inim);
-             return 1;
+    return false;
 
 
-        }
+}
+bool Batalha::defenderI(Inimigo *user, Jogador *inim){
+
+    int z = inim->get_estamina() + 1;
+    if(z > inim->get_max_estamina()){
+        z = z - 1;
+    }
+    inim->set_estamina(z);
+    if (inim->get_vida() <= 0 || user->get_vida() <= 0){
+
+        return true;
+    }
+    return false;
+    }
+
+bool Batalha::inventario(Jogador *user, Inimigo *inim){
+
+    int iten = 0;
+    cout << "inventario: " << endl;
+    user->mostra_item();
+    cout << "[8] = voltar" << endl;
+    cin >> iten;
+    if(iten == 8){
+        return 0;
+    }
+    user->usa_item(iten, user, inim);
+    return 1;
+}
 

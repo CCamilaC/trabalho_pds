@@ -46,15 +46,6 @@ char Inferno::Escolha(char opcaoEscolhida){
         }
     } while(_opcaoEscolhida!='1' && _opcaoEscolhida!='2');
     
-    /*catch(){ 
-        /*amg isso não seria na main? o catch no caso?
-    eu n sei direito. sei q o try é aqui e o throw é no arquivo de teste
-    vc acha q o catch é na main? sim, acho que o catch e  try ficam juntos na main
-    quando chama a função, o neitam falou que era assim, masv tb não tenho certeza nao kkkkkk
-    vou pesquisar mais um pouco ent camila: eu tbb vou!!
-    }
-    */
-    
     return '0';
 }
 int Inferno::getContador(){

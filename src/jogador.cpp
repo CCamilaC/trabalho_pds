@@ -36,7 +36,7 @@ using namespace std;
         }
 
         else if(_inventario[x].getTipo() == 3){
-            int vida_antes = p->get_vida();
+            //int vida_antes = p->get_vida();
             int cura = _inventario[x].get_intensidadeEfeito();
             int aux1 = 0;
             int aux2 = 0;
@@ -78,7 +78,7 @@ using namespace std;
     }
 
     void Jogador::mostra_item(){
-        for(int i = 0; i < _inventario.size(); i ++){
+        for(size_t i = 0; i < _inventario.size(); i ++){
             cout << "(" << i << ")" << _inventario[i].getNome() << endl;
             }
 

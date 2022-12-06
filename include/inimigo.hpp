@@ -28,7 +28,7 @@ class Inimigo: protected Usuario{
  * @brief construtor
  * 
  */
-    public: Inimigo(int vida, int estamina, int ataque, int defesa, bool veneno):Usuario(vida, estamina, ataque, defesa), _envenenado(veneno){};
+    public: Inimigo(int vida, int estamina, int ataque, int defesa, bool veneno);
 /**
  * @brief retorna a condição do inimigo: se está envenenado ou não
  * 

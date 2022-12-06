@@ -19,9 +19,6 @@
 #include "inimigo.hpp"
 #include "jogador.hpp"
 
-
-
-
 class Batalha{
 
 public:
@@ -85,11 +82,10 @@ public:
  * 
  * @return 0 
  * @return 1
- * @return 2s
+ * @return 2
  */
     int batalhar(Jogador *user, Inimigo *inim);
 
 };
-
 
 #endif  //BATALHA_HPP_INCLUDED

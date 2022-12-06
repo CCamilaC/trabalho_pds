@@ -1,11 +1,11 @@
 #include <iostream>
-#include "batalha.hpp"
-#include "inferno.hpp"
-#include "inventario.hpp"
-#include "usuario.hpp"
-#include "inimigo.hpp"
-#include "jogador.hpp"
-#include "ceu.hpp"
+#include "../include/batalha.hpp"
+#include "../include/inferno.hpp"
+#include "../include/inventario.hpp"
+#include "../include/usuario.hpp"
+#include "../include/inimigo.hpp"
+#include "../include/jogador.hpp"
+#include "../include/ceu.hpp"
 #include <string>
 
 using namespace std;
@@ -134,9 +134,9 @@ int main()
     luta.batalhar(user, inim);
     */
     ////////////////////////////////////////////////////////////////////////////////////
-   
-
+    
     return 0;
 }
+
 
 

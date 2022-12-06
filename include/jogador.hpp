@@ -38,7 +38,7 @@ public:
  * @param ataque 
  * @param defesa 
  */
-    Jogador(int vida, int estamina, int ataque, int defesa): Usuario(vida, estamina, ataque, defesa){};
+    Jogador(int vida, int estamina, int ataque, int defesa);
 /**
  * @brief Adiciona um item ao inventario 
  * 
