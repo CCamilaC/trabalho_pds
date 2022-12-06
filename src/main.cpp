@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-    Jogador user(true,100, 6, 15, 10);
+    Jogador user(100, 6, 15, 10);
     item i1("Megafone de platão", 1, 5);//preguiça
     item i2("Brioche duro", 1, 7);//gula
     item i3("espada", 5, 5);//soberba

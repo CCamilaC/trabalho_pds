@@ -155,8 +155,32 @@ char Inferno::Preguica(){
 }
 
 char Inferno::Gula(){
-   cout<<"Antes mesmo de seu localizador apitar você vê ao longe uma grande mesa de banquete. Animado pela perspectiva de um lanchinho, você anda em direção a mulher sentada na cabeceira. Sua tela te avisa que é Maria Antonieta, a infame rainha francesa."<<endl<<endl;
-    cout<<"Maria Antonieta: Eu disse uma frase boba uma vez e agora sou obrigada a jantar lama todo dia que nem uma plebeia. O que há de tão mau em incentivar o consumo de brioches? Eu entendo que acumular comida pode ser visto como ruim por alguns, mas vocês só pensam nisso quando alguém rico faz isso. Se um esfomeado qualquer decidir roubar um brioche para não morrer de fome ele deverá ser punido no inferno?"<<endl<<endl;
+    cout<<"Antes mesmo de seu localizador apitar você vê ao longe uma grande mesa de banquete. Animado pela perspectiva de um lanchinho, você anda em direção a mulher sentada na cabeceira. Sua tela te avisa que é Maria Antonieta, a infame rainha francesa."<<endl<<endl;
+    cout<<R"(      
+         .....
+         WWWWW
+        ((. .))    
+       ))) - (((	  
+     ((((`...')))       
+      ))))\  /(((   	      
+      /    \/    \
+     / /\      /\ \
+    / /  \    /  \ \
+   @@@@  / \/ \  @@@@
+   (v   /      \   v)  
+       @@@@@@@@@@
+      /          \
+     /            \
+    @@@@@@@@@@@@@@@@
+   /                \
+  /                  \
+ @@@@@@@@@@@@@@@@@@@@@@
+ /                    \
+@@@@@@@@@@@@@@@@@@@@@@@@      
+         v  v
+
+)";
+    cout<<"\n \nMaria Antonieta: Eu disse uma frase boba uma vez e agora sou obrigada a jantar lama todo dia que nem uma plebeia. O que há de tão mau em incentivar o consumo de brioches? Eu entendo que acumular comida pode ser visto como ruim por alguns, mas vocês só pensam nisso quando alguém rico faz isso. Se um esfomeado qualquer decidir roubar um brioche para não morrer de fome ele deverá ser punido no inferno?"<<endl<<endl;
     cout<<_escolha<<endl;
     cout<<"1- Todos devem ter suas necessidades básicas atendidas, mesmo que às vezes isso aconteça por meios duvidosos."<<endl;
     cout<<"2- O pecado está na ação, não importa a intenção por trás dela. É a única forma realmente justa de lidar com a imoralidade."<<endl;
