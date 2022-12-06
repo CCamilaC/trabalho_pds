@@ -21,15 +21,6 @@ OBJETIVOS
 → Criar um jogo de escolhas em que elas realmente impactem a gameplay.
 → Ter uma história envolvente e interessante/criar reflexão à respeito da subjetividade dos pecados.
 
-PERSONAGENS:
-→ Platão
-→ Maria Antonieta
-→ Napoleão
-→ Marylin Monroe
-→ Elon Musk
-→ Thomas Edison
-→ Zumbi dos Palmares
-
 USER STORIES:
 
 COMO jogador(a), EU QUERO fazer boas escolhas no inferno PARA alcançar o céu
