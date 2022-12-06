@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-    Jogador user(250, 25,10 , 5);
+    Jogador user(100, 6, 15, 10);
     item i1("Megafone de platão", 1, 5);//preguiça
     item i2("Brioche duro", 1, 7);//gula
     item i3("espada", 5, 5);//soberba
@@ -20,7 +20,7 @@ int main()
     item i5("taser", 5, 5);//avareza
     item i6("lâmpada", 5, 5);//inveja
     item i7("chicote", 3, 10);//ira
-    Jogador inim(300, 10, 0, 0);
+    Inimigo inim(100, 6, 15, 10, 0);
     Batalha luta;
     char aux;
     Inferno inf("",""); 
@@ -64,7 +64,7 @@ int main()
         user.adiciona_item(i3);
     }
     while(luta.batalhar(&user, &inim) == 1){}
-    //Luxuaria
+    //Luxuria
     try{
         aux = inf.Luxuria();
     } 

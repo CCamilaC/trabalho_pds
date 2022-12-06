@@ -41,7 +41,7 @@ class Inimigo: protected Usuario{
  * @brief imprime vida, estamina, ataque, defesa e se o inimigo está envenenado ou não
  * 
  */
-    void print() override;
+    void print();
 /**
  * @brief imprime a quantidade de vida do inimigo e se está envenenado ou não
  * 
