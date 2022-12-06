@@ -3,20 +3,20 @@
 using namespace std;
 
 
-        string item:: getNome(){
-            return _nome;
-        }
+string item:: getNome(){
+    return _nome;
+}
 
-        int item:: getTipo(){
-            return _tipo;
-        }
+int item:: getTipo(){
+    return _tipo;
+}
 
-        int item:: get_intensidadeEfeito(){
-            return _intensidadeEfeito;
-        }
+int item:: get_intensidadeEfeito(){
+    return _intensidadeEfeito;
+}
 
-        item::item(string x, int y, int z){
-            _nome = x;
-            _tipo = y;
-            _intensidadeEfeito = z;
-        }
+item::item(string nome, int tipo, int efeito){
+    _nome = nome;
+    _tipo = tipo;
+    _intensidadeEfeito = efeito;
+}
