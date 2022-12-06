@@ -62,7 +62,7 @@ public:
   * @param y = tipo
   * @param z = intensidade e efeito
   */
-   item(string nome, int tipo, int intens);
+   item(string x, int y, int z);
 
 };
 

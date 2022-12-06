@@ -16,19 +16,24 @@
 #include <cstdlib>
 #include <vector>
 #include "inventario.hpp"
-#include "usuario.hpp"
-#include "inimigo.hpp"
+
 
 using namespace std;
 
-class Jogador:protected Usuario{
+class Jogador{
 private:
+    int _vida;
+    int _atq;
+    int _def;
+    int _estamina;
+    bool _veneno = false;
+    int _max_estamina = 6;
 /**
  * @brief Vetor do tipo item que adiciona um item ao inventario
  * 
  */
-   vector<item> _inventario;
-   bool _vivo;
+    vector<item> _inventario;
+
 public:
 /**
  * @brief Construtor
@@ -38,7 +43,11 @@ public:
  * @param ataque 
  * @param defesa 
  */
-    Jogador(bool vivo, int vida, int estamina, int ataque, int defesa);
+    Jogador(int vida, int ataque, int defesa, int estamina);
+
+    bool get_veneno();
+
+    void set_veneno(bool x);
 /**
  * @brief Adiciona um item ao inventario 
  * 
@@ -52,7 +61,7 @@ public:
  * @param p 
  * @param i 
  */
-    void usa_item(int x, Jogador *p, Inimigo *i);
+    void usa_item(int x, Jogador *p, Jogador *i);
 /**
  * @brief Mostra os itens do iventario
  * 
@@ -64,71 +73,30 @@ public:
  */
     void remove_item();
 
-    /**
- * @brief retorna a quantidade de estamina maxima do jogador ou do inimigo
- * 
- * @return int 
- */
-    int get_max_estamina();
-/**
- * @brief retorna a quantidade de vida do jogador ou do inimigo
- * 
- * @return int 
- */
     int get_vida();
-/**
- * @brief altera a quantidade de vida
- * 
- * @param vida número inteiro 
- */
+
     void set_vida(int vida);
-/**
- * @brief retorna a quantidade de dano que o ataque causa
- * 
- * @return int 
- */
+
     int get_atq();
-/**
- * @brief altera o valor do dano causado pelo ataque
- * 
- * @param atq 
- */
+
     void set_atq(int atq);
-/**
- * @brief retorna a quantidade de dano ignorado pelo jogador ou inimigo
- * 
- * @return int 
- */
+
     int get_def();
-/**
- * @brief altera a quantidade de dano ignorado pelo jogador ou inimigo
- * 
- * @param def 
- */
+
     void set_def(int def);
-/**
- * @brief retorna a quantidade de energia do jogador ou do inimigo
- * 
- * @return int 
- */
+
     int get_estamina();
-/**
- * @brief altera a quantidade de energia do jogador ou do inimigo
- * 
- * @param estamina 
- */
+
     void set_estamina(int estamina);
 
-/**
- * @brief imprime Vida
- * 
- */
+    int get_max_estamina();
+
     void printv();
-/**
- * @brief define a estamina maxima permitida durante o jogo
- * 
- */
-    void set_max_estamina(int maxe);
-    ~Jogador();
+
+    void printiv();
+
+    void print();
+
+    void envenenado(int cont);
 };
 #endif

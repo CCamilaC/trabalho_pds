@@ -15,8 +15,6 @@
 #define BATALHA_HPP_INCLUDED
 #include <string>
 
-#include "usuario.hpp"
-#include "inimigo.hpp"
 #include "jogador.hpp"
 
 class Batalha{
@@ -32,7 +30,7 @@ public:
  * @return true 
  * @return false 
  */
-    bool atacarJ(Jogador *user, Inimigo *inim, bool atq_def);
+    bool atacar(Jogador *user, Jogador *inim, bool atq_def);
 /**
  * @brief retorna se alguma das partes defendeu
  * 
@@ -42,28 +40,8 @@ public:
  * @return true 
  * @return false 
  */
-    bool defenderJ(Jogador *user, Inimigo *inim);
-/**
- * @brief retorna se alguma das partes chegou a 0 de vida
- * 
- * @param user
- * @param inim
- * @param atq_def
- * 
- * @return true 
- * @return false 
- */
-    bool atacarI(Inimigo *inim, Jogador *user, bool atq_def);
-/**
- * @brief retorna se alguma das partes defendeu
- * 
- * @param user
- * @param inim
- * 
- * @return true 
- * @return false 
- */
-    bool defenderI(Inimigo *inim, Jogador *user);
+    bool defender(Jogador *user, Jogador *inim);
+
 /**
  * @brief retorna se algum item foi utilizado
  * 
@@ -73,7 +51,7 @@ public:
  * @return true 
  * @return false 
  */
-    bool inventario(Jogador *user, Inimigo *inim);
+    bool inventario(Jogador *user, Jogador *inim);
 /**
  * @brief retorna os resultados da batlha
  * 
@@ -84,7 +62,7 @@ public:
  * @return 1
  * @return 2
  */
-    int batalhar(Jogador *user, Inimigo *inim);
+    int batalhar(Jogador *user, Jogador *inim);
 
 };
 
