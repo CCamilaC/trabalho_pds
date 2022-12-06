@@ -19,7 +19,7 @@ int main()
     item i4("colete de diamantes", 2, 8);//luxúria
     item i5("taser", 5, 5);//avareza
     item i6("lâmpada", 5, 5);//inveja
-    item i7("chicote", 3, 10);//ira
+    item i7("GUIA", 2, 8);//ira
     Inimigo inim(300, 10, 10, 0, 0);
     Batalha luta;
     char aux;
