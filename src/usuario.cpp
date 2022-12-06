@@ -50,10 +50,10 @@ using namespace std;
 
     }
 
-    void Usuario::printv(){
+    /*void Usuario::printv(){
        cout << "Vida ";
     }
-
+*/
     void Usuario::set_max_estamina(int maxe){
         _max_estamina = maxe;
     }
