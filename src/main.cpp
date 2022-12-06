@@ -20,7 +20,7 @@ int main()
     item i5("taser", 5, 5);//avareza
     item i6("lâmpada", 5, 5);//inveja
     item i7("chicote", 3, 10);//ira
-    Jogador inim(300, 10, 0, 0);
+    Inimigo inim(300, 10, 10, 0, 0);
     Batalha luta;
     char aux;
     Inferno inf("",""); 
@@ -56,8 +56,9 @@ int main()
     }
     //Soberba
     try{
-    inf.Soberba()
-    } catch(invalid_argument& e){
+    inf.Soberba();
+    } 
+    catch(invalid_argument& e){
         cout << e.what() << endl;
     }
     if(aux=='2'){
