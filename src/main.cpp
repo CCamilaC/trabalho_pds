@@ -32,7 +32,7 @@ int main()
         cout << e.what() << endl;
     }
     try{
-    inf.Soberba()
+    inf.Soberba();
     } catch(invalid_argument& e){
         cout << e.what() << endl;
     }
