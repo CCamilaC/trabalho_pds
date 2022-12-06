@@ -2,6 +2,7 @@
 #define BATALHA_HPP_INCLUDED
 #include <string>
 
+#include "inimigo.hpp"
 #include "jogador.hpp"
 
 

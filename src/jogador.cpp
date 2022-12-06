@@ -1,4 +1,3 @@
-#pragma once
 #include <vector>
 #include <math.h>
 #include "jogador.hpp"
@@ -7,7 +6,7 @@
 
 using namespace std;
 
-    Jogador::Jogador(int vida, int estamina, int ataque, int defesa): Jogador(vida, estamina, ataque, defesa){}
+    Jogador::Jogador(int vida, int estamina, int ataque, int defesa): Usuario(vida, estamina, ataque, defesa){};
 
     void Jogador::adiciona_item(item x){
         _inventario.push_back(x);
@@ -91,7 +90,7 @@ using namespace std;
         _inventario.erase(_inventario.begin() + random);
     }
 
-    void Jogador::printv() override{
+    void Jogador::printv() {
         cout << "do Jogador: " << get_vida() << endl;
         cout << "Estamina do Jogador: " << get_estamina() << endl;
     }
