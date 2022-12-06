@@ -1,4 +1,4 @@
-#include "../include/inferno.hpp"
+#include "inferno.hpp"
 #include <iostream>
 //#include <windows.h>
 #include <vector>
