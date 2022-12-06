@@ -16,7 +16,7 @@ int Usuario::get_max_estamina(){
 
 int Usuario::get_vida(){
     return _vida;
-}
+}s
 void Usuario::set_vida(int vida){
     _vida = vida;
 }
@@ -56,4 +56,4 @@ void Usuario::set_max_estamina(int maxe){
     _max_estamina = maxe;
 }
 
-
+//testsss
