@@ -15,7 +15,8 @@
 #include<iostream>
 #include <cstdlib>
 #include <vector>
-#include "inventario.hpp"
+#include "../include/inventario.hpp"
+#include "../include/usuario.hpp"
 
 
 using namespace std;
