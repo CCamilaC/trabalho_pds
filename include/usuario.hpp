@@ -47,7 +47,7 @@ protected:
 /**
  * @brief quantidade de energia máxima do jogador ou do inimigo
  */
-    int _max_estamina = 6;
+    int _max_estamina;
 
 public:
 /**
@@ -118,7 +118,7 @@ public:
  * @brief imprime a quantidade de vida, de dano do ataque, de defesa e de energia
  * 
  */
-    virtual void print();
+    virtual void print() = 0;
 /**
  * @brief imprime Vida
  * 

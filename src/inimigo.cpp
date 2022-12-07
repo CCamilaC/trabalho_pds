@@ -1,4 +1,4 @@
-#include "inimigo.hpp"
+#include "../include/inimigo.hpp"
 
 using namespace std;
 

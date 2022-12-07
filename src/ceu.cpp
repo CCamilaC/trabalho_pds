@@ -1,4 +1,4 @@
-#include "ceu.hpp"
+#include "../include/ceu.hpp"
 #include <iostream>
 using namespace std;
 
@@ -15,20 +15,45 @@ void esperarEnter(){
 }
 
 void Ceu::Ceu_bom(){
-   cout<<"----------------------------------------------------//----------------------------------------------------"<<endl;
-   cout << "Que golpe final foi aquele, " + _nome + "!! O jeito que você combinou os poderes dos itens" << endl;
+   //cout<<"----------------------------------------------------//----------------------------------------------------"<<endl;
+   cout<<R"( 
+                  ----o-
+ _____________   %%% , ,%_________
+(___________,,)  %c    >) ,________)
+   (_________,,)  )   =  ,______)
+        (_____,,)/ _/__,,____)
+           / \   \__/ /\
+          /\ |        \/\
+         /__\|'   ,   /  \,
+        < -  '====o==,  /_\
+       /    /`       |\ __ \
+      /__,_/    |  _/, \____\
+      //   |     \/  \    \\
+    _( \   \      \  \   _/ \
+     //|    \     \  \    |/|
+            < `  _\ -)
+           /    |_/ |
+          |    / |_/
+         / _,  ' /|
+         \/ \_,--.,
+         '(    )'
+        / |    | \
+        |,/    \,/     )";
+   cout << "\nAnjo: Que golpe final foi aquele, " + _nome + "!! O jeito que você combinou os poderes dos itens" << endl;
    cout << "para derrotar o demônio foi sensacional, eu nunca duvidei de você! Sua pontuação foi excelente,"<< endl;
    cout << "tanto nas lutas quanto nas escolhas morais. Eu não imaginava que o projeto “Hell x heaven” fosse dar tão certo,"<< endl; 
    cout << "mas você é prova viva, viva talvez não, mas é prova de que ele funciona! Você conseguiu mostrar maestria em suas"<< endl; 
    cout << "decisões e revelou que até mesmo os pecados não são universais e merecem uma segunda perspectiva, conseguindo de fato" << endl;
    cout << "entender a dor de cada um. Sua forma compassiva mostrou que você possui uma das maiores qualidades que o céu precisa."<< endl;
-   cout <<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
-   esperarEnter();
+   //cout <<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
+   cin.get();
+   cin.get();
+   system("clear");
    cout <<"------------------------------------------------------------------------------------------"<<endl;
    cout << "Parabéns Herói, você cumpriu seu objetivo e agora tem passe ilimitado para" << endl;
    cout << "o céu, mas além disso, você tem direito de selecionar uma das pessoas que você"<< endl;
-   cout << "trombou para ir com você!"<< endl; 
-   cout <<"------------------------------------------------------------------------------------------"<<endl;
+   cout << "trombou para ir com você!"<< endl<<endl; 
+   //cout <<"------------------------------------------------------------------------------------------"<<endl;
    cout << "[1] = Platão"<< endl;
    cout << "[2] = Maria Antonieta"<< endl;
    cout << "[3] = Napoleão"<< endl;
@@ -38,7 +63,7 @@ void Ceu::Ceu_bom(){
    cout << "[7] = Zumbi dos Palmares"<< endl;
    cout <<""<<endl;
    cout <<"Faça sua escolha:" << endl;
-   cout<<"-----------------------------------------//-----------------------------------------"<<endl;
+   //cout<<"-----------------------------------------//-----------------------------------------"<<endl;
    _pessoa_salva = '0';
    do{
       cin>>_pessoa_salva;
@@ -89,8 +114,31 @@ void Ceu::Ceu_bom(){
 }
 
 void Ceu::Ceu_ruim(){
-   cout<<"-----------------------------------------//-----------------------------------------"<<endl;
-   cout << _nome + ", você venceu a luta. Desculpe, não estou em clima de" << endl;
+   //cout<<"-----------------------------------------//-----------------------------------------"<<endl;
+   cout<<R"( 
+                  ----o-
+ _____________   %%% , ,%_________
+(___________,,)  %c    >) ,________)
+   (_________,,)  )   =  ,______)
+        (_____,,)/ _/__,,____)
+           / \   \__/ /\
+          /\ |        \/\
+         /__\|'   ,   /  \,
+        < -  '====o==,  /_\
+       /    /`       |\ __ \
+      /__,_/    |  _/, \____\
+      //   |     \/  \    \\
+    _( \   \      \  \   _/ \
+     //|    \     \  \    |/|
+            < `  _\ -)
+           /    |_/ |
+          |    / |_/
+         / _,  ' /|
+         \/ \_,--.,
+         '(    )'
+        / |    | \
+        |,/    \,/     )";
+   cout << "\nAnjo: "+_nome + ", você venceu a luta. Desculpe, não estou em clima de" << endl;
    cout << "comemoração. Terminamos agora de computar a sua pontuação e eu nem sabia" << endl;
    cout << "que tinha como o número ser tão pequeno. O que passou na sua cabeça para você" << endl;
    cout << "fazer escolhas tão ruins? Você sinceramente achou que era uma boa ideia ou só estava"<<endl;
@@ -100,14 +148,18 @@ void Ceu::Ceu_ruim(){
    cout << "participar do projeto. Como pode um humano ser tão fundamentalmente malvado? Você vai pro"<<endl;
    cout << "inferno, e não para esse inferno legal cheio de provações e distrações, você vai para o"<<endl;
    cout << "inferno de verdade. Até nunca mais “herói”." << endl;
-
+   cout<<"-----------------------------------------//-----------------------------------------"<<endl;
+   cin.get();
 }
 
 void Ceu::Finalizar_historia(){
-   cout<<"-----------------------------------------//-----------------------------------------"<<endl;
+   //cout<<"-----------------------------------------//-----------------------------------------"<<endl;
+   cin.get();
+   cin.get();
+   system("clear");
    cout<<"Anjo: As escolhas foram feitas, espero que esteja feliz com elas!"<<endl; 
    cout<<"      Obrigado por ser parte desse experimento e até uma próxima vida" <<endl;
-   cout<<"----------------------------------------------------------------------------------"<<endl;
+   //cout<<"----------------------------------------------------------------------------------"<<endl;
    cout<<R"(
 ___  ___  _______   ________  ___      ___ _______   ________           ___    ___      ___  ___  _______   ___       ___              
 |\  \|\  \|\  ___ \ |\   __  \|\  \    /  /|\  ___ \ |\   ___  \        |\  \  /  /|    |\  \|\  \|\  ___ \ |\  \     |\  \             
@@ -119,7 +171,6 @@ ___  ___  _______   ________  ___      ___ _______   ________           ___    _
                                                                         |__|/ \|__|                                                     
                                                                                                                                         
                                                                                                                                      )";
-
 
 }
 

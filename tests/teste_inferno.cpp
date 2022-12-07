@@ -1,5 +1,5 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include "../third_party/doctest.h"
 #include "../src/inferno.cpp"
 #include "../include/inferno.hpp"
 

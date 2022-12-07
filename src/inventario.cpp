@@ -1,4 +1,4 @@
-#include "inventario.hpp"
+#include "../include/inventario.hpp"
 
 using namespace std;
 

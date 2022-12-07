@@ -1,47 +1,61 @@
 CC := g++
-SRCDIR := src
-BUILDDIR := build
-TESTDIR := tests
+CFLAGS := -I include/ -Wall
+BUILD := build/
+SRC := src/
 TARGET := main.out
-CFLAGS := -Wall -I third_party -I include
+
 
 all: main
 
 inferno: 
-	$(CC) $(CFLAGS) -o build/inferno.o -c src/inferno.cpp
+	g++ -o build/inferno.o -c src/inferno.cpp
 
-batalha:
-	$(CC) $(CFLAGS) -o build/batalha.o -c src/batalha.cpp
+ceu: 
+	g++ -o build/ceu.o -c src/ceu.cpp
 
-ceu:
-	$(CC) $(CFLAGS) -o build/ceu.o -c src/ceu.cpp
+inventario: 
+	g++ -o build/inventario.o -c src/inventario.cpp
 
-inimigo:
-	$(CC) $(CFLAGS) -o build/inimigo.o -c src/inimigo.cpp
+usuario: 
+	g++ -o build/usuario.o -c src/usuario.cpp
 
-jogador:
-	$(CC) $(CFLAGS) -o build/jogador.o -c src/jogador.cpp
+jogador: 
+	g++ build/usuario.o -o build/jogador.o -c src/jogador.cpp
 
-usuario: inventario inimigo jogador
-	$(CC) $(CFLAGS) -o build/usuario.o -c src/usuario.cpp
+inimigo: 
+	g++ build/usuario.o -o build/inimigo.o -c src/inimigo.cpp
 
-inventario:
-	$(CC) $(CFLAGS) -o build/inventario.o -c src/inventario.cpp
+batalha: 
+	g++ build/*.o -o build/batalha.o -c src/batalha.cpp
 
-testeinf: inferno.o
-	$(CC) $(CFLAGS) $(TESTDIR)/teste_inferno.cpp
-	$(BUILDDIR)/inferno.o -o $(BUILDDIR)/teste_inferno.out
+main: inferno ceu inventario usuario jogador inimigo batalha
+	g++ build/*.o -o build/main.o -c src/main.cpp
+	
 
-testeinm: inimigo.o
-	$(CC) $(CFLAGS) $(TESTDIR)/teste_inimigo.cpp
-	$(BUILDDIR)/inimigo.o -o $(BUILDDIR)/teste_inimigo.out
+teste1: inferno 
+	g++ -o build/teste1.o build/*.o src/Testes_de_verificacao/Teste_de_verificacao_1.cpp
+	./build/teste1.o
 
-testejog: jogador.o
-	$(CC) $(CFLAGS) $(TESTDIR)/teste_jogador.cpp
-	$(BUILDDIR)/jogador.o -o $(BUILDDIR)/teste_jogador.out
+teste2: inventario
+	g++ -o build/teste2.o build/*.o src/Testes_de_verificacao/Teste_de_verificacao_2.cpp
+	./build/teste2.o
 
-main: inferno usuario batalha ceu inventario
-	$(CC) $(CFLAGS) build/*.o src/main.cpp -o $(TARGET)
+teste3: batalha
+	g++ -o build/teste3.o build/*.o src/Testes_de_verificacao/Teste_de_verificacao_3.cpp
+	./build/teste3.o
+
+teste4: jogador
+	g++ -o build/teste4.o build/*.o src/Testes_de_verificacao/Teste_de_verificacao_4.cpp
+	./build/teste4.o
+
+teste5: inimigo
+	g++ -o build/teste5.o build/*.o src/Testes_de_verificacao/Teste_de_verificacao_5.cpp
+	./build/teste5.o
+
+run:
+	./build/teste3.o
 
 clean:
 	$(RM) -r $(BUILD)/* $(TARGET)
+
+reboot: clean all 

@@ -1,4 +1,4 @@
-#include "inferno.hpp"
+#include "../include/inferno.hpp"
 #include <iostream>
 //#include <windows.h>
 #include <vector>
@@ -28,7 +28,7 @@ char Inferno::Escolha(char opcaoEscolhida){
     do{ //escolha de uma das opcoes
         cin>>_opcaoEscolhida;
         if(_opcaoEscolhida!='1' && _opcaoEscolhida!='2'){
-            throw invalid_argument("Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:");
+            cout<<"Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:"<<endl;
             //cout<<"Anjo: Eii espertalhão, não adianta burlar as regras hein!! Você tem que escolher uma das opções 1 ou 2, vou te dar uma nova chance:"<<endl<<endl;
         }
         switch (_opcaoEscolhida)
@@ -53,6 +53,8 @@ int Inferno::getContador(){
 }
 
 void Inferno::Inicializar_historia(){
+    //SE DER TEMPO REALOCAR AS VARIAVEIS NOME E PECADO PRA JOGADOR
+    
     //SE DER TEMPO REALOCAR AS VARIAVEIS NOME E PECADO PRA JOGADOR
     cout<<"\nAnjo: Bem-vindo pobre alma mortal! Eu sou o anjo designado para cuidar de você por aqui. O sistema diz que você morreu hoje, e, devido a superlotação no purgatório, conseguimos uma vaga aqui no inferno. Só preciso que você confirme seu nome e o pecado que te trouxe aqui."<<endl<<endl;
     cout<<R"(   
@@ -89,11 +91,11 @@ void Inferno::Inicializar_historia(){
     _pecadoJog=pe;
     cin.get();
     //getch();
-    system("CLS");
+   system("clear");
 }
 
 char Inferno::Preguica(){
-   int decisao;
+    char decisao;
     cout<<"Antes mesmo de alcançar o seu objetivo você escuta vozes alteradas. Várias pessoas se reúnem em um círculo discutindo algo, mas o assunto parece variar dependendo de qual voz você presta atenção. No centro dessa baderna está um homem com uma longa barba branca discursando. Você se aproxima."<<endl<<endl;
     cout<<R"( 
                .---.
@@ -143,20 +145,21 @@ char Inferno::Preguica(){
     default:
         break;
     }
+    cin.get();
+    cin.get();
+    system("clear");
     cout<<"Sua resposta traz consigo uma grande reverberação dos demais filósofos. De repente você sente algo atingindo sua orelha com força, um deles atirou um rolo de pergaminho em sua direção e você não pode deixar isso passar sem consequências"<<endl;
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
     //getch();
-    cin.get();
-    cin.get();
-    system("CLS");
-    return '0';
     //clrscr();
     //inico da batalha
+    return decisao;
 }
 
 char Inferno::Gula(){
+    system("clear");
     cout<<"Antes mesmo de seu localizador apitar você vê ao longe uma grande mesa de banquete. Animado pela perspectiva de um lanchinho, você anda em direção a mulher sentada na cabeceira. Sua tela te avisa que é Maria Antonieta, a infame rainha francesa."<<endl<<endl;
-    cout<<R"(      
+    cout<<R"( 
          .....
          WWWWW
         ((. .))    
@@ -176,15 +179,14 @@ char Inferno::Gula(){
   /                  \
  @@@@@@@@@@@@@@@@@@@@@@
  /                    \
-@@@@@@@@@@@@@@@@@@@@@@@@      
+@@@@@@@@@@@@@@@@@@@@@@@@     
          v  v
-
 )";
-    cout<<"\n \nMaria Antonieta: Eu disse uma frase boba uma vez e agora sou obrigada a jantar lama todo dia que nem uma plebeia. O que há de tão mau em incentivar o consumo de brioches? Eu entendo que acumular comida pode ser visto como ruim por alguns, mas vocês só pensam nisso quando alguém rico faz isso. Se um esfomeado qualquer decidir roubar um brioche para não morrer de fome ele deverá ser punido no inferno?"<<endl<<endl;
+    cout<<"\n\nMaria Antonieta: Eu disse uma frase boba uma vez e agora sou obrigada a jantar lama todo dia que nem uma plebeia. O que há de tão mau em incentivar o consumo de brioches? Eu entendo que acumular comida pode ser visto como ruim por alguns, mas vocês só pensam nisso quando alguém rico faz isso. Se um esfomeado qualquer decidir roubar um brioche para não morrer de fome ele deverá ser punido no inferno?"<<endl<<endl;
     cout<<_escolha<<endl;
     cout<<"1- Todos devem ter suas necessidades básicas atendidas, mesmo que às vezes isso aconteça por meios duvidosos."<<endl;
     cout<<"2- O pecado está na ação, não importa a intenção por trás dela. É a única forma realmente justa de lidar com a imoralidade."<<endl;
-    int decisao;
+    char decisao;
     decisao=Escolha('0');
 
     switch (decisao)
@@ -229,11 +231,11 @@ char Inferno::Gula(){
     //getch();
     cin.get();
     cin.get();
-    system("CLS");
-    return '0';
+   system("clear");
+    return decisao;
 }
 char Inferno::Soberba(){
-      //adicionar cout dialogo
+     //adicionar cout dialogo
     cout<<"Andando pelas terras devastadas do inferno, você vê um vulto branco se aproximando de você em alta velocidade. Quando o esbelto cavalo branco para a sua frente um homem baixíssimo desce de sua lombar. Você nem precisa olhar seu localizador para saber que é Napoleão, o soberbo."<<endl<<endl<<endl;
     cout<<R"(  
                   .-"""""-.
@@ -264,7 +266,7 @@ char Inferno::Soberba(){
     cout<<_escolha<<endl<<endl;
     cout<<"1- Se a unidade vem da dor e da conquista então ela não está unificando nada. "<<endl;
     cout<<"2- Sabe de uma coisa? A humanidade seria melhor com todos do mesmo lado. Eu aceitaria sua proposta."<<endl<<endl;
-    int decisao;
+    char decisao;
     decisao=Escolha('0');
 
     switch (decisao)
@@ -293,13 +295,13 @@ char Inferno::Soberba(){
     //getch();
     cin.get();
     cin.get();
-    system("CLS");
+    system("clear");
+    return decisao;
     //inico da batalha
     //batalha.batalhar();
-    return '0';
 }
 char Inferno::Luxuria(){
-    //adicionar cout dialogo
+    system("clear");
     cout<<"De longe você escuta uma voz angelical cantando, seu localizador apitando atrapalha as notas afinadas da dama. Enfiando o aparelho irritante no meio das roupas para abafar o barulho, você se aproxima da mulher mais linda que já viu na vida: Marilyn Monroe. Assim que ela te vê, ela corre na sua direção se desculpando"<<endl<<endl<<endl;
     cout<<R"(
                   ⣾⣿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠿⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -342,7 +344,7 @@ char Inferno::Luxuria(){
     cout<<_escolha<<endl;
     cout<<"1- concordo!"<<endl;
     cout<<"2- acho que não concordo, pois se você quisesse que isso não acontecesse com você, você deveria agir de forma respeitável. Uma vez que já estava na posição de sexualizada, você deixou claro que qualquer um tinha direito de fazer o que bem entender. O que não aconteceria com um homem"<<endl;
-    int decisao;
+    char decisao;
     decisao=Escolha('0');
     switch (decisao)
     {
@@ -379,8 +381,8 @@ char Inferno::Luxuria(){
     //getch();
     cin.get();
     cin.get();
-    system("CLS");
-    return '0';
+   system("clear");
+    return decisao;
 }
 char Inferno::Avareza(){
     cout<<"A falta de qualquer objeto na vasta planície escura traz ansiedade. Você se apoia no localizador para encontrar a sua próxima provação. Ao longe se encontra um homem estranho, com uma certa cara de rato. O aparelho diz que é Elon Musk, o famoso bilionário."<<endl;
@@ -403,13 +405,13 @@ char Inferno::Avareza(){
          | |   |
          [_[___]
         (_(__,_|)";
-    cout<<"Elon Musk: O capitalismo é um jogo, você não pode me culpar por ter ganhado. Ter nascido em um berço de ouro é só um detalhe, tenho certeza que qualquer um poderia ter chegado no meu nível se tivesse se esforçado o suficiente. Bando de preguiçosos com suas filosofias e ideais.";
+    cout<<"\nElon Musk: O capitalismo é um jogo, você não pode me culpar por ter ganhado. Ter nascido em um berço de ouro é só um detalhe, tenho certeza que qualquer um poderia ter chegado no meu nível se tivesse se esforçado o suficiente. Bando de preguiçosos com suas filosofias e ideais.";
     cout<<" O que eles esperavam que eu fizesse? Desistisse de tudo que tinha e acabasse com o emprego de milhares de pessoas para trazer melhores condições de vida ou qualquer coisa assim?"<<endl<<endl;
 
     cout<<_escolha<<endl;
     cout<<"1- Nada é um jogo quando envolve a vida dos outros, nem um centavo de um bilionário é ganho de forma ética. A redistribuição de ganhos é a única forma realmente ética de lidar com a riqueza."<<endl;
     cout<<"2- Não tem problema em aprender a usar o sistema para ganhar. Não foi você que instaurou essa forma de vida injusta, por que você deveria desistir de tudo que conquistou?"<<endl;
-    int decisao;
+    char decisao;
     decisao=Escolha('0');
 
     switch (decisao)
@@ -449,11 +451,11 @@ char Inferno::Avareza(){
     //getch();
     cin.get();
     cin.get();
-    system("CLS");
-    return '0';
+    system("clear");
+    return decisao;
 }
 char Inferno::Inveja(){
-      cout<<"Ao longe há uma luz fraca, o localizador apita naquela direção. Passa pela sua cabeça a hipótese de ser a saída do seu inferno pessoal, mas estranhamente quanto mais perto da luz mais quente o ambiente fica. Após seus olhos se acostumarem com a claridade você vê um homem perto de uma fogueira."<<endl<<endl;
+    cout<<"Ao longe há uma luz fraca, o localizador apita naquela direção. Passa pela sua cabeça a hipótese de ser a saída do seu inferno pessoal, mas estranhamente quanto mais perto da luz mais quente o ambiente fica. Após seus olhos se acostumarem com a claridade você vê um homem perto de uma fogueira."<<endl<<endl;
     cout<<R"(  
             .---.
            / _ _ \
@@ -479,13 +481,13 @@ char Inferno::Inveja(){
          (__/   \__)
  )";
     //Thomas falando
-    cout<<"Thomas Edison: No inferno, cercado de fogo ainda, isso sim é castigo eterno. Se me deixassem trazer uma lâmpada pra cá… Oh, você aí, olhe por onde anda! Ok, eu sei que deve ser extremamente chocante me ver por aqui, o Thomas Edison. Eu sou um dos grandes pais da ciência, eu trouxe a luz pro mundo, literalmente!"<<endl<<endl;
+    cout<<"\nThomas Edison: No inferno, cercado de fogo ainda, isso sim é castigo eterno. Se me deixassem trazer uma lâmpada pra cá… Oh, você aí, olhe por onde anda! Ok, eu sei que deve ser extremamente chocante me ver por aqui, o Thomas Edison. Eu sou um dos grandes pais da ciência, eu trouxe a luz pro mundo, literalmente!"<<endl<<endl;
     cout<<"Ok, talvez não literalmente, mas eu merecia a glória daquela invenção. Só eu era capaz de levar a lâmpada a um novo nível, a sociedade precisava descobrir essa maravilha da tecnologia, que mal tem não ter sido o inventor que a popularizou? Esses ingratos não teriam metade do que tem hoje se não fosse por mim! Você entende, não?"<<endl<<endl;
     cout<<_escolha<<endl;
     cout<<"1- Não importa o bem que se faz ao mundo no fim, roubar nunca é certo."<<endl;
     cout<<"2- O crescimento científico deve ser priorizado, não importa os meios."<<endl<<endl;
 
-    int decisao;
+    char decisao;
     decisao=Escolha('0');
 
     switch (decisao)
@@ -504,16 +506,16 @@ char Inferno::Inveja(){
     }
     cout<<"-----------------------------------------//-----------------------------------------"<<endl<<endl;
     //getch();
-    
+    cin.get();
+    cin.get();
+    system("clear");
     //inico da batalha
     cout<<"\nQuanto mais você se afasta do “inventor” mais arrepiada sua pele fica. De algum modo você sente a atmosfera ao seu redor mudar, como se alguém estivesse te observando. A presença da sua mochila passa pela sua cabeça e você decide abraçá-la em um gesto protetor, como se soubesse que algo estaria atrás dela. Você tenta se acalmar dizendo que é apenas um truque do nível da inveja, mas poucos passos depois algo puxa suas costas com força"<<endl<<endl;
-    cin.get();
-    cin.get();
-    system("CLS");
-    return '0';
+    return decisao;;
 }
 char Inferno::Ira(){
-     cout<<"Você está no chão, juntando o resto das suas energias após uma batalha tão difícil quando você ouve, ao fundo, um choro. A princípio você continua deitada(o) à espera de que seja somente mais uma alma vagando, mas você percebe que os choros estão se multiplicando mais e mais e quando percebe só consegue ouvir um barulho ensurdecedor de um grito, até que você estreita os olhos e vê o que julga ser o Zumbi dos Palmares gritando..."<<endl<<endl;
+    system("clear");
+    cout<<"Você está no chão, juntando o resto das suas energias após uma batalha tão difícil quando você ouve, ao fundo, um choro. A princípio você continua deitada(o) à espera de que seja somente mais uma alma vagando, mas você percebe que os choros estão se multiplicando mais e mais e quando percebe só consegue ouvir um barulho ensurdecedor de um grito, até que você estreita os olhos e vê o que julga ser o Zumbi dos Palmares gritando..."<<endl<<endl;
     cout<<R"( 
          _ __
         / \Y \
@@ -547,13 +549,13 @@ char Inferno::Ira(){
         |&  \  \
        *( ,  `'-.'-.
         `"`"""""`""`)";
-    cout<<"Zumbi dos Palmares: Ira!! eu fiquei 14.600 dias na terra desejando minha morte por conta da ira dos brancos, eu cultivei por 14.600 toda dor e sofrimento que a ira deles depositavam em mim, e agora eu estou no inferno por retribuir nem uma fração daquilo que eles fizeram com milhares de pessoas?!";
+    cout<<"\nZumbi dos Palmares: Ira!! eu fiquei 14.600 dias na terra desejando minha morte por conta da ira dos brancos, eu cultivei por 14.600 toda dor e sofrimento que a ira deles depositavam em mim, e agora eu estou no inferno por retribuir nem uma fração daquilo que eles fizeram com milhares de pessoas?!";
     cout<<"O meu inferno começou logo quando eu nasci, minha alma faleceu quando eu fui escravizado, torturado, tratado como demônio. Eu duvido que alguém que realmente entende minha situação iria fazer algo diferente de mim, você não concorda?"<<endl<<endl;
     cout<<_escolha<<endl;
     cout<<"1- Concordo! A guerra é justa quando se luta por liberdade."<<endl;
     cout<<"2- Discordo! Se as mãos de dois combatentes estão sujas de sangue, então nunca haverá um lado certo."<<endl;
 
-    int decisao;
+    char decisao;
     decisao=Escolha('0');
 
     switch (decisao)
@@ -562,8 +564,24 @@ char Inferno::Ira(){
         //dialogo bom
         cout<<"\nZumbi dos Palmares: Não gosto do que fiz, mas isso só foi reflexo do que fizeram comigo."<<endl<<endl;
         cout<<"*** NOVO ITEM ADQUIRIDO! ***"<<endl;
-        cout<<"--- VOCÊ GANHA UMA GUIA(colar de proteção). USE SABIAMENTE. ---"<<endl<<endl;
-    
+        cout<<"--- VOCÊ GANHA UM GUIA(colar de proteção). USE SABIAMENTE. ---"<<endl<<endl;
+        cout<<R"(
+                o--o--=g=--o--o     
+               /      .'       \
+               o      '.       o
+                \             /
+                 o           o
+                  \         /
+                   o       o
+                    \     /
+                     o   o
+                      \_/
+                       =
+                      .^.
+                     '   '
+                     '. .'
+                       !    
+         )";
         cout<<endl<<endl;
         break;
     case '2':
@@ -576,8 +594,8 @@ char Inferno::Ira(){
     //getch();
     cin.get();
     cin.get();
-    system("CLS");
-    return '0';
+   system("clear");
+    return decisao;
 }
 
 void Inferno::Batalha_final(){
@@ -613,7 +631,7 @@ void Inferno::Batalha_final(){
         cout<<"Enfim, é hora de terminar a sua jornada, só resta um último desafio à sua frente: você deve enfrentar o senhor dos pecados, o encardido, o sete-pele, o sinteco gelado, o DEMÔNIO! Não se preocupe muito, é só sair no soco com ele, vou garantir que não sejam usados muitos golpes sujos, e eu digo isso pra você, seu encrenqueiro"<<endl<<endl;
     }
     cin.get();
-    system("CLS");
+    system("clear");
     cout<<"Aqui vem o vencedor dos vencedores, o rei dos reis, o anjo que comanda, o grande diabo! (ele percebe que está visível) Eu disse para só abaixar a cortina depois da minha fala! Bando de incompetentes. Agora minha incrível entrada dramática foi arruinada, todo aquele ensaio na frente do espelho foi inútil. Enfim, o que importa é que eu vou mostrar como eu trato pessoas como você e acabar com essa coisa do céu de querer controlar até o inferno"<<endl<<endl;
     cout<<R"(  
                 , ,, ,                              
@@ -635,6 +653,5 @@ void Inferno::Batalha_final(){
     cout<<"\n-----------------------------------------//-----------------------------------------"<<endl<<endl;
     //getch();
     cin.get();
-    cin.get();
-    system("CLS");
+    system("clear");
 }

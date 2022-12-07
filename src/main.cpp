@@ -122,18 +122,7 @@ int main()
         ceu.Ceu_ruim();
     }
     ceu.Finalizar_historia();
-    /* OLHAR O QUE É ISSO COM OS MENINOS
-    cout << "Jogador:" << endl;
-    user.print();
-    cout << endl << "Inimigo:" << endl;
-    inim.print();
-    cout << endl;
 
-    cout << "sistema de batalha" << endl;
-    Batalha luta;
-    luta.batalhar(user, inim);
-    */
-    ////////////////////////////////////////////////////////////////////////////////////
     
     return 0;
 }

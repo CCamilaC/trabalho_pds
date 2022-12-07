@@ -1,22 +1,47 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
-#include "../include/jogador.hpp"
 
-//using shapes::Jogador;
+#include "../third_party/doctest.h"
+#include "../include/batalha.hpp"
+#include "../include/inventario.hpp"
 
-Jogador gamer1 ();
-Jogador gamer2 ();
-Jogador gamer3 ();
 
-TEST_CASE("Teste adicionar item"){
-    CHECK_THROWS(adiciona_item()); //vetor cheio
-    CHECK_THROWS(adiciona_item()); //posição do vetor não existe
-}
+TEST_CASE("TESTANDO"){
+    Jogador user(100, 20, 10, 1);
+    Jogador user2(-30, -7,-9,-4);
 
-TEST_CASE("Teste usar item"){
-    CHECK_THROWS(usa_item()); //não possui mais itens para usar
-}
+    SUBCASE("atributos do jogador"){
+        CHECK(user.get_atq() == 10);
+        CHECK(user.get_def() == 1);
+        CHECK(user.get_vida() == 100);
+        CHECK(user.get_estamina() == 20);
 
-TEST_CASE("Teste mostrar item"){
-    CHECK_THROWS(mostra_item()); //não possui itens para mostrar
+    }
+
+    SUBCASE("atrubutos de jogador invalidos"){
+        CHECK(user2.get_atq() == 0);
+        CHECK(user2.get_def() == 0);
+        CHECK(user2.get_vida() == 0);
+        CHECK(user2.get_estamina() == 0);
+    }
+
+    SUBCASE("atributo dos itens"){
+        item i1("espada de fogo", 1, 2);
+        CHECK(i1.getTipo() == 1);
+        CHECK(i1.getNome() == "espada de fogo");
+        CHECK(i1.get_intensidadeEfeito() == 2);
+
+    }
+
+
+    SUBCASE("atributos de item invalidos"){
+        item i2("espada de chamas",-1,-4);
+        CHECK(i2.getTipo() == 0);
+        CHECK(i2.getNome() == "espada de chamas");
+        CHECK(i2.get_intensidadeEfeito() == 0);
+
+    }
+
+
+
+
 }
