@@ -47,3 +47,5 @@ EXTRA:
 link do docs usado durante o desenvolvimento do jogo: https://docs.google.com/document/d/1Lk0AEHWh82QkxKOwMCVIJBk7utQWAjxyyy3hp7cRctg/edit
 
 LINK DO CÓDIGO RODANDO: https://youtu.be/WcKBLORPldY  https://youtu.be/b83gzlRiiHw
+
+LINK APRESENTAÇÃO DE SLIDES: https://docs.google.com/presentation/d/1uJ1FhihDa-GLYjyztEN0_NzjzvNJLs_qc-1E3vdHT3Y/edit#slide=id.gd431007ba2_0_215
