@@ -1,7 +1,0 @@
-<map id="include/inventario.hpp" name="include/inventario.hpp">
-<area shape="rect" id="node1" title="Classe que crio os itens que o jogador recebe." alt="" coords="103,5,270,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,85,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="110,80,175,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="199,80,262,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="287,80,345,107"/>
-</map>
