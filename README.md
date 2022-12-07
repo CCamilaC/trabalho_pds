@@ -3,7 +3,7 @@ HEAVEN X HELL
 
 Membros do grupo: Camila Chagas - Luis Otavio - Luiza Calheiros - Natan Henrique - Pedro Silva Lima - Victoria Machado
 
-# trabalho_pds
+# HEAVEN X HELL
 repositorio para o código e extras
 RESUMO DA HISTÓRIA:
 Você acorda num lugar misterioso com um anjo falando. Logo te explicam que você está morto e, por ter sido moralmente duvidoso na vida, merece um lugar no purgatório. O único problema é que esse está totalmente lotado, mas não se preocupe, com isso você ganhou uma vaga como cobaia no mais inovador programa do céu chamado “HEAVEN X HELL”. Tudo o que você precisa fazer é percorrer os sete níveis do inferno, cada um representando um pecado capital, enfrentando as difíceis decisões morais e as impossíveis batalhas. Seu destino será decidido pelo quão bondoso você foi durante o experimento, então escolha sabiamente.
