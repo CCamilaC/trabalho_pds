@@ -12,55 +12,23 @@
  */
 #ifndef INIMIGO_HPP_INCLUDED
 #define INIMIGO_HPP_INCLUDED
-#include<iostream>
-#include <cstdlib>
-#include <vector>
-#include "inventario.hpp"
 #include "usuario.hpp"
-
+#include <iostream>
 
 using namespace std;
 
-class Inimigo: protected Usuario{
-    private:
-        bool _envenenado;
+class Inimigo: public Usuario{
+private:
 /**
- * @brief construtor
- * 
- */
-    public: Inimigo(int vida, int estamina, int ataque, int defesa, bool veneno);
-/**
- * @brief retorna a condição do inimigo: se está envenenado ou não
- * 
- * @return true 
- * @return false 
- */
-    bool get_veneno();
-/**
- * @brief define a condiçao de envenenado
- * 
- * @param ven
+ * @brief inimigo envenenado (true) ou não (false)
 */
-    void set_veneno(bool ven);
+    bool _envenenado;
 
+public:
 /**
- * @brief imprime a quantidade de vida do inimigo e se está envenenado ou não
- * 
- */
-    void printv();
-/**
- * @brief executa o efeito de envenenado no inimigo e mostra a duração do efeito
- * 
- * @param cont
- */
-    void envenenado(int cont);
-
-    /**
- * @brief retorna a quantidade de estamina maxima do jogador ou do inimigo
- * 
- * @return int 
- */
-    int get_max_estamina();
+ * @brief Construtor
+*/
+    Inimigo(int vida, int ataque, int defesa, int estamina, bool veneno); 
 /**
  * @brief retorna a quantidade de vida do jogador ou do inimigo
  * 
@@ -109,12 +77,45 @@ class Inimigo: protected Usuario{
  * @param estamina 
  */
     void set_estamina(int estamina);
-
-
+/**
+ * @brief imprime a quantidade de vida, de dano do ataque, de defesa e de energia
+ * 
+ */
+    void print();
+/**
+ * @brief imprime Vida
+ * 
+ */
+    void printv();
 /**
  * @brief define a estamina maxima permitida durante o jogo
  * 
  */
-    void set_max_estamina(int maxe);
+    // void set_max_estamina(int maxe);
+/**
+ * @brief retorna a quantidade de estamina maxima do jogador ou do inimigo
+ * 
+ * @return int 
+ */
+   // int get_max_estamina();  
+ /**
+ * @brief executa o efeito de envenenado no inimigo e mostra a duração do efeito
+ * 
+ * @param cont
+ */
+    void envenenado(int cont);
+ /**
+ * @brief retorna a condição do inimigo: se está envenenado ou não
+ * 
+ * @return true 
+ * @return false 
+ */
+    bool get_envenenado();
+/**
+ * @brief define a condiçao de envenenado
+ * 
+ * @param veneno
+*/
+    void set_envenenado(bool veneno);
 };
 #endif
