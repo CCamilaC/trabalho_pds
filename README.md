@@ -1,7 +1,7 @@
 HEAVEN X HELL
 "testando a universalidade dos pecados"
 
-
+Membros do grupo: Camila Chagas - Luis Otavio - Luiza Calheiros - Natan Henrique - Pedro Silva Lima - Victoria Machado
 
 # trabalho_pds
 repositorio para o código e extras
