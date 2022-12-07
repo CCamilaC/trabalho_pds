@@ -1,0 +1,7 @@
+digraph "doctest::Context"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{doctest::Context\n||+ Context()\l+ Context()\l+ Context()\l+ operator=()\l+ operator=()\l+ ~Context()\l+ applyCommandLine()\l+ addFilter()\l+ clearFilters()\l+ setOption()\l+ setOption()\l+ setOption()\l+ shouldExit()\l+ setAsDefaultForAssertsOut\lOfTestCases()\l+ setAssertHandler()\l+ setCout()\l+ run()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}

@@ -1,0 +1,48 @@
+digraph "Model"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Model\n||}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +materials" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{Material\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMaterial.html",tooltip=" "];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +shader" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{Shader\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structShader.html",tooltip=" "];
+  Node4 -> Node3 [color="grey25",fontsize="10",style="solid",label=" +id\n+locs" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{int\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +params" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 [label="{float\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +maps" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node6 [label="{MaterialMap\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMaterialMap.html",tooltip=" "];
+  Node5 -> Node6 [color="grey25",fontsize="10",style="solid",label=" +value" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node7 -> Node6 [color="grey25",fontsize="10",style="solid",label=" +texture" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node7 [label="{Texture\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTexture.html",tooltip=" "];
+  Node4 -> Node7 [color="grey25",fontsize="10",style="solid",label=" +format\n+height\n+id\n+mipmaps\n+width" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node8 -> Node6 [color="grey25",fontsize="10",style="solid",label=" +color" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node8 [label="{Color\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structColor.html",tooltip=" "];
+  Node9 -> Node8 [color="grey25",fontsize="10",style="solid",label=" +a\n+b\n+g\n+r" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node9 [label="{char\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node10 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +bones" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node10 [label="{BoneInfo\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structBoneInfo.html",tooltip=" "];
+  Node9 -> Node10 [color="grey25",fontsize="10",style="solid",label=" +name" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 -> Node10 [color="grey25",fontsize="10",style="solid",label=" +parent" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +boneCount\n+materialCount\n+meshCount\n+meshMaterial" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node11 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +bindPose" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node11 [label="{Transform\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTransform.html",tooltip=" "];
+  Node12 -> Node11 [color="grey25",fontsize="10",style="solid",label=" +scale\n+translation" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node12 [label="{Vector3\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structVector3.html",tooltip=" "];
+  Node5 -> Node12 [color="grey25",fontsize="10",style="solid",label=" +x\n+y\n+z" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node13 -> Node11 [color="grey25",fontsize="10",style="solid",label=" +rotation" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node13 [label="{Vector4\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structVector4.html",tooltip=" "];
+  Node5 -> Node13 [color="grey25",fontsize="10",style="solid",label=" +w\n+x\n+y\n+z" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node14 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +meshes" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node14 [label="{Mesh\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMesh.html",tooltip=" "];
+  Node9 -> Node14 [color="grey25",fontsize="10",style="solid",label=" +boneIds\n+colors" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 -> Node14 [color="grey25",fontsize="10",style="solid",label=" +animNormals\n+animVertices\n+boneWeights\n+normals\n+tangents\n+texcoords\n+texcoords2\n+vertices" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 -> Node14 [color="grey25",fontsize="10",style="solid",label=" +triangleCount\n+vaoId\n+vboId\n+vertexCount" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node15 -> Node14 [color="grey25",fontsize="10",style="solid",label=" +indices" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node15 [label="{unsigned short *\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node16 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +transform" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node16 [label="{Matrix\n|+ m4\l+ m8\l+ m5\l+ m9\l+ m6\l+ m7\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMatrix.html",tooltip=" "];
+  Node5 -> Node16 [color="grey25",fontsize="10",style="solid",label=" +m0\n+m1\n+m10\n+m11\n+m12\n+m13\n+m14\n+m15\n+m2\n+m3\n..." ,arrowhead="odiamond",fontname="Helvetica"];
+}

@@ -1,0 +1,7 @@
+digraph "Inferno"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Inferno\n||+ Inferno()\l+ getNome()\l+ getPecado()\l+ getContador()\l+ Inicializar_historia()\l+ Escolha()\l+ Preguica()\l+ Gula()\l+ Soberba()\l+ Luxuria()\l+ Avareza()\l+ Inveja()\l+ Ira()\l+ Batalha_final()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="printa na tela toda a história do inferno, implementa batalhas e faz as escolhas do jogo"];
+}

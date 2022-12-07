@@ -1,0 +1,23 @@
+digraph "Material"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Material\n||}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +shader" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{Shader\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structShader.html",tooltip=" "];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +id\n+locs" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{int\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +params" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{float\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +maps" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 [label="{MaterialMap\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMaterialMap.html",tooltip=" "];
+  Node4 -> Node5 [color="grey25",fontsize="10",style="solid",label=" +value" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node6 -> Node5 [color="grey25",fontsize="10",style="solid",label=" +texture" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node6 [label="{Texture\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTexture.html",tooltip=" "];
+  Node3 -> Node6 [color="grey25",fontsize="10",style="solid",label=" +format\n+height\n+id\n+mipmaps\n+width" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node7 -> Node5 [color="grey25",fontsize="10",style="solid",label=" +color" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node7 [label="{Color\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structColor.html",tooltip=" "];
+  Node8 -> Node7 [color="grey25",fontsize="10",style="solid",label=" +a\n+b\n+g\n+r" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node8 [label="{char\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

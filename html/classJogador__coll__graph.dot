@@ -1,0 +1,11 @@
+digraph "Jogador"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Jogador\n||+ Jogador()\l+ adiciona_item()\l+ usa_item()\l+ mostra_item()\l+ remove_item()\l+ get_max_estamina()\l+ get_vida()\l+ set_vida()\l+ get_atq()\l+ set_atq()\l+ get_def()\l+ set_def()\l+ get_estamina()\l+ set_estamina()\l+ print()\l+ printv()\l+ set_max_estamina()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkgreen",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{Usuario\n||+ Usuario()\l+ get_max_estamina()\l+ get_vida()\l+ set_vida()\l+ get_atq()\l+ set_atq()\l+ get_def()\l+ set_def()\l+ get_estamina()\l+ set_estamina()\l+ print()\l+ printv()\l+ set_max_estamina()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUsuario.html",tooltip=" "];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" #_atq\n#_def\n#_estamina\n#_max_estamina\n#_vida" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{int\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

@@ -1,0 +1,7 @@
+digraph "doctest::IReporter"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{doctest::IReporter\n||+ report_query()\l+ test_run_start()\l+ test_run_end()\l+ test_case_start()\l+ test_case_reenter()\l+ test_case_end()\l+ test_case_exception()\l+ subcase_start()\l+ subcase_end()\l+ log_assert()\l+ log_message()\l+ test_case_skipped()\l+ get_num_active_contexts()\l+ get_active_contexts()\l+ get_num_stringified\l_contexts()\l+ get_stringified_contexts()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}

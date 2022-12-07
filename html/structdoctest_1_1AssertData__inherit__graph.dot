@@ -1,0 +1,9 @@
+digraph "doctest::AssertData"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{doctest::AssertData\n|+ m_test_case\l+ m_at\l+ m_file\l+ m_line\l+ m_expr\l+ m_failed\l+ m_threw\l+ m_exception\l+ m_decomp\l+ m_threw_as\l+ m_exception_type\l+ m_exception_string\l|+ AssertData()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{doctest::detail::ResultBuilder\n||+ ResultBuilder()\l+ ResultBuilder()\l+ setResult()\l+ binary_assert()\l+ unary_assert()\l+ translateException()\l+ log()\l+ react()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdoctest_1_1detail_1_1ResultBuilder.html",tooltip=" "];
+}

@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['tangents_2870',['tangents',['../structMesh.html#a72f95dc8ed3a06eabc64cbc78e1070f9',1,'Mesh']]],
+  ['target_2871',['target',['../structCamera3D.html#ae87720bc94914ae37215b5057dba2c07',1,'Camera3D::target()'],['../structCamera2D.html#abcb7637d3fc2b9fa851205e3ae818ff4',1,'Camera2D::target()']]],
+  ['testcase_2872',['TestCase',['../namespacedoctest_1_1detail.html#ade1619b532a3d3e6f19ee1187ff3c514',1,'doctest::detail']]],
+  ['testcasesuccess_2873',['testCaseSuccess',['../structdoctest_1_1CurrentTestCaseStats.html#a2c77d43c1fbab06710da7b5bbba4f3ab',1,'doctest::CurrentTestCaseStats']]],
+  ['teste_5fbrioche_2874',['teste_brioche',['../teste__inventario_8cpp.html#aab6f8dc99a19ce0a6c2ceeae5418acf5',1,'teste_inventario.cpp']]],
+  ['teste_5fchicote_2875',['teste_chicote',['../teste__inventario_8cpp.html#ae91a46070c1139e948949297c01c8a47',1,'teste_inventario.cpp']]],
+  ['teste_5fcolete_2876',['teste_colete',['../teste__inventario_8cpp.html#af4b9de432f87785907fac3b8ff78c032',1,'teste_inventario.cpp']]],
+  ['teste_5fespada_2877',['teste_espada',['../teste__inventario_8cpp.html#ab1c61566e31ef151945d0ab6fcdc30af',1,'teste_inventario.cpp']]],
+  ['teste_5fmegafone_2878',['teste_megafone',['../teste__inventario_8cpp.html#acb17857d49e0d1ce1b7872c6c355bf67',1,'teste_inventario.cpp']]],
+  ['teste_5ftaser_2879',['teste_taser',['../teste__inventario_8cpp.html#acfb9033662672ed2297928b6e2e42edf',1,'teste_inventario.cpp']]],
+  ['texcoords_2880',['texcoords',['../structMesh.html#aef35063564cbbf0280e74edbed60dbaa',1,'Mesh']]],
+  ['texcoords2_2881',['texcoords2',['../structMesh.html#a6d541d8a176a384eb2d9cc6f38547437',1,'Mesh']]],
+  ['texture_2882',['texture',['../structMaterialMap.html#ad89d26ae9df4ba66257f698935563560',1,'MaterialMap::texture()'],['../structFont.html#a931f2837dbe625791fee618ef0475e66',1,'Font::texture()'],['../structRenderTexture.html#ad2a1398929d1921971ac2b2ac76c31c9',1,'RenderTexture::texture()']]],
+  ['top_2883',['top',['../structNPatchInfo.html#a4548e9727bfce78ba28d47933faf850a',1,'NPatchInfo']]],
+  ['transform_2884',['transform',['../structModel.html#aab39d4fe4b3b9399a24377168d6c0f0a',1,'Model']]],
+  ['translation_2885',['translation',['../structTransform.html#a3c8673f9d19d493ff81c63b8e9b72c90',1,'Transform']]],
+  ['trianglecount_2886',['triangleCount',['../structMesh.html#aee7cdb1ea43963513f2eebaa961d9e93',1,'Mesh']]]
+];

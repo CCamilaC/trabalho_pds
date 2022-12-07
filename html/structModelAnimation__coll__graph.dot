@@ -1,0 +1,23 @@
+digraph "ModelAnimation"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{ModelAnimation\n||}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +bones" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{BoneInfo\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structBoneInfo.html",tooltip=" "];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +name" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{char\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +parent" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{int\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +boneCount\n+frameCount" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +framePoses" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 [label="{Transform\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTransform.html",tooltip=" "];
+  Node6 -> Node5 [color="grey25",fontsize="10",style="solid",label=" +scale\n+translation" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node6 [label="{Vector3\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structVector3.html",tooltip=" "];
+  Node7 -> Node6 [color="grey25",fontsize="10",style="solid",label=" +x\n+y\n+z" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node7 [label="{float\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node8 -> Node5 [color="grey25",fontsize="10",style="solid",label=" +rotation" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node8 [label="{Vector4\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structVector4.html",tooltip=" "];
+  Node7 -> Node8 [color="grey25",fontsize="10",style="solid",label=" +w\n+x\n+y\n+z" ,arrowhead="odiamond",fontname="Helvetica"];
+}

@@ -1,0 +1,9 @@
+digraph "Matrix"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Matrix\n|+ m4\l+ m8\l+ m5\l+ m9\l+ m6\l+ m7\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +m0\n+m1\n+m10\n+m11\n+m12\n+m13\n+m14\n+m15\n+m2\n+m3\n..." ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{float\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}
