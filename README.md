@@ -46,4 +46,4 @@ LINK DO DIAGRAMA DE CLASSES: https://lucid.app/lucidchart/invitations/accept/inv
 EXTRA: 
 link do docs usado durante o desenvolvimento do jogo: https://docs.google.com/document/d/1Lk0AEHWh82QkxKOwMCVIJBk7utQWAjxyyy3hp7cRctg/edit
 
-LINK DO CÓDIGO RODANDO: https://drive.google.com/drive/folders/1MrCC5M81zp8Zt85tj6Oluw-_5UsqVggl?usp=sharing
+LINK DO CÓDIGO RODANDO: https://youtu.be/WcKBLORPldY  https://youtu.be/b83gzlRiiHw
